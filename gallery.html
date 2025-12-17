@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Yatay kaydırmalı galeri */
+    .gallery {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .gallery::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .gallery::-webkit-scrollbar-thumb {
+      background: #444;
+      border-radius: 4px;
+    }
+
+    .gallery img {
+      height: 300px;
+      border-radius: 12px;
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fotoğraf Galerisi</h1>
+
+  <div class="gallery">
+    <img src="images/photo1.jpg" alt="Foto 1" />
+    <img src="images/photo2.jpg" alt="Foto 2" />
+    <img src="images/photo3.jpg" alt="Foto 3" />
+    <img src="images/photo4.jpg" alt="Foto 4" />
+    <img src="images/photo5.jpg" alt="Foto 5" />
+  </div>
+
+</body>
+</html>

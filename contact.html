@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Bizimle İletişime Geçin</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #23493f 0%, #1b3b32 70%, #0f1f1a 100%);
+      background-attachment: fixed;
+      color: #e6eef8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      padding-top: 120px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      background: #111;
+      padding: 12px 0;
+      border-bottom: 1px solid #00f0b5;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      color: #00f0b5;
+      text-shadow: 0 0 8px #00f0b5;
+    }
+
+    .contact-box {
+      background: rgba(0, 0, 0, 0.35);
+      border-left: 4px solid #00f0b5;
+      padding: 26px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+      z-index: 2;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00f0b5;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .info a {
+      color: #9fffe0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .buttons a {
+      display: block;
+      text-align: center;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: #111;
+    }
+
+    .maps-btn {
+      background: #00f0b5;
+      color: #111;
+    }
+
+    iframe {
+      width: 100%;
+      height: 260px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 14px;
+    }
+
+    /* SABİT WHATSAPP BALONU */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: #111;
+      padding: 16px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 14px rgba(0,255,120,0.6);
+      z-index: 9999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="gallery.html">Galeri</a></li>
+      <li><a href="services.html">Hizmetlerimiz</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-box">
+    <h2>Bizimle İletişime Geçin</h2>
+
+    <div class="info">
+      📞 <a href="tel:+902163100583">0216 310 05 83</a><br>
+      📱 <a href="tel:+905426952150">+90 542 695 21 50</a>
+    </div>
+
+    <div class="info">
+      📍 Karacaahmet Karacaahmet, Zeynep Kamil,<br>
+      Nuhkuyusu Cd No:25, 34668 Üsküdar / İstanbul
+    </div>
+
+    <div class="buttons">
+      <a class="whatsapp-btn"
+         href="https://wa.me/905426952150"
+         target="_blank">💬 WhatsApp’tan Yaz</a>
+
+      <a class="maps-btn"
+         href="https://maps.app.goo.gl/UQtLZf7PX6sbDAzT6"
+         target="_blank">📍 Yol Tarifi Al</a>
+    </div>
+
+    <!-- %100 ÇALIŞAN GOOGLE MAPS EMBED -->
+    <iframe
+      src="https://www.google.com/maps?q=Karacaahmet+Zeynep+Kamil+Nuhkuyusu+Cd+No:25+Üsküdar+İstanbul&output=embed"
+      loading="lazy">
+    </iframe>
+
+  </div>
+
+  <!-- SABİT WHATSAPP -->
+  <a class="whatsapp-float"
+     href="https://wa.me/905426952150"
+     target="_blank">
+     💬 WhatsApp
+  </a>
+
+</body>
+</html>
