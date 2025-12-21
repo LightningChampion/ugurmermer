@@ -1,15 +1,153 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Uğur Mermer</title>
-  <!-- CSS bağlantısı büyük harfe duyarlı olarak düzeltildi -->
-  <link rel="stylesheet" href="Styles.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    /* NAV */
+    nav {
+      background: #000;
+      padding: 15px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a:hover { color: #aaa; }
+
+    /* GENEL */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    /* HAKKIMIZDA */
+    .about {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-image img {
+      max-width: 300px;
+      border-radius: 15px;
+    }
+
+    /* İLETİŞİM */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .contact-box {
+      background: #000;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid #222;
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .contact-box a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #000;
+    }
+
+    .btn-map {
+      background: #1a73e8;
+      color: #fff;
+      margin-left: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+      border: 0;
+      border-radius: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      border-top: 1px solid #222;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-map {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
+  <!-- NAV -->
   <nav>
     <ul>
       <li><a href="index.html">Anasayfa</a></li>
@@ -19,13 +157,12 @@
     </ul>
   </nav>
 
-  <main class="container">
+  <div class="container">
 
+    <!-- HAKKIMIZDA (AYNEN KALDI) -->
     <section class="about">
-
       <div class="about-text">
         <h1>Uğur Mermer</h1>
-        <p class="tagline">Ustalık. Kalite. Güven.</p>
 
         <h2>Hakkımızda</h2>
         <p>
@@ -46,61 +183,57 @@
       <div class="about-image">
         <img src="images/profile.jpg" alt="Uğur Mermer">
       </div>
-
     </section>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-content">
+    <!-- İLETİŞİM + KONUM (contact.html’den ALINAN KISIM) -->
+    <section class="contact-wrapper">
 
       <div class="contact-box">
-        <h2>Bizimle İletişime Geçin</h2>
+        <p><strong>Telefon (Cep):</strong><br>
+          <a href="tel:+905426952150">+90 542 695 21 50</a>
+        </p>
 
-        <div class="info">
-          📞 <a href="tel:+902163100583">0216 310 05 83</a><br>
-          📱 <a href="tel:+905426952150">+90 542 695 21 50</a>
-        </div>
+        <p><strong>Telefon (Sabit):</strong><br>
+          <a href="tel:+902163100583">0216 310 05 83</a>
+        </p>
 
-        <div class="info">
-          📍 Karacaahmet Karacaahmet, Zeynep Kamil,<br>
-          Nuhkuyusu Cd No:25, 34668 Üsküdar / İstanbul
-        </div>
+        <p><strong>Adres:</strong><br>
+          Karacaahmet, Zeynep Kamil<br>
+          Nuhkuyusu Caddesi No:25<br>
+          Üsküdar / İstanbul
+        </p>
 
-        <div class="buttons">
-          <a class="whatsapp-btn"
-             href="https://wa.me/905426952150"
-             target="_blank">💬 WhatsApp’tan Yaz</a>
+        <a
+          href="https://wa.me/905426952150"
+          target="_blank"
+          class="btn btn-whatsapp">
+          WhatsApp ile İletişime Geç
+        </a>
 
-          <a class="maps-btn"
-             href="https://www.google.com/maps?q=41.0082,28.9784"
-             target="_blank">📍 Yol Tarifi Al</a>
-        </div>
+        <a
+          href="https://www.google.com/maps/place/U%C4%9Fur+Mermer/@41.0132304,29.0222005,17z"
+          target="_blank"
+          class="btn btn-map">
+          Haritada Göster
+        </a>
+      </div>
 
+      <div class="contact-box">
         <iframe
-          src="https://www.google.com/maps?q=41.0082,28.9784&output=embed"
-          loading="lazy">
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.3093316403107!2d29.0222005!3d41.0132304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7a7f7967f29%3A0x558d44e6e1e3ac49!2sU%C4%9Fur%20Mermer!5e0!3m2!1str!2str!4v1702470000000">
         </iframe>
       </div>
 
-      <p class="copyright">
-        © 1969 – <span id="year"></span> Uğur Mermer
-      </p>
+    </section>
 
-    </div>
+  </div>
+
+  <footer>
+    © Uğur Mermer
   </footer>
-
-  <!-- SABİT WHATSAPP -->
-  <a class="whatsapp-float"
-     href="https://wa.me/905426952150"
-     target="_blank">
-     💬 WhatsApp
-  </a>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>
