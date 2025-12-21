@@ -14,85 +14,76 @@
       margin: 0;
       font-family: Arial, sans-serif;
       padding: 20px;
-      background: radial-gradient(circle at top, #23493f 0%, #1b3b32 70%, #0f1f1a 100%);
-      background-attachment: fixed;
-      color: white;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
-      z-index: -1;
+      background-color: #111; /* DEĞİŞTİ */
+      color: #fff;            /* DEĞİŞTİ */
     }
 
     /* NAVBAR */
     nav {
-      background: #111;
-      padding: 14px 0;
-      border-bottom: 1px solid #00f0b5;
-      box-shadow: 0 0 12px rgba(0,0,0,0.6);
+      background: #000;             /* DEĞİŞTİ */
+      padding: 15px 0;              /* DEĞİŞTİ */
+      border-bottom: 1px solid #222;/* DEĞİŞTİ */
       margin-bottom: 30px;
       position: sticky;
       top: 0;
       z-index: 10;
+      box-shadow: none;             /* DEĞİŞTİ */
     }
 
     nav ul {
       display: flex;
       justify-content: center;
-      gap: 28px;
+      gap: 40px;   /* DEĞİŞTİ */
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
     nav ul li a {
-      color: white;
-      font-size: 18px;
+      color: #fff;          /* DEĞİŞTİ */
+      font-size: 16px;      /* DEĞİŞTİ */
       text-decoration: none;
-      font-weight: 600;
+      font-weight: normal; /* DEĞİŞTİ */
       transition: 0.2s ease;
     }
 
     nav ul li a:hover,
     nav ul li a.active {
-      color: #00f0b5;
-      text-shadow: 0 0 8px #00f0b5;
+      color: #aaa;          /* DEĞİŞTİ */
+      text-shadow: none;    /* DEĞİŞTİ */
     }
 
     /* TITLE */
     h1 {
       text-align: center;
-      color: #00f0b5;
-      text-shadow: 0 0 8px rgba(0,255,200,0.4);
+      color: #fff;          /* DEĞİŞTİ */
+      text-shadow: none;    /* DEĞİŞTİ */
       margin-bottom: 30px;
     }
 
     /* SERVICE BOX */
     .article-box {
-      background: rgba(0,0,0,0.45);
+      background: #000;     /* DEĞİŞTİ */
       padding: 22px;
       border-radius: 14px;
       margin: 18px auto;
-      border-left: 4px solid #00f0b5;
+      border-left: 4px solid #444; /* DEĞİŞTİ */
       max-width: 900px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .article-box:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(0,255,200,0.15);
+      box-shadow: 0 0 10px rgba(255,255,255,0.08); /* DEĞİŞTİ */
     }
 
     .article-box h2 {
       margin-top: 0;
-      color: #00f0b5;
+      color: #fff; /* DEĞİŞTİ */
+    }
+
+    .article-box p {
+      color: #ccc; /* DEĞİŞTİ */
     }
 
     /* MOBILE */
@@ -102,7 +93,7 @@
       }
 
       nav ul {
-        flex-direction: row; /* SADECE DEĞİŞEN SATIR */
+        flex-direction: row; /* AYNI */
         gap: 14px;
       }
 
@@ -119,7 +110,7 @@
     <ul>
       <li><a href="index.html">Anasayfa</a></li>
       <li><a href="gallery.html">Galeri</a></li>
-      <li><a href="services.html">Hizmetlerimiz</a></li>
+      <li><a href="services.html" class="active">Hizmetlerimiz</a></li>
       <li><a href="contact.html">İletişim</a></li>
     </ul>
   </nav>
