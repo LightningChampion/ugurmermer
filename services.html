@@ -1,121 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hizmetlerimiz</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #111; /* DEĞİŞTİ */
-      color: #fff;            /* DEĞİŞTİ */
-    }
-
-    /* NAVBAR */
-    nav {
-      background: #000;             /* DEĞİŞTİ */
-      padding: 15px 0;              /* DEĞİŞTİ */
-      border-bottom: 1px solid #222;/* DEĞİŞTİ */
-      margin-bottom: 30px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: none;             /* DEĞİŞTİ */
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 40px;   /* DEĞİŞTİ */
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      color: #fff;          /* DEĞİŞTİ */
-      font-size: 16px;      /* DEĞİŞTİ */
-      text-decoration: none;
-      font-weight: normal; /* DEĞİŞTİ */
-      transition: 0.2s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      color: #aaa;          /* DEĞİŞTİ */
-      text-shadow: none;    /* DEĞİŞTİ */
-    }
-
-    /* TITLE */
-    h1 {
-      text-align: center;
-      color: #fff;          /* DEĞİŞTİ */
-      text-shadow: none;    /* DEĞİŞTİ */
-      margin-bottom: 30px;
-    }
-
-    /* SERVICE BOX */
-    .article-box {
-      background: #000;     /* DEĞİŞTİ */
-      padding: 22px;
-      border-radius: 14px;
-      margin: 18px auto;
-      border-left: 4px solid #444; /* DEĞİŞTİ */
-      max-width: 900px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .article-box:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 10px rgba(255,255,255,0.08); /* DEĞİŞTİ */
-    }
-
-    .article-box h2 {
-      margin-top: 0;
-      color: #fff; /* DEĞİŞTİ */
-    }
-
-    .article-box p {
-      color: #ccc; /* DEĞİŞTİ */
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-      body {
-        padding: 14px;
-      }
-
-      nav ul {
-        flex-direction: row; /* AYNI */
-        gap: 14px;
-      }
-
-      nav ul li a {
-        font-size: 16px;
-      }
-    }
-
-    /* FOOTER */
-    footer {
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
-      background: #000;
-      color: #aaa;
-      margin-top: 60px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hizmetlerimiz | Uğur Mermer</title>
+  <meta name="description" content="Mezar taşı yapımı, mezar onarım, temizlik, lahit yapımı, komple mezar yapımı ve çeşme uygulamaları.">
+  <link rel="stylesheet" href="Styles.css">
 </head>
-
 <body>
-
   <nav>
     <ul>
       <li><a href="index.html">Anasayfa</a></li>
@@ -125,45 +17,97 @@
     </ul>
   </nav>
 
-  <h1>Hizmetlerimiz</h1>
+  <main class="container">
+    <section class="page-hero section-header center">
+      <span class="eyebrow">Hizmetlerimiz</span>
+      <h1>İhtiyaca uygun uygulamalar</h1>
+      <p class="lead">Her hizmette düzenli işçilik, dayanıklı malzeme ve özenli uygulama anlayışıyla çalışıyoruz.</p>
+    </section>
 
-  <div class="article-box">
-    <h2>Mezar taşı yapımı</h2>
-    <p></p>
-  </div>
+    <section class="section services-grid">
+      <article class="service-card">
+        <h3>Mezar taşı yapımı</h3>
+        <p>Mermer veya granit seçenekleriyle, yazı ve model tercihlerinize uygun mezar taşı üretimi yapılır.</p>
+        <ul>
+          <li>Kişiye özel ölçü ve model seçenekleri</li>
+          <li>Yazı ve yüzey uygulamaları</li>
+          <li>Temiz ve düzenli montaj</li>
+        </ul>
+      </article>
 
-  <div class="article-box">
-    <h2>Mezar onarım</h2>
-    <p></p>
-  </div>
+      <article class="service-card">
+        <h3>Mezar onarım</h3>
+        <p>Hasar gören, çatlayan veya zamanla yıpranan bölümlerin düzenlenmesi ve yenilenmesi yapılır.</p>
+        <ul>
+          <li>Kırık ve hasarlı kısımların onarımı</li>
+          <li>Taş yüzey düzeltmeleri</li>
+          <li>Genel görünüm yenilemesi</li>
+        </ul>
+      </article>
 
-  <div class="article-box">
-    <h2>Mezar temizliği</h2>
-    <p></p>
-  </div>
+      <article class="service-card">
+        <h3>Mezar temizliği</h3>
+        <p>Zamanla kirlenen, matlaşan veya bakıma ihtiyaç duyan mezar alanlarının temizliği sağlanır.</p>
+        <ul>
+          <li>Yüzey temizliği</li>
+          <li>Daha düzenli görünüm</li>
+          <li>Bakım odaklı uygulama</li>
+        </ul>
+      </article>
 
-  <div class="article-box">
-    <h2>Mezar içine lahit yapımı</h2>
-    <p></p>
-  </div>
+      <article class="service-card">
+        <h3>Mezar içine lahit yapımı</h3>
+        <p>İhtiyaca uygun şekilde mezar içine lahit uygulaması özenle hazırlanır ve uygulanır.</p>
+        <ul>
+          <li>Uygun ölçülendirme</li>
+          <li>Sağlam ve düzenli uygulama</li>
+          <li>Uzun ömürlü kullanım hedefi</li>
+        </ul>
+      </article>
 
-  <div class="article-box">
-    <h2>Komple mezar yapımı</h2>
-    <p></p>
-  </div>
+      <article class="service-card">
+        <h3>Komple mezar yapımı</h3>
+        <p>Baştan sona tasarlanan mezar yapım sürecinde tüm taş ve uygulama detayları birlikte planlanır.</p>
+        <ul>
+          <li>Mermer ve granit çözümleri</li>
+          <li>Bütünlüklü görünüm</li>
+          <li>İsteğe uygun detaylandırma</li>
+        </ul>
+      </article>
 
-  <div class="article-box">
-    <h2>Çeşme</h2>
-    <p></p>
-  </div>
+      <article class="service-card">
+        <h3>Çeşme</h3>
+        <p>Mezar alanı veya uygun bölümler için estetik ve işlevsel çeşme uygulamaları yapılır.</p>
+        <ul>
+          <li>Şık ve sade tasarım</li>
+          <li>Taş ile uyumlu görünüm</li>
+          <li>Özenli montaj</li>
+        </ul>
+      </article>
+    </section>
 
-    </div>
-
-  </div>
+    <section class="section">
+      <div class="cta-panel">
+        <div>
+          <span class="eyebrow">Bilgi Alın</span>
+          <h2>İhtiyacınıza uygun hizmet için bize ulaşın</h2>
+          <p>Yapım, bakım veya yenileme süreci hakkında hızlıca bilgi almak için telefon ya da WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-secondary" href="tel:+905426952150">Ara</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    Uğur Mermer
+    <div class="container footer-inner">
+      <div>Uğur Mermer</div>
+      <div>Mezar yapımı ve mermer işleri</div>
+    </div>
   </footer>
 
+  <a class="floating-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişim">WA</a>
 </body>
 </html>
