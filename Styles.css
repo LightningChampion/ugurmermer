@@ -592,7 +592,7 @@ footer {
 
 @media (max-width: 760px) {
   body {
-    padding-top: 108px;
+    padding-top: 96px;
   }
 
   .nav-inner {
@@ -638,12 +638,12 @@ footer {
 
   .hero-mobile-stack {
     display: block;
-    padding: 8px 0 0;
+    padding: 0;
   }
 
   .hero-copy-mobile {
     max-width: 100%;
-    padding: 8px 0 0;
+    padding: 0;
   }
 
   .hero-copy-mobile h1 {
@@ -788,7 +788,7 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 102px;
+    padding-top: 92px;
   }
 
   .container {
@@ -821,7 +821,7 @@ footer {
   }
 
   .hero-copy-mobile {
-    padding: 4px 0 0;
+    padding: 0;
   }
 
   h1,
