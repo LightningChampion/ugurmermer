@@ -577,28 +577,27 @@ footer {
 
 @media (max-width: 760px) {
   body {
-    padding-top: 116px;
+    padding-top: 108px;
   }
 
   .nav-inner {
     min-height: auto;
-    padding: 12px 0 14px;
+    padding: 10px 0 12px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
   }
 
   .brand {
-    font-size: 1.05rem;
-    line-height: 1.1;
+    font-size: 1rem;
+    line-height: 1.05;
   }
 
   nav ul {
-    gap: 18px;
+    gap: 12px 18px;
     flex-wrap: wrap;
     justify-content: flex-start;
-    row-gap: 10px;
   }
 
   nav a {
@@ -606,76 +605,115 @@ footer {
   }
 
   .container {
-    width: min(100% - 20px, 1280px);
+    width: min(100% - 18px, 1280px);
   }
 
   .hero {
-    min-height: 700px;
+    min-height: auto;
+  }
+
+  .hero-banner {
+    padding: 8px 0 0;
   }
 
   .hero::before,
   .hero-banner-image,
   .hero-banner-overlay {
-    inset: 8px 8px 0 8px;
-    border-radius: 20px;
+    inset: 6px 6px 0 6px;
+    border-radius: 18px;
   }
 
   .hero-banner-content {
-    min-height: 700px;
+    min-height: auto;
     align-items: flex-start;
+    padding-bottom: 18px;
   }
 
   .hero-banner-image img {
-    object-position: 72% center;
-    transform: scale(1.06);
+    object-position: 76% center;
+    transform: scale(1.08);
   }
 
   .hero-banner-overlay {
     background:
       linear-gradient(180deg,
-        rgba(0,0,0,0.82) 0%,
-        rgba(0,0,0,0.66) 34%,
-        rgba(0,0,0,0.48) 58%,
-        rgba(0,0,0,0.34) 100%);
+        rgba(0,0,0,0.88) 0%,
+        rgba(0,0,0,0.72) 28%,
+        rgba(0,0,0,0.56) 56%,
+        rgba(0,0,0,0.44) 100%);
   }
 
   .hero-copy {
     max-width: 100%;
-    padding: 34px 0 34px;
+    padding: 24px 0 24px;
   }
 
   .hero-chip {
     font-size: 12px;
-    padding: 7px 12px;
-    margin-bottom: 10px;
+    padding: 7px 11px;
+    margin-bottom: 8px;
   }
 
   h1 {
-    font-size: clamp(1.95rem, 8vw, 2.7rem);
-    line-height: 1.04;
-    margin-bottom: 14px;
+    font-size: clamp(1.75rem, 7.8vw, 2.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
   }
 
   .lead {
-    font-size: 0.98rem;
-    line-height: 1.55;
+    font-size: 0.96rem;
+    line-height: 1.5;
     max-width: 100%;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   .hero-badges {
-    gap: 10px;
-    margin: 18px 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 14px 0 16px;
+  }
+
+  .hero-badges .badge:last-child {
+    grid-column: 1 / -1;
   }
 
   .badge {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.25;
-    padding: 10px 12px;
+    padding: 9px 10px;
+    text-align: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.09);
+  }
+
+  .actions,
+  .contact-actions,
+  .cta-panel,
+  .footer-inner {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .actions .btn,
+  .contact-actions .btn {
+    width: 100%;
+  }
+
+  .btn {
+    min-height: 48px;
+    font-size: 15px;
+    border-radius: 14px;
   }
 
   .section-tight {
-    margin-top: 12px;
+    margin-top: 14px;
     padding-top: 14px;
   }
 
@@ -694,25 +732,6 @@ footer {
     padding: 20px;
   }
 
-  .actions,
-  .contact-actions,
-  .cta-panel,
-  .footer-inner {
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .actions .btn,
-  .contact-actions .btn {
-    width: 100%;
-  }
-
-  .btn {
-    min-height: 52px;
-    font-size: 16px;
-  }
-
   .slider img {
     height: 360px;
   }
@@ -724,74 +743,70 @@ footer {
   }
 
   .floating-whatsapp {
-    width: 56px;
-    height: 56px;
-    right: 14px;
-    bottom: 14px;
+    width: 54px;
+    height: 54px;
+    right: 12px;
+    bottom: 12px;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    padding-top: 112px;
+    padding-top: 102px;
   }
 
   .container {
-    width: min(100% - 16px, 1280px);
+    width: min(100% - 14px, 1280px);
   }
 
   .nav-inner {
-    gap: 10px;
-    padding: 10px 0 12px;
+    gap: 7px;
+    padding: 9px 0 10px;
   }
 
   .brand {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   nav ul {
-    gap: 14px;
+    gap: 10px 14px;
   }
 
   nav a {
     font-size: 13px;
   }
 
-  .hero {
-    min-height: 660px;
-  }
-
   .hero::before,
   .hero-banner-image,
   .hero-banner-overlay {
-    inset: 6px 6px 0 6px;
+    inset: 4px 4px 0 4px;
     border-radius: 16px;
   }
 
-  .hero-banner-content {
-    min-height: 660px;
-  }
-
   .hero-banner-image img {
-    object-position: 74% center;
-    transform: scale(1.08);
+    object-position: 78% center;
+    transform: scale(1.1);
   }
 
   .hero-copy {
-    padding: 28px 0 28px;
+    padding: 20px 0 20px;
   }
 
   h1 {
-    font-size: clamp(1.75rem, 8.8vw, 2.25rem);
-    line-height: 1.03;
+    font-size: clamp(1.6rem, 8vw, 2.05rem);
+    line-height: 1.04;
   }
 
   .lead {
-    font-size: 0.93rem;
+    font-size: 0.92rem;
   }
 
   .hero-badges {
-    gap: 8px;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-badges .badge:last-child {
+    grid-column: auto;
   }
 
   .badge {
@@ -800,11 +815,11 @@ footer {
   }
 
   .btn {
-    min-height: 48px;
+    min-height: 46px;
     font-size: 15px;
   }
 
   .section-tight {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 }
