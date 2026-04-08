@@ -592,16 +592,16 @@ footer {
 
 @media (max-width: 760px) {
   body {
-    padding-top: 96px;
+    padding-top: 88px;
   }
 
   .nav-inner {
     min-height: auto;
-    padding: 10px 0 12px;
+    padding: 6px 0 8px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
   }
 
   .brand {
@@ -610,7 +610,7 @@ footer {
   }
 
   nav ul {
-    gap: 12px 18px;
+    gap: 10px 16px;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
@@ -661,7 +661,7 @@ footer {
   }
 
   .hero-mobile-image-wrap {
-    margin-top: 18px;
+    margin-top: 16px;
     padding: 0 9px;
   }
 
@@ -726,7 +726,7 @@ footer {
   .hero-chip {
     font-size: 12px;
     padding: 7px 11px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   h1 {
@@ -788,7 +788,7 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 92px;
+    padding-top: 84px;
   }
 
   .container {
@@ -796,8 +796,8 @@ footer {
   }
 
   .nav-inner {
-    gap: 7px;
-    padding: 9px 0 10px;
+    gap: 5px;
+    padding: 5px 0 7px;
   }
 
   .brand {
@@ -805,7 +805,7 @@ footer {
   }
 
   nav ul {
-    gap: 10px 14px;
+    gap: 8px 12px;
   }
 
   nav a {
