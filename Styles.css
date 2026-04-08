@@ -577,86 +577,106 @@ footer {
 
 @media (max-width: 760px) {
   body {
-    padding-top: 74px;
+    padding-top: 116px;
   }
 
   .nav-inner {
-    min-height: 74px;
-    padding: 12px 0;
+    min-height: auto;
+    padding: 12px 0 14px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .brand {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+    line-height: 1.1;
   }
 
   nav ul {
-    gap: 16px;
+    gap: 18px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    row-gap: 10px;
   }
 
   nav a {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .container {
-    width: min(100% - 22px, 1280px);
+    width: min(100% - 20px, 1280px);
   }
 
   .hero {
-    min-height: 560px;
+    min-height: 700px;
   }
 
   .hero::before,
   .hero-banner-image,
   .hero-banner-overlay {
-    inset: 10px 10px 0 10px;
-    border-radius: 22px;
+    inset: 8px 8px 0 8px;
+    border-radius: 20px;
   }
 
   .hero-banner-content {
-    min-height: 560px;
+    min-height: 700px;
+    align-items: flex-start;
   }
 
   .hero-banner-image img {
-    object-position: 62% center;
-    transform: scale(1.03);
+    object-position: 72% center;
+    transform: scale(1.06);
+  }
+
+  .hero-banner-overlay {
+    background:
+      linear-gradient(180deg,
+        rgba(0,0,0,0.82) 0%,
+        rgba(0,0,0,0.66) 34%,
+        rgba(0,0,0,0.48) 58%,
+        rgba(0,0,0,0.34) 100%);
   }
 
   .hero-copy {
     max-width: 100%;
-    padding: 48px 0 50px;
+    padding: 34px 0 34px;
+  }
+
+  .hero-chip {
+    font-size: 12px;
+    padding: 7px 12px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: clamp(1.95rem, 8vw, 2.7rem);
+    line-height: 1.04;
+    margin-bottom: 14px;
+  }
+
+  .lead {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    max-width: 100%;
+    margin-bottom: 14px;
   }
 
   .hero-badges {
     gap: 10px;
+    margin: 18px 0 20px;
   }
 
   .badge {
     font-size: 13px;
-    padding: 9px 12px;
-  }
-
-  .hero-chip {
-    font-size: 13px;
-    padding: 7px 12px;
-  }
-
-  h1 {
-    font-size: clamp(1.9rem, 7.6vw, 2.7rem);
-    line-height: 1.08;
-  }
-
-  .lead {
-    font-size: 1rem;
+    line-height: 1.25;
+    padding: 10px 12px;
   }
 
   .section-tight {
-    margin-top: -10px;
+    margin-top: 12px;
+    padding-top: 14px;
   }
 
   .stats-grid,
@@ -664,6 +684,33 @@ footer {
   .gallery-grid,
   .highlights-grid {
     grid-template-columns: 1fr;
+  }
+
+  .stat-card,
+  .service-card,
+  .highlight-card,
+  .cta-panel,
+  .contact-box {
+    padding: 20px;
+  }
+
+  .actions,
+  .contact-actions,
+  .cta-panel,
+  .footer-inner {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions .btn,
+  .contact-actions .btn {
+    width: 100%;
+  }
+
+  .btn {
+    min-height: 52px;
+    font-size: 16px;
   }
 
   .slider img {
@@ -676,21 +723,6 @@ footer {
     font-size: 24px;
   }
 
-  .contact-actions,
-  .actions,
-  .cta-panel,
-  .footer-inner {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .contact-actions .btn,
-  .actions .btn {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-
   .floating-whatsapp {
     width: 56px;
     height: 56px;
@@ -701,63 +733,78 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 70px;
+    padding-top: 112px;
   }
 
   .container {
-    width: min(100% - 18px, 1280px);
+    width: min(100% - 16px, 1280px);
   }
 
   .nav-inner {
-    gap: 8px;
+    gap: 10px;
+    padding: 10px 0 12px;
+  }
+
+  .brand {
+    font-size: 1rem;
   }
 
   nav ul {
-    gap: 12px;
+    gap: 14px;
   }
 
   nav a {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .hero {
-    min-height: 500px;
+    min-height: 660px;
   }
 
   .hero::before,
   .hero-banner-image,
   .hero-banner-overlay {
-    inset: 8px 8px 0 8px;
-    border-radius: 18px;
+    inset: 6px 6px 0 6px;
+    border-radius: 16px;
   }
 
   .hero-banner-content {
-    min-height: 500px;
+    min-height: 660px;
+  }
+
+  .hero-banner-image img {
+    object-position: 74% center;
+    transform: scale(1.08);
   }
 
   .hero-copy {
-    padding: 40px 0 40px;
+    padding: 28px 0 28px;
   }
 
   h1 {
-    font-size: clamp(1.75rem, 8vw, 2.35rem);
+    font-size: clamp(1.75rem, 8.8vw, 2.25rem);
+    line-height: 1.03;
   }
 
   .lead {
-    font-size: 0.95rem;
+    font-size: 0.93rem;
+  }
+
+  .hero-badges {
+    gap: 8px;
   }
 
   .badge {
     font-size: 12px;
-    padding: 8px 10px;
+    padding: 9px 10px;
   }
 
   .btn {
-    min-height: 46px;
+    min-height: 48px;
     font-size: 15px;
   }
 
   .section-tight {
-    margin-top: -4px;
+    margin-top: 10px;
   }
 }
