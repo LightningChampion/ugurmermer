@@ -311,11 +311,16 @@ p {
 
 .stats-grid,
 .services-grid,
-.gallery-grid,
 .highlights-grid {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .stat-card,
