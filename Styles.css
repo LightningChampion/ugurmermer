@@ -436,13 +436,13 @@ iframe.map {
   max-width: 760px;
 }
 
-.page-hero.center .eyebrow {
+.gallery-page .page-hero.center .eyebrow {
   font-size: 18px;
   letter-spacing: 0.12em;
   margin-bottom: 18px;
 }
 
-.page-hero.center h1 {
+.gallery-page .page-hero.center h1 {
   font-size: clamp(3.2rem, 5vw, 5rem);
   line-height: 1.06;
   letter-spacing: -0.04em;
@@ -450,7 +450,7 @@ iframe.map {
   margin: 0 auto 22px;
 }
 
-.page-hero.center .lead {
+.gallery-page .page-hero.center .lead {
   font-size: 1.35rem;
   line-height: 1.6;
   max-width: 920px;
@@ -763,18 +763,18 @@ footer {
     max-width: 100%;
   }
 
-  .page-hero.center .eyebrow {
+  .gallery-page .page-hero.center .eyebrow {
     font-size: 14px;
     margin-bottom: 12px;
   }
 
-  .page-hero.center h1 {
+  .gallery-page .page-hero.center h1 {
     font-size: clamp(2.1rem, 8vw, 3rem);
     line-height: 1.08;
     margin-bottom: 16px;
   }
 
-  .page-hero.center .lead {
+  .gallery-page .page-hero.center .lead {
     font-size: 1rem;
     line-height: 1.55;
   }
