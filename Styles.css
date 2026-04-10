@@ -369,6 +369,10 @@ p {
   font-size: 1.6rem;
 }
 
+.highlight-card h3 {
+  color: var(--accent);
+}
+
 .highlight-card p:last-child,
 .service-card p:last-child,
 .stat-card p:last-child,
