@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeri | Uğur Mermer</title>
-  <meta name="description" content="Uğur Mermer tarafından tamamlanan örnek mezar yapımı ve mermer işlerini galeride inceleyin.">
+  <title id="pageTitle">Galeri | Uğur Mermer</title>
+  <meta id="pageDescription" name="description" content="Uğur Mermer tarafından tamamlanan örnek mezar yapımı ve mermer işlerini galeride inceleyin.">
   <link rel="stylesheet" href="Styles.css">
   <style>
     .floating-whatsapp {
@@ -23,10 +23,148 @@
       display: block;
     }
 
+    .language-bar {
+      position: relative;
+      z-index: 20;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: #e9e9e9;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .lang-btn.active {
+      background: #ffffff;
+      color: #111;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+    }
+
+    .lang-btn .flag {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .lang-btn .label {
+      line-height: 1;
+    }
+
+    html[dir="rtl"] body {
+      direction: rtl;
+    }
+
+    html[dir="rtl"] .nav-inner,
+    html[dir="rtl"] .actions,
+    html[dir="rtl"] .footer-inner,
+    html[dir="rtl"] .slider-meta {
+      direction: rtl;
+    }
+
+    html[dir="rtl"] .page-hero,
+    html[dir="rtl"] .cta-panel,
+    html[dir="rtl"] .slider-meta {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .slider {
+      direction: ltr;
+    }
+
+    @media (max-width: 1180px) {
+      .language-bar {
+        margin-top: 10px;
+      }
+
+      .language-switcher {
+        width: 100%;
+      }
+    }
+
     @media (max-width: 760px) {
       .floating-whatsapp svg {
         width: 26px;
         height: 26px;
+      }
+
+      .language-bar {
+        margin-top: 10px;
+        margin-bottom: 4px;
+      }
+
+      .language-switcher {
+        width: 100%;
+        padding: 10px;
+        border-radius: 22px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .lang-btn {
+        width: 100%;
+        min-height: 42px;
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+
+      .lang-btn .flag {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .language-switcher {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        padding: 8px;
+      }
+
+      .lang-btn {
+        min-height: 42px;
+        padding: 8px 6px;
+        font-size: 13px;
+        gap: 6px;
+      }
+
+      .lang-btn .flag {
+        font-size: 16px;
+      }
+
+      .lang-btn .label {
+        font-size: 13px;
       }
     }
   </style>
@@ -36,117 +174,142 @@
     <div class="container nav-inner">
       <a class="brand" href="index.html">UĞUR MERMER</a>
       <ul>
-        <li><a href="index.html">Anasayfa</a></li>
-        <li><a href="gallery.html" class="active">Galeri</a></li>
-        <li><a href="services.html">Hizmetlerimiz</a></li>
-        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Anasayfa</a></li>
+        <li><a href="gallery.html" class="active" data-i18n="nav_gallery">Galeri</a></li>
+        <li><a href="services.html" data-i18n="nav_services">Hizmetlerimiz</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">İletişim</a></li>
       </ul>
     </div>
   </nav>
 
+  <div class="language-bar">
+    <div class="container">
+      <div class="language-switcher" aria-label="Dil seçici">
+        <button type="button" class="lang-btn active" data-lang="tr" aria-label="Türkçe">
+          <span class="flag">🇹🇷</span><span class="label">Türkçe</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-label="English">
+          <span class="flag">🇬🇧</span><span class="label">English</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="ar" aria-label="العربية">
+          <span class="flag">🇸🇦</span><span class="label">العربية</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch">
+          <span class="flag">🇩🇪</span><span class="label">Deutsch</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-label="Русский">
+          <span class="flag">🇷🇺</span><span class="label">Русский</span>
+        </button>
+        <button type="button" class="lang-btn" data-lang="zh" aria-label="简体中文">
+          <span class="flag">🇨🇳</span><span class="label">简体中文</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <main class="container">
     <section class="page-hero section-header center">
-      <h1 style="color: var(--accent);">Referanslarımız</h1>
-      <p class="lead">Tamamlanan işlerden seçilen görselleri inceleyebilir, tarz ve uygulama detayları hakkında fikir edinebilirsiniz.</p>
+      <h1 style="color: var(--accent);" data-i18n="gallery_page_title">Referanslarımız</h1>
+      <p class="lead" data-i18n="gallery_page_text">Tamamlanan işlerden seçilen görselleri inceleyebilir, tarz ve uygulama detayları hakkında fikir edinebilirsiniz.</p>
     </section>
 
     <section class="section slider-shell">
       <div class="slider-container">
         <div class="slider" id="slider">
-          <img src="images/photo1.jpg" alt="Galeri görseli 1">
-          <img src="images/photo2.jpg" alt="Galeri görseli 2">
-          <img src="images/photo3.jpg" alt="Galeri görseli 3">
-          <img src="images/photo4.jpg" alt="Galeri görseli 4">
-          <img src="images/photo5.jpg" alt="Galeri görseli 5">
-          <img src="images/photo6.jpg" alt="Galeri görseli 6">
-          <img src="images/photo7.jpg" alt="Galeri görseli 7">
-          <img src="images/photo8.jpg" alt="Galeri görseli 8">
-          <img src="images/photo9.jpg" alt="Galeri görseli 9">
-          <img src="images/photo10.jpg" alt="Galeri görseli 10">
-          <img src="images/photo11.jpg" alt="Galeri görseli 11">
-          <img src="images/photo12.jpg" alt="Galeri görseli 12">
-          <img src="images/photo13.jpg" alt="Galeri görseli 13">
-          <img src="images/photo14.jpg" alt="Galeri görseli 14">
-          <img src="images/photo15.jpg" alt="Galeri görseli 15">
-          <img src="images/photo16.jpg" alt="Galeri görseli 16">
-          <img src="images/photo17.jpg" alt="Galeri görseli 17">
-          <img src="images/photo18.jpg" alt="Galeri görseli 18">
-          <img src="images/photo19.jpg" alt="Galeri görseli 19">
-          <img src="images/photo20.jpg" alt="Galeri görseli 20">
-          <img src="images/photo21.jpg" alt="Galeri görseli 21">
-          <img src="images/photo22.jpg" alt="Galeri görseli 22">
-          <img src="images/photo23.jpg" alt="Galeri görseli 23">
-          <img src="images/photo24.jpg" alt="Galeri görseli 24">
-          <img src="images/photo25.jpg" alt="Galeri görseli 25">
-          <img src="images/photo26.jpg" alt="Galeri görseli 26">
-          <img src="images/photo27.jpg" alt="Galeri görseli 27">
-          <img src="images/photo28.jpg" alt="Galeri görseli 28">
-          <img src="images/photo29.jpg" alt="Galeri görseli 29">
-          <img src="images/photo30.jpg" alt="Galeri görseli 30">
-          <img src="images/photo31.jpg" alt="Galeri görseli 31">
-          <img src="images/photo32.jpg" alt="Galeri görseli 32">
-          <img src="images/photo33.jpg" alt="Galeri görseli 33">
-          <img src="images/photo34.jpg" alt="Galeri görseli 34">
-          <img src="images/photo35.jpg" alt="Galeri görseli 35">
-          <img src="images/photo36.jpg" alt="Galeri görseli 36">
-          <img src="images/photo37.jpg" alt="Galeri görseli 37">
-          <img src="images/photo38.jpg" alt="Galeri görseli 38">
-          <img src="images/photo39.jpg" alt="Galeri görseli 39">
-          <img src="images/photo40.jpg" alt="Galeri görseli 40">
-          <img src="images/photo41.jpg" alt="Galeri görseli 41">
-          <img src="images/photo42.jpg" alt="Galeri görseli 42">
-          <img src="images/photo43.jpg" alt="Galeri görseli 43">
-          <img src="images/photo44.jpg" alt="Galeri görseli 44">
-          <img src="images/photo45.jpg" alt="Galeri görseli 45">
-          <img src="images/photo46.jpg" alt="Galeri görseli 46">
-          <img src="images/photo47.jpg" alt="Galeri görseli 47">
-          <img src="images/photo48.jpg" alt="Galeri görseli 48">
-          <img src="images/photo49.jpg" alt="Galeri görseli 49">
-          <img src="images/photo50.jpg" alt="Galeri görseli 50">
-          <img src="images/photo51.jpg" alt="Galeri görseli 51">
-          <img src="images/photo52.jpg" alt="Galeri görseli 52">
-          <img src="images/photo53.jpg" alt="Galeri görseli 53">
-          <img src="images/photo54.jpg" alt="Galeri görseli 54">
-          <img src="images/photo55.jpg" alt="Galeri görseli 55">
-          <img src="images/photo56.jpg" alt="Galeri görseli 56">
-          <img src="images/photo57.jpg" alt="Galeri görseli 57">
-          <img src="images/photo58.jpg" alt="Galeri görseli 58">
-          <img src="images/photo59.jpg" alt="Galeri görseli 59">
-          <img src="images/photo60.jpg" alt="Galeri görseli 60">
-          <img src="images/photo61.jpg" alt="Galeri görseli 61">
-          <img src="images/photo62.jpg" alt="Galeri görseli 62">
-          <img src="images/photo63.jpg" alt="Galeri görseli 63">
-          <img src="images/photo64.jpg" alt="Galeri görseli 64">
-          <img src="images/photo65.jpg" alt="Galeri görseli 65">
-          <img src="images/photo66.jpg" alt="Galeri görseli 66">
-          <img src="images/photo67.jpg" alt="Galeri görseli 67">
-          <img src="images/photo68.jpg" alt="Galeri görseli 68">
-          <img src="images/photo69.jpg" alt="Galeri görseli 69">
-          <img src="images/photo70.jpg" alt="Galeri görseli 70">
-          <img src="images/photo71.jpg" alt="Galeri görseli 71">
-          <img src="images/photo71.jpg" alt="Galeri görseli 72">
+          <img src="images/photo1.jpg" alt="Galeri görseli 1" data-gallery-alt="1">
+          <img src="images/photo2.jpg" alt="Galeri görseli 2" data-gallery-alt="2">
+          <img src="images/photo3.jpg" alt="Galeri görseli 3" data-gallery-alt="3">
+          <img src="images/photo4.jpg" alt="Galeri görseli 4" data-gallery-alt="4">
+          <img src="images/photo5.jpg" alt="Galeri görseli 5" data-gallery-alt="5">
+          <img src="images/photo6.jpg" alt="Galeri görseli 6" data-gallery-alt="6">
+          <img src="images/photo7.jpg" alt="Galeri görseli 7" data-gallery-alt="7">
+          <img src="images/photo8.jpg" alt="Galeri görseli 8" data-gallery-alt="8">
+          <img src="images/photo9.jpg" alt="Galeri görseli 9" data-gallery-alt="9">
+          <img src="images/photo10.jpg" alt="Galeri görseli 10" data-gallery-alt="10">
+          <img src="images/photo11.jpg" alt="Galeri görseli 11" data-gallery-alt="11">
+          <img src="images/photo12.jpg" alt="Galeri görseli 12" data-gallery-alt="12">
+          <img src="images/photo13.jpg" alt="Galeri görseli 13" data-gallery-alt="13">
+          <img src="images/photo14.jpg" alt="Galeri görseli 14" data-gallery-alt="14">
+          <img src="images/photo15.jpg" alt="Galeri görseli 15" data-gallery-alt="15">
+          <img src="images/photo16.jpg" alt="Galeri görseli 16" data-gallery-alt="16">
+          <img src="images/photo17.jpg" alt="Galeri görseli 17" data-gallery-alt="17">
+          <img src="images/photo18.jpg" alt="Galeri görseli 18" data-gallery-alt="18">
+          <img src="images/photo19.jpg" alt="Galeri görseli 19" data-gallery-alt="19">
+          <img src="images/photo20.jpg" alt="Galeri görseli 20" data-gallery-alt="20">
+          <img src="images/photo21.jpg" alt="Galeri görseli 21" data-gallery-alt="21">
+          <img src="images/photo22.jpg" alt="Galeri görseli 22" data-gallery-alt="22">
+          <img src="images/photo23.jpg" alt="Galeri görseli 23" data-gallery-alt="23">
+          <img src="images/photo24.jpg" alt="Galeri görseli 24" data-gallery-alt="24">
+          <img src="images/photo25.jpg" alt="Galeri görseli 25" data-gallery-alt="25">
+          <img src="images/photo26.jpg" alt="Galeri görseli 26" data-gallery-alt="26">
+          <img src="images/photo27.jpg" alt="Galeri görseli 27" data-gallery-alt="27">
+          <img src="images/photo28.jpg" alt="Galeri görseli 28" data-gallery-alt="28">
+          <img src="images/photo29.jpg" alt="Galeri görseli 29" data-gallery-alt="29">
+          <img src="images/photo30.jpg" alt="Galeri görseli 30" data-gallery-alt="30">
+          <img src="images/photo31.jpg" alt="Galeri görseli 31" data-gallery-alt="31">
+          <img src="images/photo32.jpg" alt="Galeri görseli 32" data-gallery-alt="32">
+          <img src="images/photo33.jpg" alt="Galeri görseli 33" data-gallery-alt="33">
+          <img src="images/photo34.jpg" alt="Galeri görseli 34" data-gallery-alt="34">
+          <img src="images/photo35.jpg" alt="Galeri görseli 35" data-gallery-alt="35">
+          <img src="images/photo36.jpg" alt="Galeri görseli 36" data-gallery-alt="36">
+          <img src="images/photo37.jpg" alt="Galeri görseli 37" data-gallery-alt="37">
+          <img src="images/photo38.jpg" alt="Galeri görseli 38" data-gallery-alt="38">
+          <img src="images/photo39.jpg" alt="Galeri görseli 39" data-gallery-alt="39">
+          <img src="images/photo40.jpg" alt="Galeri görseli 40" data-gallery-alt="40">
+          <img src="images/photo41.jpg" alt="Galeri görseli 41" data-gallery-alt="41">
+          <img src="images/photo42.jpg" alt="Galeri görseli 42" data-gallery-alt="42">
+          <img src="images/photo43.jpg" alt="Galeri görseli 43" data-gallery-alt="43">
+          <img src="images/photo44.jpg" alt="Galeri görseli 44" data-gallery-alt="44">
+          <img src="images/photo45.jpg" alt="Galeri görseli 45" data-gallery-alt="45">
+          <img src="images/photo46.jpg" alt="Galeri görseli 46" data-gallery-alt="46">
+          <img src="images/photo47.jpg" alt="Galeri görseli 47" data-gallery-alt="47">
+          <img src="images/photo48.jpg" alt="Galeri görseli 48" data-gallery-alt="48">
+          <img src="images/photo49.jpg" alt="Galeri görseli 49" data-gallery-alt="49">
+          <img src="images/photo50.jpg" alt="Galeri görseli 50" data-gallery-alt="50">
+          <img src="images/photo51.jpg" alt="Galeri görseli 51" data-gallery-alt="51">
+          <img src="images/photo52.jpg" alt="Galeri görseli 52" data-gallery-alt="52">
+          <img src="images/photo53.jpg" alt="Galeri görseli 53" data-gallery-alt="53">
+          <img src="images/photo54.jpg" alt="Galeri görseli 54" data-gallery-alt="54">
+          <img src="images/photo55.jpg" alt="Galeri görseli 55" data-gallery-alt="55">
+          <img src="images/photo56.jpg" alt="Galeri görseli 56" data-gallery-alt="56">
+          <img src="images/photo57.jpg" alt="Galeri görseli 57" data-gallery-alt="57">
+          <img src="images/photo58.jpg" alt="Galeri görseli 58" data-gallery-alt="58">
+          <img src="images/photo59.jpg" alt="Galeri görseli 59" data-gallery-alt="59">
+          <img src="images/photo60.jpg" alt="Galeri görseli 60" data-gallery-alt="60">
+          <img src="images/photo61.jpg" alt="Galeri görseli 61" data-gallery-alt="61">
+          <img src="images/photo62.jpg" alt="Galeri görseli 62" data-gallery-alt="62">
+          <img src="images/photo63.jpg" alt="Galeri görseli 63" data-gallery-alt="63">
+          <img src="images/photo64.jpg" alt="Galeri görseli 64" data-gallery-alt="64">
+          <img src="images/photo65.jpg" alt="Galeri görseli 65" data-gallery-alt="65">
+          <img src="images/photo66.jpg" alt="Galeri görseli 66" data-gallery-alt="66">
+          <img src="images/photo67.jpg" alt="Galeri görseli 67" data-gallery-alt="67">
+          <img src="images/photo68.jpg" alt="Galeri görseli 68" data-gallery-alt="68">
+          <img src="images/photo69.jpg" alt="Galeri görseli 69" data-gallery-alt="69">
+          <img src="images/photo70.jpg" alt="Galeri görseli 70" data-gallery-alt="70">
+          <img src="images/photo71.jpg" alt="Galeri görseli 71" data-gallery-alt="71">
+          <img src="images/photo71.jpg" alt="Galeri görseli 72" data-gallery-alt="72">
         </div>
       </div>
 
-      <button class="slider-button prev" type="button" aria-label="Önceki görsel">&#8249;</button>
-      <button class="slider-button next" type="button" aria-label="Sonraki görsel">&#8250;</button>
+      <button class="slider-button prev" type="button" aria-label="Önceki görsel" data-i18n-aria="prev_aria">&#8249;</button>
+      <button class="slider-button next" type="button" aria-label="Sonraki görsel" data-i18n-aria="next_aria">&#8250;</button>
 
       <div class="slider-meta">
-        <p>Görseller arasında ok tuşlarıyla geçiş yapabilirsiniz.</p>
-        <div class="slider-counter" id="sliderCounter">1 / 71</div>
+        <p data-i18n="slider_help">Görseller arasında ok tuşlarıyla geçiş yapabilirsiniz.</p>
+        <div class="slider-counter" id="sliderCounter">1 / 72</div>
       </div>
     </section>
 
     <section class="section">
       <div class="cta-panel">
         <div>
-          <span class="eyebrow">Bilgi Alın</span>
-          <h2>Benzer bir uygulama için bize ulaşın</h2>
-          <p>Galeride gördüğünüz modellere benzer uygulamalar hakkında bilgi almak için hemen iletişime geçebilirsiniz.</p>
+          <span class="eyebrow" data-i18n="cta_eyebrow">Bilgi Alın</span>
+          <h2 data-i18n="cta_title">Benzer bir uygulama için bize ulaşın</h2>
+          <p data-i18n="cta_text">Galeride gördüğünüz modellere benzer uygulamalar hakkında bilgi almak için hemen iletişime geçebilirsiniz.</p>
         </div>
         <div class="actions">
-          <a class="btn btn-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-secondary" href="tel:+905426952150">Hemen Ara</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener" data-i18n="cta_btn_whatsapp">WhatsApp</a>
+          <a class="btn btn-secondary" href="tel:+905426952150" data-i18n="cta_btn_call">Hemen Ara</a>
         </div>
       </div>
     </section>
@@ -154,8 +317,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>Uğur Mermer</div>
-      <div>Referans ve örnek işler</div>
+      <div data-i18n="footer_brand">Uğur Mermer</div>
+      <div data-i18n="footer_text">Referans ve örnek işler</div>
     </div>
   </footer>
 
@@ -167,16 +330,196 @@
   </a>
 
   <script>
+    const translations = {
+      tr: {
+        pageTitle: "Galeri | Uğur Mermer",
+        pageDescription: "Uğur Mermer tarafından tamamlanan örnek mezar yapımı ve mermer işlerini galeride inceleyin.",
+        nav_home: "Anasayfa",
+        nav_gallery: "Galeri",
+        nav_services: "Hizmetlerimiz",
+        nav_contact: "İletişim",
+        gallery_page_title: "Referanslarımız",
+        gallery_page_text: "Tamamlanan işlerden seçilen görselleri inceleyebilir, tarz ve uygulama detayları hakkında fikir edinebilirsiniz.",
+        slider_help: "Görseller arasında ok tuşlarıyla geçiş yapabilirsiniz.",
+        prev_aria: "Önceki görsel",
+        next_aria: "Sonraki görsel",
+        cta_eyebrow: "Bilgi Alın",
+        cta_title: "Benzer bir uygulama için bize ulaşın",
+        cta_text: "Galeride gördüğünüz modellere benzer uygulamalar hakkında bilgi almak için hemen iletişime geçebilirsiniz.",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_call: "Hemen Ara",
+        footer_brand: "Uğur Mermer",
+        footer_text: "Referans ve örnek işler",
+        gallery_alt_prefix: "Galeri görseli"
+      },
+      en: {
+        pageTitle: "Gallery | Uğur Mermer",
+        pageDescription: "Browse sample grave construction and marble works completed by Uğur Mermer in the gallery.",
+        nav_home: "Home",
+        nav_gallery: "Gallery",
+        nav_services: "Services",
+        nav_contact: "Contact",
+        gallery_page_title: "Our References",
+        gallery_page_text: "You can review selected images from completed works and get an idea about styles and application details.",
+        slider_help: "You can navigate through the images using the arrow keys.",
+        prev_aria: "Previous image",
+        next_aria: "Next image",
+        cta_eyebrow: "Get Information",
+        cta_title: "Contact us for a similar application",
+        cta_text: "You can contact us right away to get information about applications similar to the models you see in the gallery.",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_call: "Call Now",
+        footer_brand: "Uğur Mermer",
+        footer_text: "References and sample works",
+        gallery_alt_prefix: "Gallery image"
+      },
+      ar: {
+        pageTitle: "المعرض | أوغور مرمر",
+        pageDescription: "تصفح نماذج من أعمال بناء القبور والرخام التي أنجزها أوغور مرمر في المعرض.",
+        nav_home: "الرئيسية",
+        nav_gallery: "المعرض",
+        nav_services: "خدماتنا",
+        nav_contact: "التواصل",
+        gallery_page_title: "أعمالنا المرجعية",
+        gallery_page_text: "يمكنكم الاطلاع على صور مختارة من الأعمال المنجزة وأخذ فكرة عن الأساليب وتفاصيل التنفيذ.",
+        slider_help: "يمكنكم التنقل بين الصور باستخدام أزرار الأسهم.",
+        prev_aria: "الصورة السابقة",
+        next_aria: "الصورة التالية",
+        cta_eyebrow: "احصل على معلومات",
+        cta_title: "تواصلوا معنا لتطبيق مشابه",
+        cta_text: "يمكنكم التواصل معنا فوراً للحصول على معلومات حول تطبيقات مشابهة للنماذج التي ترونها في المعرض.",
+        cta_btn_whatsapp: "واتساب",
+        cta_btn_call: "اتصل الآن",
+        footer_brand: "أوغور مرمر",
+        footer_text: "الأعمال المرجعية والنماذج",
+        gallery_alt_prefix: "صورة المعرض"
+      },
+      de: {
+        pageTitle: "Galerie | Uğur Mermer",
+        pageDescription: "Sehen Sie sich in der Galerie Beispielarbeiten zu Grabbau und Marmorarbeiten von Uğur Mermer an.",
+        nav_home: "Startseite",
+        nav_gallery: "Galerie",
+        nav_services: "Leistungen",
+        nav_contact: "Kontakt",
+        gallery_page_title: "Unsere Referenzen",
+        gallery_page_text: "Sie können ausgewählte Bilder abgeschlossener Arbeiten ansehen und sich einen Eindruck von Stil und Ausführungsdetails verschaffen.",
+        slider_help: "Sie können mit den Pfeiltasten zwischen den Bildern wechseln.",
+        prev_aria: "Vorheriges Bild",
+        next_aria: "Nächstes Bild",
+        cta_eyebrow: "Informationen",
+        cta_title: "Kontaktieren Sie uns für eine ähnliche Ausführung",
+        cta_text: "Für Informationen zu ähnlichen Ausführungen wie den in der Galerie gezeigten Modellen können Sie uns sofort kontaktieren.",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_call: "Jetzt anrufen",
+        footer_brand: "Uğur Mermer",
+        footer_text: "Referenzen und Beispielarbeiten",
+        gallery_alt_prefix: "Galeriebild"
+      },
+      ru: {
+        pageTitle: "Галерея | Uğur Mermer",
+        pageDescription: "Посмотрите в галерее примеры выполненных Uğur Mermer работ по изготовлению памятников и мрамору.",
+        nav_home: "Главная",
+        nav_gallery: "Галерея",
+        nav_services: "Услуги",
+        nav_contact: "Контакты",
+        gallery_page_title: "Наши работы",
+        gallery_page_text: "Вы можете посмотреть выбранные изображения завершенных работ и получить представление о стиле и деталях исполнения.",
+        slider_help: "Вы можете переключаться между изображениями с помощью стрелок на клавиатуре.",
+        prev_aria: "Предыдущее изображение",
+        next_aria: "Следующее изображение",
+        cta_eyebrow: "Получить информацию",
+        cta_title: "Свяжитесь с нами для похожего проекта",
+        cta_text: "Вы можете сразу связаться с нами, чтобы получить информацию о проектах, похожих на модели, представленные в галерее.",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_call: "Позвонить сейчас",
+        footer_brand: "Uğur Mermer",
+        footer_text: "Примеры и выполненные работы",
+        gallery_alt_prefix: "Изображение галереи"
+      },
+      zh: {
+        pageTitle: "作品集 | Uğur Mermer",
+        pageDescription: "在作品集中查看 Uğur Mermer 完成的墓碑建造和大理石工程示例。",
+        nav_home: "首页",
+        nav_gallery: "作品集",
+        nav_services: "我们的服务",
+        nav_contact: "联系我们",
+        gallery_page_title: "我们的案例",
+        gallery_page_text: "您可以查看已完成项目的精选图片，并了解风格与施工细节。",
+        slider_help: "您可以使用方向键在图片之间切换。",
+        prev_aria: "上一张图片",
+        next_aria: "下一张图片",
+        cta_eyebrow: "获取信息",
+        cta_title: "需要类似方案请联系我们",
+        cta_text: "如果您想了解与作品集中展示模型类似的施工方案，请立即联系我们。",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_call: "立即致电",
+        footer_brand: "Uğur Mermer",
+        footer_text: "案例与示例作品",
+        gallery_alt_prefix: "作品集图片"
+      }
+    };
+
     const slider = document.getElementById('slider');
     const slides = slider.querySelectorAll('img');
     const counter = document.getElementById('sliderCounter');
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
+    const languageButtons = document.querySelectorAll('.lang-btn');
+    const pageTitle = document.getElementById('pageTitle');
+    const pageDescription = document.getElementById('pageDescription');
+
     let index = 0;
 
     function updateSlider() {
       slider.style.transform = `translateX(-${index * 100}%)`;
       counter.textContent = `${index + 1} / ${slides.length}`;
+    }
+
+    function updateGalleryAltTexts(dict) {
+      document.querySelectorAll('[data-gallery-alt]').forEach(img => {
+        const no = img.getAttribute('data-gallery-alt');
+        img.alt = `${dict.gallery_alt_prefix} ${no}`;
+      });
+    }
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.tr;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      pageTitle.textContent = dict.pageTitle;
+      pageDescription.setAttribute('content', dict.pageDescription);
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria');
+        if (dict[key]) el.setAttribute('aria-label', dict[key]);
+      });
+
+      updateGalleryAltTexts(dict);
+
+      languageButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      localStorage.setItem('siteLanguage', lang);
+      requestAnimationFrame(updateBodyOffset);
+    }
+
+    function updateBodyOffset() {
+      const nav = document.querySelector('nav');
+      const languageBar = document.querySelector('.language-bar');
+      if (!nav) return;
+
+      const navHeight = nav.offsetHeight;
+      const langHeight = languageBar ? languageBar.offsetHeight : 0;
+
+      document.body.style.paddingTop = `${navHeight + langHeight + 6}px`;
     }
 
     prevBtn.addEventListener('click', () => {
@@ -190,9 +533,38 @@
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowLeft') prevBtn.click();
-      if (event.key === 'ArrowRight') nextBtn.click();
+      if (event.key === 'ArrowLeft') {
+        if (document.documentElement.dir === 'rtl') {
+          nextBtn.click();
+        } else {
+          prevBtn.click();
+        }
+      }
+
+      if (event.key === 'ArrowRight') {
+        if (document.documentElement.dir === 'rtl') {
+          prevBtn.click();
+        } else {
+          nextBtn.click();
+        }
+      }
     });
+
+    const savedLanguage = localStorage.getItem('siteLanguage') || 'tr';
+    setLanguage(savedLanguage);
+
+    languageButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.dataset.lang);
+      });
+    });
+
+    window.addEventListener('load', () => {
+      updateBodyOffset();
+      updateSlider();
+    });
+
+    window.addEventListener('resize', updateBodyOffset);
 
     updateSlider();
   </script>
