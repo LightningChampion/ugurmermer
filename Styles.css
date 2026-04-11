@@ -896,6 +896,7 @@ footer {
   }
 }
 
+/* Normal masaüstü ayarları */
 @media (min-width: 761px) {
   .hero {
     min-height: 620px;
@@ -913,7 +914,7 @@ footer {
   }
 }
 
-/* SADECE ARAPÇA + SADECE MASAÜSTÜ */
+/* Sadece Arapça + sadece masaüstü için hero yapısını üst yazı alt görsel haline getir */
 @media (min-width: 761px) {
   html[dir="rtl"] .hero {
     min-height: auto;
@@ -924,33 +925,33 @@ footer {
   }
 
   html[dir="rtl"] .hero-desktop-layer {
-    display: none !important;
+    display: none;
   }
 
   html[dir="rtl"] .hero-mobile-stack {
-    display: block !important;
+    display: block;
     padding: 0;
   }
 
   html[dir="rtl"] .hero-copy-mobile {
-    max-width: 980px;
+    max-width: min(980px, 100%);
     margin: 0 auto;
     padding: 0;
     text-align: center;
   }
 
   html[dir="rtl"] .hero-copy-mobile h1 {
-    font-size: clamp(2.7rem, 4.4vw, 4.8rem);
-    line-height: 1.35;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1.28;
     letter-spacing: 0;
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto 18px;
   }
 
   html[dir="rtl"] .hero-copy-mobile .lead {
     max-width: 900px;
     margin: 0 auto;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     line-height: 1.9;
   }
 
@@ -962,14 +963,24 @@ footer {
   html[dir="rtl"] .hero-mobile-image-wrap .hero-banner-image {
     position: relative;
     inset: auto;
-    width: 100%;
-    height: auto;
-    min-height: 520px;
-    aspect-ratio: auto;
     border-radius: var(--hero-radius);
     overflow: hidden;
+    aspect-ratio: 16 / 8.5;
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(201, 162, 77, 0.12);
+  }
+
+  html[dir="rtl"] .hero-mobile-image-wrap .hero-banner-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(270deg,
+        rgba(0,0,0,0.88) 0%,
+        rgba(0,0,0,0.70) 28%,
+        rgba(0,0,0,0.28) 55%,
+        rgba(0,0,0,0.06) 100%);
+    pointer-events: none;
   }
 
   html[dir="rtl"] .hero-mobile-image-wrap .hero-banner-image picture,
@@ -996,10 +1007,5 @@ footer {
 
   html[dir="rtl"] .hero-mobile-bottom .actions {
     justify-content: center;
-  }
-
-  html[dir="rtl"] .hero-mobile-bottom .actions .btn {
-    width: auto;
-    min-width: 160px;
   }
 }
