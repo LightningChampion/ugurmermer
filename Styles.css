@@ -163,7 +163,7 @@ p {
 }
 
 .hero-banner {
-  padding: 18px 0 0;
+  padding: 10px 0 0;
 }
 
 .hero::before {
@@ -896,7 +896,6 @@ footer {
   }
 }
 
-/* Normal masaüstü ayarları */
 @media (min-width: 761px) {
   .hero {
     min-height: 620px;
@@ -914,7 +913,6 @@ footer {
   }
 }
 
-/* Sadece Arapça + sadece masaüstü için hero yazısını menünün altına düzgün hizala */
 @media (min-width: 761px) {
   html[dir="rtl"] .hero {
     min-height: auto;
