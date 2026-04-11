@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uğur Mermer | İstanbul Mezar Yapımı ve Mermer İşleri</title>
-  <meta name="description" content="1969'dan beri İstanbul Karacaahmet'te mezar yapımı, mezar onarımı, granit ve mermer işleri. Uğur Mermer ile hızlı iletişim kurun.">
+  <title id="pageTitle">Uğur Mermer | İstanbul Mezar Yapımı ve Mermer İşleri</title>
+  <meta id="pageDescription" name="description" content="1969'dan beri İstanbul Karacaahmet'te mezar yapımı, mezar onarımı, granit ve mermer işleri. Uğur Mermer ile hızlı iletişim kurun.">
   <link rel="stylesheet" href="Styles.css">
   <style>
     .floating-whatsapp {
@@ -30,10 +30,65 @@
       color: var(--text) !important;
     }
 
+    .language-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 12px;
+    }
+
+    .language-switcher select {
+      min-height: 40px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .language-switcher select option {
+      color: #111;
+    }
+
+    html[dir="rtl"] body {
+      direction: rtl;
+    }
+
+    html[dir="rtl"] .nav-inner,
+    html[dir="rtl"] .hero-badges,
+    html[dir="rtl"] .actions,
+    html[dir="rtl"] .footer-inner {
+      direction: rtl;
+    }
+
+    html[dir="rtl"] .hero-copy,
+    html[dir="rtl"] .hero-copy-mobile,
+    html[dir="rtl"] .section-header,
+    html[dir="rtl"] .gallery-card-body,
+    html[dir="rtl"] .service-card,
+    html[dir="rtl"] .stat-card,
+    html[dir="rtl"] .highlight-card,
+    html[dir="rtl"] .cta-panel {
+      text-align: right;
+    }
+
     @media (max-width: 760px) {
       .floating-whatsapp svg {
         width: 26px;
         height: 26px;
+      }
+
+      .language-switcher {
+        margin-left: 0;
+        margin-top: 6px;
+      }
+
+      .language-switcher select {
+        min-height: 36px;
+        font-size: 14px;
       }
     }
   </style>
@@ -43,11 +98,21 @@
     <div class="container nav-inner">
       <a class="brand" href="index.html">UĞUR MERMER</a>
       <ul>
-        <li><a href="index.html" class="active">Anasayfa</a></li>
-        <li><a href="gallery.html">Galeri</a></li>
-        <li><a href="services.html">Hizmetlerimiz</a></li>
-        <li><a href="contact.html">İletişim</a></li>
+        <li><a href="index.html" class="active" data-i18n="nav_home">Anasayfa</a></li>
+        <li><a href="gallery.html" data-i18n="nav_gallery">Galeri</a></li>
+        <li><a href="services.html" data-i18n="nav_services">Hizmetlerimiz</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">İletişim</a></li>
       </ul>
+
+      <div class="language-switcher">
+        <select id="languageSelect" aria-label="Dil seç">
+          <option value="tr">Türkçe</option>
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="de">Deutsch</option>
+          <option value="ru">Русский</option>
+        </select>
+      </div>
     </div>
   </nav>
 
@@ -55,9 +120,9 @@
     <section class="hero hero-banner">
       <div class="hero-mobile-stack">
         <div class="container hero-copy hero-copy-mobile">
-          <span class="eyebrow hero-chip">1969'dan beri deneyim</span>
-          <h1>İstanbul'da mezar yapımı, onarım ve mermer işlerinde güvenilir hizmet</h1>
-          <p class="lead">
+          <span class="eyebrow hero-chip" data-i18n="hero_chip">1969'dan beri deneyim</span>
+          <h1 data-i18n="hero_title">İstanbul'da mezar yapımı, onarım ve mermer işlerinde güvenilir hizmet</h1>
+          <p class="lead" data-i18n="hero_text">
             Karacaahmet merkezli işletmemiz; mezar taşı yapımı, komple mezar yapımı,
             lahit uygulamaları, onarım ve temizlik hizmetlerini kaliteli işçilik ve
             özenli uygulama ile sunar.
@@ -68,20 +133,20 @@
           <div class="hero-banner-image">
             <picture>
               <source media="(max-width: 760px)" srcset="images/hero-mobile.jpg">
-              <img src="images/hero.jpg" alt="Uğur Mermer beyaz mermer mezar uygulaması">
+              <img src="images/hero.jpg" alt="Uğur Mermer beyaz mermer mezar uygulaması" data-i18n-alt="hero_alt">
             </picture>
           </div>
         </div>
 
         <div class="container hero-mobile-bottom">
           <div class="actions hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/905426952150" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
-            <a class="btn btn-secondary" href="tel:+905426952150">Hemen Ara</a>
-            <a class="btn btn-outline" href="gallery.html">Örnek İşleri Gör</a>
+            <a class="btn btn-primary" href="https://wa.me/905426952150" target="_blank" rel="noopener" data-i18n="hero_btn_whatsapp">WhatsApp'tan Yaz</a>
+            <a class="btn btn-secondary" href="tel:+905426952150" data-i18n="hero_btn_call">Hemen Ara</a>
+            <a class="btn btn-outline" href="gallery.html" data-i18n="hero_btn_gallery">Örnek İşleri Gör</a>
           </div>
 
           <div class="hero-badges">
-            <span class="badge">Karacaahmet / Üsküdar</span>
+            <span class="badge" data-i18n="hero_badge_location">Karacaahmet / Üsküdar</span>
           </div>
         </div>
       </div>
@@ -90,7 +155,7 @@
         <div class="hero-banner-image">
           <picture>
             <source media="(max-width: 760px)" srcset="images/hero-mobile.jpg">
-            <img src="images/hero.jpg" alt="Uğur Mermer beyaz mermer mezar uygulaması">
+            <img src="images/hero.jpg" alt="Uğur Mermer beyaz mermer mezar uygulaması" data-i18n-alt="hero_alt">
           </picture>
         </div>
 
@@ -98,22 +163,22 @@
 
         <div class="container hero-banner-content">
           <div class="hero-copy">
-            <span class="eyebrow hero-chip">1969'dan beri deneyim</span>
-            <h1>İstanbul'da mezar yapımı, onarım ve mermer işlerinde güvenilir hizmet</h1>
-            <p class="lead">
+            <span class="eyebrow hero-chip" data-i18n="hero_chip">1969'dan beri deneyim</span>
+            <h1 data-i18n="hero_title">İstanbul'da mezar yapımı, onarım ve mermer işlerinde güvenilir hizmet</h1>
+            <p class="lead" data-i18n="hero_text">
               Karacaahmet merkezli işletmemiz; mezar taşı yapımı, komple mezar yapımı,
               lahit uygulamaları, onarım ve temizlik hizmetlerini kaliteli işçilik ve
               özenli uygulama ile sunar.
             </p>
 
             <div class="hero-badges">
-              <span class="badge">Karacaahmet / Üsküdar</span>
+              <span class="badge" data-i18n="hero_badge_location">Karacaahmet / Üsküdar</span>
             </div>
 
             <div class="actions hero-actions">
-              <a class="btn btn-primary" href="https://wa.me/905426952150" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
-              <a class="btn btn-secondary" href="tel:+905426952150">Hemen Ara</a>
-              <a class="btn btn-outline" href="gallery.html">Örnek İşleri Gör</a>
+              <a class="btn btn-primary" href="https://wa.me/905426952150" target="_blank" rel="noopener" data-i18n="hero_btn_whatsapp">WhatsApp'tan Yaz</a>
+              <a class="btn btn-secondary" href="tel:+905426952150" data-i18n="hero_btn_call">Hemen Ara</a>
+              <a class="btn btn-outline" href="gallery.html" data-i18n="hero_btn_gallery">Örnek İşleri Gör</a>
             </div>
           </div>
         </div>
@@ -123,43 +188,43 @@
     <section class="section gallery-preview">
       <div class="container">
         <div class="section-header center">
-          <h2 style="color: var(--text);">Yapılan işlerden bazı örnekler</h2>
-          <p>Farklı model, taş ve uygulama örneklerini galerimizde inceleyebilirsiniz.</p>
+          <h2 style="color: var(--text);" data-i18n="gallery_title">Yapılan işlerden bazı örnekler</h2>
+          <p data-i18n="gallery_text">Farklı model, taş ve uygulama örneklerini galerimizde inceleyebilirsiniz.</p>
         </div>
 
         <div class="gallery-grid">
           <article class="gallery-card">
-            <img src="images/photo1.jpg" alt="Mezar yapımı örneği 1">
+            <img src="images/photo1.jpg" alt="Mezar yapımı örneği 1" data-i18n-alt="gallery_alt_1">
             <div class="gallery-card-body">
-              <h3>Örnek uygulama</h3>
-              <p>Temiz işçilik ve dengeli tasarım anlayışıyla hazırlanan bu uygulama, estetik görünüm ve uzun ömürlü kullanım açısından özenle tamamlanmıştır.</p>
+              <h3 data-i18n="gallery_card_1_title">Örnek uygulama</h3>
+              <p data-i18n="gallery_card_1_text">Temiz işçilik ve dengeli tasarım anlayışıyla hazırlanan bu uygulama, estetik görünüm ve uzun ömürlü kullanım açısından özenle tamamlanmıştır.</p>
             </div>
           </article>
           <article class="gallery-card">
-            <img src="images/photo12.jpg" alt="Mezar yapımı örneği 2">
+            <img src="images/photo12.jpg" alt="Mezar yapımı örneği 2" data-i18n-alt="gallery_alt_2">
             <div class="gallery-card-body">
-              <h3>Granit detay</h3>
-              <p>Dayanıklı ve şık görünüm sunan granit detaylar, kaliteli malzeme yapısıyla uzun yıllar sağlamlığını korurken mezara estetik bir bütünlük kazandırır.</p>
+              <h3 data-i18n="gallery_card_2_title">Granit detay</h3>
+              <p data-i18n="gallery_card_2_text">Dayanıklı ve şık görünüm sunan granit detaylar, kaliteli malzeme yapısıyla uzun yıllar sağlamlığını korurken mezara estetik bir bütünlük kazandırır.</p>
             </div>
           </article>
           <article class="gallery-card">
-            <img src="images/photo25.jpg" alt="Mezar yapımı örneği 3">
+            <img src="images/photo25.jpg" alt="Mezar yapımı örneği 3" data-i18n-alt="gallery_alt_3">
             <div class="gallery-card-body">
-              <h3>Kişiye uygun uygulama</h3>
-              <p>İhtiyaca göre planlanan çözümler, ölçü, model ve malzeme tercihleri doğrultusunda kişiye özel olarak hazırlanarak istenilen görünüme uygun şekilde uygulanır.</p>
+              <h3 data-i18n="gallery_card_3_title">Kişiye uygun uygulama</h3>
+              <p data-i18n="gallery_card_3_text">İhtiyaca göre planlanan çözümler, ölçü, model ve malzeme tercihleri doğrultusunda kişiye özel olarak hazırlanarak istenilen görünüme uygun şekilde uygulanır.</p>
             </div>
           </article>
           <article class="gallery-card">
-            <img src="images/photo5.jpg" alt="Mezar temizliği ve bakım örneği">
+            <img src="images/photo5.jpg" alt="Mezar temizliği ve bakım örneği" data-i18n-alt="gallery_alt_4">
             <div class="gallery-card-body">
-              <h3>Mezar temizliği ve bakım</h3>
-              <p>Zamanla oluşan kir ve yıpranmalar, özenli uygulama ile giderilerek daha temiz bir görünüme kavuşturulur.</p>
+              <h3 data-i18n="gallery_card_4_title">Mezar temizliği ve bakım</h3>
+              <p data-i18n="gallery_card_4_text">Zamanla oluşan kir ve yıpranmalar, özenli uygulama ile giderilerek daha temiz bir görünüme kavuşturulur.</p>
             </div>
           </article>
         </div>
 
         <div class="actions section-actions">
-          <a class="btn btn-outline" href="gallery.html" style="color: var(--accent);">Tüm galeriyi görüntüle</a>
+          <a class="btn btn-outline" href="gallery.html" style="color: var(--accent);" data-i18n="gallery_btn">Tüm galeriyi görüntüle</a>
         </div>
       </div>
     </section>
@@ -167,45 +232,45 @@
     <section class="section services-section">
       <div class="container">
         <div class="section-header center">
-          <h2 style="color: var(--text);">İhtiyaca uygun mezar ve mermer çözümleri</h2>
-          <p>Yapım, yenileme ve bakım süreçlerinde farklı ihtiyaçlara yönelik hizmetler sunuyoruz.</p>
+          <h2 style="color: var(--text);" data-i18n="services_title">İhtiyaca uygun mezar ve mermer çözümleri</h2>
+          <p data-i18n="services_text">Yapım, yenileme ve bakım süreçlerinde farklı ihtiyaçlara yönelik hizmetler sunuyoruz.</p>
         </div>
 
         <div class="services-grid">
           <article class="service-card">
             <div class="card-icon">▤</div>
-            <h3>Mezar taşı yapımı</h3>
-            <p>İsteğe uygun yazı, ölçü ve model seçenekleriyle mermer veya granit mezar taşı üretimi yapılır.</p>
+            <h3 data-i18n="service_1_title">Mezar taşı yapımı</h3>
+            <p data-i18n="service_1_text">İsteğe uygun yazı, ölçü ve model seçenekleriyle mermer veya granit mezar taşı üretimi yapılır.</p>
           </article>
           <article class="service-card">
             <div class="card-icon">▣</div>
-            <h3>Komple mezar yapımı</h3>
-            <p>Baştan sona planlanan mezar yapım sürecinde estetik ve düzenli çözümler sunulur.</p>
+            <h3 data-i18n="service_2_title">Komple mezar yapımı</h3>
+            <p data-i18n="service_2_text">Baştan sona planlanan mezar yapım sürecinde estetik ve düzenli çözümler sunulur.</p>
           </article>
           <article class="service-card">
             <div class="card-icon">⚒</div>
-            <h3>Mezar onarımı</h3>
-            <p>Hasar gören veya zamanla yıpranan mezar bölümlerinin onarım ve yenileme işlemleri yapılır.</p>
+            <h3 data-i18n="service_3_title">Mezar onarımı</h3>
+            <p data-i18n="service_3_text">Hasar gören veya zamanla yıpranan mezar bölümlerinin onarım ve yenileme işlemleri yapılır.</p>
           </article>
           <article class="service-card">
             <div class="card-icon">◩</div>
-            <h3>Mezar temizliği</h3>
-            <p>Zamanla kirlenen mezar alanları temizlenerek daha bakımlı ve düzenli hale getirilir.</p>
+            <h3 data-i18n="service_4_title">Mezar temizliği</h3>
+            <p data-i18n="service_4_text">Zamanla kirlenen mezar alanları temizlenerek daha bakımlı ve düzenli hale getirilir.</p>
           </article>
           <article class="service-card">
             <div class="card-icon">◪</div>
-            <h3>Mezar içine lahit yapımı</h3>
-            <p>İhtiyaca uygun ölçülerle lahit uygulamaları özenli ve sağlam şekilde hazırlanır.</p>
+            <h3 data-i18n="service_5_title">Mezar içine lahit yapımı</h3>
+            <p data-i18n="service_5_text">İhtiyaca uygun ölçülerle lahit uygulamaları özenli ve sağlam şekilde hazırlanır.</p>
           </article>
           <article class="service-card">
             <div class="card-icon">◫</div>
-            <h3>Çeşme</h3>
-            <p>Mezar alanı veya uygun bölümler için estetik ve işlevsel çeşme uygulamaları yapılır.</p>
+            <h3 data-i18n="service_6_title">Çeşme</h3>
+            <p data-i18n="service_6_text">Mezar alanı veya uygun bölümler için estetik ve işlevsel çeşme uygulamaları yapılır.</p>
           </article>
         </div>
 
         <div class="actions section-actions">
-          <a class="btn btn-outline" href="services.html" style="color: var(--accent);">Tüm hizmetlerimizi incele</a>
+          <a class="btn btn-outline" href="services.html" style="color: var(--accent);" data-i18n="services_btn">Tüm hizmetlerimizi incele</a>
         </div>
       </div>
     </section>
@@ -213,7 +278,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header center">
-          <h2>Neden Uğur Mermer?</h2>
+          <h2 data-i18n="why_title">Neden Uğur Mermer?</h2>
         </div>
       </div>
     </section>
@@ -222,18 +287,18 @@
       <div class="container stats-grid">
         <article class="stat-card">
           <div class="card-icon">🛡</div>
-          <div class="stat-number">1969'dan beri</div>
-          <p>Mermer ve mezar işlerinde yılların birikimiyle güven veren, düzenli ve özenli çözümler sunuyoruz.</p>
+          <div class="stat-number" data-i18n="stat_1_title">1969'dan beri</div>
+          <p data-i18n="stat_1_text">Mermer ve mezar işlerinde yılların birikimiyle güven veren, düzenli ve özenli çözümler sunuyoruz.</p>
         </article>
         <article class="stat-card">
           <div class="card-icon">◈</div>
-          <div class="stat-number text-number">Özenli</div>
-          <p>Her çalışmada estetik görünüm, sağlamlık ve düzenli teslim anlayışıyla hareket ediyoruz.</p>
+          <div class="stat-number text-number" data-i18n="stat_2_title">Özenli</div>
+          <p data-i18n="stat_2_text">Her çalışmada estetik görünüm, sağlamlık ve düzenli teslim anlayışıyla hareket ediyoruz.</p>
         </article>
         <article class="stat-card">
           <div class="card-icon">⚡</div>
-          <div class="stat-number text-number">Hızlı</div>
-          <p>Telefon ve WhatsApp üzerinden bilgi alabilir, konumumuza kolayca ulaşabilirsiniz.</p>
+          <div class="stat-number text-number" data-i18n="stat_3_title">Hızlı</div>
+          <p data-i18n="stat_3_text">Telefon ve WhatsApp üzerinden bilgi alabilir, konumumuza kolayca ulaşabilirsiniz.</p>
         </article>
       </div>
     </section>
@@ -242,18 +307,18 @@
       <div class="container highlights-grid">
         <article class="highlight-card">
           <div class="card-icon">◌</div>
-          <h3>Şeffaf iletişim</h3>
-          <p>Süreç, model ve uygulama detaylarını açık şekilde paylaşarak ilerliyoruz.</p>
+          <h3 data-i18n="highlight_1_title">Şeffaf iletişim</h3>
+          <p data-i18n="highlight_1_text">Süreç, model ve uygulama detaylarını açık şekilde paylaşarak ilerliyoruz.</p>
         </article>
         <article class="highlight-card">
           <div class="card-icon">⌖</div>
-          <h3>Yerinde ulaşım kolaylığı</h3>
-          <p>Karacaahmet'teki konumumuz sayesinde müşterilerimiz bize rahatça ulaşabiliyor.</p>
+          <h3 data-i18n="highlight_2_title">Yerinde ulaşım kolaylığı</h3>
+          <p data-i18n="highlight_2_text">Karacaahmet'teki konumumuz sayesinde müşterilerimiz bize rahatça ulaşabiliyor.</p>
         </article>
         <article class="highlight-card">
           <div class="card-icon">⬡</div>
-          <h3>Özenli teslim anlayışı</h3>
-          <p>İşlerimizi düzenli, temiz ve uzun ömürlü olacak şekilde tamamlamaya önem veriyoruz.</p>
+          <h3 data-i18n="highlight_3_title">Özenli teslim anlayışı</h3>
+          <p data-i18n="highlight_3_text">İşlerimizi düzenli, temiz ve uzun ömürlü olacak şekilde tamamlamaya önem veriyoruz.</p>
         </article>
       </div>
     </section>
@@ -261,13 +326,13 @@
     <section class="section">
       <div class="container cta-panel">
         <div>
-          <span class="eyebrow">İletişim</span>
-          <h2>Bilgi almak veya konum görmek için hemen ulaşın</h2>
-          <p>Telefon, WhatsApp veya harita bağlantısı üzerinden hızlıca iletişime geçebilirsiniz.</p>
+          <span class="eyebrow" data-i18n="cta_eyebrow">İletişim</span>
+          <h2 data-i18n="cta_title">Bilgi almak veya konum görmek için hemen ulaşın</h2>
+          <p data-i18n="cta_text">Telefon, WhatsApp veya harita bağlantısı üzerinden hızlıca iletişime geçebilirsiniz.</p>
         </div>
         <div class="actions">
-          <a class="btn btn-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-map" href="https://www.google.com/maps/place/U%C4%9Fur+Mermer/@41.0132344,29.0196256,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab7a7f7967f29:0x558d44e6e1e3ac49!8m2!3d41.0132304!4d29.0222005!16s%2Fg%2F1ptxcj9y8" target="_blank" rel="noopener">Haritada Göster</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener" data-i18n="cta_btn_whatsapp">WhatsApp</a>
+          <a class="btn btn-map" href="https://www.google.com/maps/place/U%C4%9Fur+Mermer/@41.0132344,29.0196256,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab7a7f7967f29:0x558d44e6e1e3ac49!8m2!3d41.0132304!4d29.0222005!16s%2Fg%2F1ptxcj9y8" target="_blank" rel="noopener" data-i18n="cta_btn_map">Haritada Göster</a>
         </div>
       </div>
     </section>
@@ -275,8 +340,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>Uğur Mermer</div>
-      <div>Karacaahmet, Üsküdar / İstanbul</div>
+      <div data-i18n="footer_brand">Uğur Mermer</div>
+      <div data-i18n="footer_location">Karacaahmet, Üsküdar / İstanbul</div>
     </div>
   </footer>
 
@@ -286,5 +351,374 @@
       <path fill="currentColor" d="M16.03 3.2c-7 0-12.68 5.67-12.68 12.67 0 2.22.58 4.39 1.69 6.31L3.2 28.8l6.78-1.78a12.69 12.69 0 0 0 6.05 1.54h.01c7 0 12.68-5.67 12.68-12.67 0-3.39-1.32-6.57-3.72-8.96A12.58 12.58 0 0 0 16.03 3.2Zm0 23.2h-.01a10.5 10.5 0 0 1-5.35-1.47l-.38-.23-4.02 1.05 1.07-3.92-.25-.4a10.45 10.45 0 0 1-1.61-5.54c0-5.8 4.73-10.53 10.55-10.53 2.81 0 5.46 1.09 7.44 3.08a10.45 10.45 0 0 1 3.08 7.45c0 5.81-4.73 10.53-10.52 10.53Z"/>
     </svg>
   </a>
+
+  <script>
+    const translations = {
+      tr: {
+        pageTitle: "Uğur Mermer | İstanbul Mezar Yapımı ve Mermer İşleri",
+        pageDescription: "1969'dan beri İstanbul Karacaahmet'te mezar yapımı, mezar onarımı, granit ve mermer işleri. Uğur Mermer ile hızlı iletişim kurun.",
+        nav_home: "Anasayfa",
+        nav_gallery: "Galeri",
+        nav_services: "Hizmetlerimiz",
+        nav_contact: "İletişim",
+        hero_chip: "1969'dan beri deneyim",
+        hero_title: "İstanbul'da mezar yapımı, onarım ve mermer işlerinde güvenilir hizmet",
+        hero_text: "Karacaahmet merkezli işletmemiz; mezar taşı yapımı, komple mezar yapımı, lahit uygulamaları, onarım ve temizlik hizmetlerini kaliteli işçilik ve özenli uygulama ile sunar.",
+        hero_btn_whatsapp: "WhatsApp'tan Yaz",
+        hero_btn_call: "Hemen Ara",
+        hero_btn_gallery: "Örnek İşleri Gör",
+        hero_badge_location: "Karacaahmet / Üsküdar",
+        hero_alt: "Uğur Mermer beyaz mermer mezar uygulaması",
+        gallery_title: "Yapılan işlerden bazı örnekler",
+        gallery_text: "Farklı model, taş ve uygulama örneklerini galerimizde inceleyebilirsiniz.",
+        gallery_card_1_title: "Örnek uygulama",
+        gallery_card_1_text: "Temiz işçilik ve dengeli tasarım anlayışıyla hazırlanan bu uygulama, estetik görünüm ve uzun ömürlü kullanım açısından özenle tamamlanmıştır.",
+        gallery_card_2_title: "Granit detay",
+        gallery_card_2_text: "Dayanıklı ve şık görünüm sunan granit detaylar, kaliteli malzeme yapısıyla uzun yıllar sağlamlığını korurken mezara estetik bir bütünlük kazandırır.",
+        gallery_card_3_title: "Kişiye uygun uygulama",
+        gallery_card_3_text: "İhtiyaca göre planlanan çözümler, ölçü, model ve malzeme tercihleri doğrultusunda kişiye özel olarak hazırlanarak istenilen görünüme uygun şekilde uygulanır.",
+        gallery_card_4_title: "Mezar temizliği ve bakım",
+        gallery_card_4_text: "Zamanla oluşan kir ve yıpranmalar, özenli uygulama ile giderilerek daha temiz bir görünüme kavuşturulur.",
+        gallery_alt_1: "Mezar yapımı örneği 1",
+        gallery_alt_2: "Mezar yapımı örneği 2",
+        gallery_alt_3: "Mezar yapımı örneği 3",
+        gallery_alt_4: "Mezar temizliği ve bakım örneği",
+        gallery_btn: "Tüm galeriyi görüntüle",
+        services_title: "İhtiyaca uygun mezar ve mermer çözümleri",
+        services_text: "Yapım, yenileme ve bakım süreçlerinde farklı ihtiyaçlara yönelik hizmetler sunuyoruz.",
+        service_1_title: "Mezar taşı yapımı",
+        service_1_text: "İsteğe uygun yazı, ölçü ve model seçenekleriyle mermer veya granit mezar taşı üretimi yapılır.",
+        service_2_title: "Komple mezar yapımı",
+        service_2_text: "Baştan sona planlanan mezar yapım sürecinde estetik ve düzenli çözümler sunulur.",
+        service_3_title: "Mezar onarımı",
+        service_3_text: "Hasar gören veya zamanla yıpranan mezar bölümlerinin onarım ve yenileme işlemleri yapılır.",
+        service_4_title: "Mezar temizliği",
+        service_4_text: "Zamanla kirlenen mezar alanları temizlenerek daha bakımlı ve düzenli hale getirilir.",
+        service_5_title: "Mezar içine lahit yapımı",
+        service_5_text: "İhtiyaca uygun ölçülerle lahit uygulamaları özenli ve sağlam şekilde hazırlanır.",
+        service_6_title: "Çeşme",
+        service_6_text: "Mezar alanı veya uygun bölümler için estetik ve işlevsel çeşme uygulamaları yapılır.",
+        services_btn: "Tüm hizmetlerimizi incele",
+        why_title: "Neden Uğur Mermer?",
+        stat_1_title: "1969'dan beri",
+        stat_1_text: "Mermer ve mezar işlerinde yılların birikimiyle güven veren, düzenli ve özenli çözümler sunuyoruz.",
+        stat_2_title: "Özenli",
+        stat_2_text: "Her çalışmada estetik görünüm, sağlamlık ve düzenli teslim anlayışıyla hareket ediyoruz.",
+        stat_3_title: "Hızlı",
+        stat_3_text: "Telefon ve WhatsApp üzerinden bilgi alabilir, konumumuza kolayca ulaşabilirsiniz.",
+        highlight_1_title: "Şeffaf iletişim",
+        highlight_1_text: "Süreç, model ve uygulama detaylarını açık şekilde paylaşarak ilerliyoruz.",
+        highlight_2_title: "Yerinde ulaşım kolaylığı",
+        highlight_2_text: "Karacaahmet'teki konumumuz sayesinde müşterilerimiz bize rahatça ulaşabiliyor.",
+        highlight_3_title: "Özenli teslim anlayışı",
+        highlight_3_text: "İşlerimizi düzenli, temiz ve uzun ömürlü olacak şekilde tamamlamaya önem veriyoruz.",
+        cta_eyebrow: "İletişim",
+        cta_title: "Bilgi almak veya konum görmek için hemen ulaşın",
+        cta_text: "Telefon, WhatsApp veya harita bağlantısı üzerinden hızlıca iletişime geçebilirsiniz.",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_map: "Haritada Göster",
+        footer_brand: "Uğur Mermer",
+        footer_location: "Karacaahmet, Üsküdar / İstanbul"
+      },
+      en: {
+        pageTitle: "Uğur Mermer | Grave Construction and Marble Works in Istanbul",
+        pageDescription: "Since 1969 in Karacaahmet, Istanbul: grave construction, grave repair, granite and marble works. Contact Uğur Mermer quickly.",
+        nav_home: "Home",
+        nav_gallery: "Gallery",
+        nav_services: "Services",
+        nav_contact: "Contact",
+        hero_chip: "Experience since 1969",
+        hero_title: "Reliable service in grave construction, repair and marble works in Istanbul",
+        hero_text: "Based in Karacaahmet, our business provides gravestone production, complete grave construction, sarcophagus applications, repair and cleaning services with quality workmanship and careful application.",
+        hero_btn_whatsapp: "Message on WhatsApp",
+        hero_btn_call: "Call Now",
+        hero_btn_gallery: "See Sample Works",
+        hero_badge_location: "Karacaahmet / Üsküdar",
+        hero_alt: "Uğur Mermer white marble grave application",
+        gallery_title: "Some examples of completed works",
+        gallery_text: "You can review different models, stone types and application examples in our gallery.",
+        gallery_card_1_title: "Sample application",
+        gallery_card_1_text: "Prepared with clean workmanship and balanced design, this application was completed with care for aesthetic appearance and long-lasting use.",
+        gallery_card_2_title: "Granite detail",
+        gallery_card_2_text: "Granite details offer a durable and elegant appearance, preserving their strength for many years while adding aesthetic integrity to the grave.",
+        gallery_card_3_title: "Custom application",
+        gallery_card_3_text: "Solutions planned according to need are prepared specifically according to dimensions, model and material preferences and applied to suit the desired appearance.",
+        gallery_card_4_title: "Grave cleaning and maintenance",
+        gallery_card_4_text: "Dirt and wear formed over time are removed with careful application to achieve a cleaner appearance.",
+        gallery_alt_1: "Grave construction example 1",
+        gallery_alt_2: "Grave construction example 2",
+        gallery_alt_3: "Grave construction example 3",
+        gallery_alt_4: "Grave cleaning and maintenance example",
+        gallery_btn: "View full gallery",
+        services_title: "Grave and marble solutions tailored to your needs",
+        services_text: "We offer services for different needs in construction, renewal and maintenance processes.",
+        service_1_title: "Gravestone production",
+        service_1_text: "Gravestones are produced in marble or granite with writing, size and model options according to your request.",
+        service_2_title: "Complete grave construction",
+        service_2_text: "Aesthetic and orderly solutions are offered throughout the complete grave construction process.",
+        service_3_title: "Grave repair",
+        service_3_text: "Repair and renewal of damaged or worn grave sections are carried out carefully.",
+        service_4_title: "Grave cleaning",
+        service_4_text: "Grave areas that become dirty over time are cleaned for a more maintained and orderly appearance.",
+        service_5_title: "Inner sarcophagus construction",
+        service_5_text: "Sarcophagus applications are prepared carefully and solidly according to suitable dimensions.",
+        service_6_title: "Fountain",
+        service_6_text: "Aesthetic and functional fountain applications are made for grave areas or suitable sections.",
+        services_btn: "Review all our services",
+        why_title: "Why Uğur Mermer?",
+        stat_1_title: "Since 1969",
+        stat_1_text: "With years of experience in marble and grave works, we offer reliable, orderly and careful solutions.",
+        stat_2_title: "Careful",
+        stat_2_text: "In every project, we act with an understanding of aesthetic appearance, durability and orderly delivery.",
+        stat_3_title: "Fast",
+        stat_3_text: "You can get information by phone or WhatsApp and easily reach our location.",
+        highlight_1_title: "Transparent communication",
+        highlight_1_text: "We move forward by clearly sharing process, model and application details.",
+        highlight_2_title: "Easy on-site access",
+        highlight_2_text: "Thanks to our location in Karacaahmet, our customers can reach us easily.",
+        highlight_3_title: "Careful delivery approach",
+        highlight_3_text: "We care about completing our work in an orderly, clean and long-lasting way.",
+        cta_eyebrow: "Contact",
+        cta_title: "Contact us now for information or location",
+        cta_text: "You can quickly get in touch via phone, WhatsApp or the map link.",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_map: "Show on Map",
+        footer_brand: "Uğur Mermer",
+        footer_location: "Karacaahmet, Üsküdar / Istanbul"
+      },
+      ar: {
+        pageTitle: "أوغور مرمر | أعمال القبور والرخام في إسطنبول",
+        pageDescription: "منذ عام 1969 في كاراجا أحمد بإسطنبول: بناء القبور، ترميمها، وأعمال الجرانيت والرخام. تواصل سريع مع أوغور مرمر.",
+        nav_home: "الرئيسية",
+        nav_gallery: "المعرض",
+        nav_services: "خدماتنا",
+        nav_contact: "التواصل",
+        hero_chip: "خبرة منذ 1969",
+        hero_title: "خدمة موثوقة في بناء القبور والترميم وأعمال الرخام في إسطنبول",
+        hero_text: "يقدم عملنا في كاراجا أحمد خدمات تصنيع شواهد القبور، وبناء القبور بالكامل، وتطبيقات اللحد، والترميم، والتنظيف بجودة عالية وعناية في التنفيذ.",
+        hero_btn_whatsapp: "راسلنا على واتساب",
+        hero_btn_call: "اتصل الآن",
+        hero_btn_gallery: "شاهد الأعمال",
+        hero_badge_location: "كاراجا أحمد / أوسكودار",
+        hero_alt: "تطبيق قبر رخامي أبيض من أوغور مرمر",
+        gallery_title: "بعض الأمثلة من الأعمال المنجزة",
+        gallery_text: "يمكنكم استعراض نماذج مختلفة من الحجر والتصميمات والتطبيقات في معرضنا.",
+        gallery_card_1_title: "تطبيق نموذجي",
+        gallery_card_1_text: "تم تنفيذ هذا العمل بعناية مع تشطيب نظيف وتصميم متوازن يضمن مظهراً أنيقاً واستخداماً طويل الأمد.",
+        gallery_card_2_title: "تفاصيل الجرانيت",
+        gallery_card_2_text: "توفر تفاصيل الجرانيت مظهراً أنيقاً ومتيناً وتحافظ على قوتها لسنوات طويلة مع إضافة انسجام بصري مميز.",
+        gallery_card_3_title: "تطبيق مخصص",
+        gallery_card_3_text: "يتم إعداد الحلول حسب الحاجة وبما يتوافق مع القياسات والنموذج ونوع المادة المطلوبة لتحقيق الشكل المرغوب.",
+        gallery_card_4_title: "تنظيف وصيانة القبور",
+        gallery_card_4_text: "تتم إزالة الأوساخ وآثار التآكل المتراكمة مع الوقت بعناية للوصول إلى مظهر أنظف.",
+        gallery_alt_1: "مثال بناء قبر 1",
+        gallery_alt_2: "مثال بناء قبر 2",
+        gallery_alt_3: "مثال بناء قبر 3",
+        gallery_alt_4: "مثال تنظيف وصيانة القبور",
+        gallery_btn: "عرض كامل المعرض",
+        services_title: "حلول القبور والرخام المناسبة لاحتياجاتكم",
+        services_text: "نقدم خدمات تلبي مختلف الاحتياجات في البناء والتجديد والصيانة.",
+        service_1_title: "صناعة شواهد القبور",
+        service_1_text: "يتم تصنيع شواهد القبور من الرخام أو الجرانيت حسب الطلب مع خيارات الكتابة والقياس والتصميم.",
+        service_2_title: "بناء القبر بالكامل",
+        service_2_text: "نقدم حلولاً منظمة وأنيقة طوال عملية بناء القبر بالكامل من البداية إلى النهاية.",
+        service_3_title: "ترميم القبور",
+        service_3_text: "نقوم بترميم وتجديد الأجزاء المتضررة أو المتآكلة من القبور بعناية.",
+        service_4_title: "تنظيف القبور",
+        service_4_text: "يتم تنظيف مناطق القبور التي تتسخ بمرور الوقت لتبدو أكثر ترتيباً وعناية.",
+        service_5_title: "بناء اللحد الداخلي",
+        service_5_text: "تُنفذ تطبيقات اللحد وفق المقاسات المناسبة بعناية ومتانة.",
+        service_6_title: "نافورة",
+        service_6_text: "ننفذ تطبيقات نوافير جمالية وعملية في مناطق القبور أو الأماكن المناسبة.",
+        services_btn: "استعرض جميع خدماتنا",
+        why_title: "لماذا أوغور مرمر؟",
+        stat_1_title: "منذ 1969",
+        stat_1_text: "بفضل سنوات الخبرة في أعمال الرخام والقبور نقدم حلولاً موثوقة ومنظمة ودقيقة.",
+        stat_2_title: "بعناية",
+        stat_2_text: "في كل عمل نهتم بالمظهر الجمالي والمتانة والتسليم المنتظم.",
+        stat_3_title: "سريع",
+        stat_3_text: "يمكنكم الحصول على المعلومات عبر الهاتف أو واتساب والوصول إلينا بسهولة.",
+        highlight_1_title: "تواصل شفاف",
+        highlight_1_text: "نشارك تفاصيل العملية والنموذج والتطبيق بشكل واضح خلال جميع المراحل.",
+        highlight_2_title: "سهولة الوصول للموقع",
+        highlight_2_text: "بفضل موقعنا في كاراجا أحمد يمكن لعملائنا الوصول إلينا بسهولة.",
+        highlight_3_title: "عناية في التسليم",
+        highlight_3_text: "نحرص على إتمام أعمالنا بشكل منظم ونظيف وطويل الأمد.",
+        cta_eyebrow: "التواصل",
+        cta_title: "تواصل معنا الآن للحصول على المعلومات أو الموقع",
+        cta_text: "يمكنكم التواصل بسرعة عبر الهاتف أو واتساب أو رابط الخريطة.",
+        cta_btn_whatsapp: "واتساب",
+        cta_btn_map: "عرض على الخريطة",
+        footer_brand: "أوغور مرمر",
+        footer_location: "كاراجا أحمد، أوسكودار / إسطنبول"
+      },
+      de: {
+        pageTitle: "Uğur Mermer | Grabbau und Marmorarbeiten in Istanbul",
+        pageDescription: "Seit 1969 in Karacaahmet, Istanbul: Grabbau, Grabreparatur sowie Granit- und Marmorarbeiten. Kontaktieren Sie Uğur Mermer schnell.",
+        nav_home: "Startseite",
+        nav_gallery: "Galerie",
+        nav_services: "Leistungen",
+        nav_contact: "Kontakt",
+        hero_chip: "Erfahrung seit 1969",
+        hero_title: "Zuverlässiger Service für Grabbau, Reparatur und Marmorarbeiten in Istanbul",
+        hero_text: "Unser Unternehmen mit Sitz in Karacaahmet bietet Grabsteinherstellung, kompletten Grabbau, Lahd-Anwendungen, Reparatur- und Reinigungsdienste mit hochwertiger Handwerkskunst und sorgfältiger Ausführung an.",
+        hero_btn_whatsapp: "Per WhatsApp schreiben",
+        hero_btn_call: "Jetzt anrufen",
+        hero_btn_gallery: "Beispiele ansehen",
+        hero_badge_location: "Karacaahmet / Üsküdar",
+        hero_alt: "Weiße Marmoranwendung von Uğur Mermer",
+        gallery_title: "Einige Beispiele unserer Arbeiten",
+        gallery_text: "In unserer Galerie können Sie verschiedene Modelle, Steinarten und Ausführungsbeispiele ansehen.",
+        gallery_card_1_title: "Beispielanwendung",
+        gallery_card_1_text: "Diese Anwendung wurde mit sauberer Verarbeitung und ausgewogenem Design sorgfältig fertiggestellt und bietet eine ästhetische Erscheinung sowie langlebige Nutzung.",
+        gallery_card_2_title: "Granitdetail",
+        gallery_card_2_text: "Granitdetails sorgen für ein langlebiges und elegantes Erscheinungsbild, bewahren ihre Stabilität über viele Jahre und verleihen dem Grab eine harmonische Optik.",
+        gallery_card_3_title: "Individuelle Anwendung",
+        gallery_card_3_text: "Lösungen werden je nach Bedarf sowie nach Maß, Modell und Materialwunsch individuell vorbereitet und passend umgesetzt.",
+        gallery_card_4_title: "Grabreinigung und Pflege",
+        gallery_card_4_text: "Mit der Zeit entstandener Schmutz und Abnutzung werden durch sorgfältige Anwendung entfernt und sorgen für ein saubereres Erscheinungsbild.",
+        gallery_alt_1: "Grabbau Beispiel 1",
+        gallery_alt_2: "Grabbau Beispiel 2",
+        gallery_alt_3: "Grabbau Beispiel 3",
+        gallery_alt_4: "Beispiel für Grabreinigung und Pflege",
+        gallery_btn: "Gesamte Galerie ansehen",
+        services_title: "Grab- und Marmorlösungen nach Bedarf",
+        services_text: "Wir bieten Leistungen für unterschiedliche Anforderungen in den Bereichen Bau, Erneuerung und Pflege.",
+        service_1_title: "Grabsteinherstellung",
+        service_1_text: "Grabsteine aus Marmor oder Granit werden mit Schrift-, Maß- und Modelloptionen nach Wunsch gefertigt.",
+        service_2_title: "Kompletter Grabbau",
+        service_2_text: "Während des gesamten Grabbauprozesses bieten wir ästhetische und geordnete Lösungen.",
+        service_3_title: "Grabreparatur",
+        service_3_text: "Beschädigte oder im Laufe der Zeit abgenutzte Grabteile werden sorgfältig repariert und erneuert.",
+        service_4_title: "Grabreinigung",
+        service_4_text: "Mit der Zeit verschmutzte Grabbereiche werden gereinigt und gepflegter gestaltet.",
+        service_5_title: "Lahit-Bau im Grab",
+        service_5_text: "Lahit-Anwendungen werden entsprechend der benötigten Maße sorgfältig und stabil vorbereitet.",
+        service_6_title: "Brunnen",
+        service_6_text: "Für Grabflächen oder geeignete Bereiche werden ästhetische und funktionale Brunnenanwendungen umgesetzt.",
+        services_btn: "Alle unsere Leistungen ansehen",
+        why_title: "Warum Uğur Mermer?",
+        stat_1_title: "Seit 1969",
+        stat_1_text: "Mit jahrelanger Erfahrung in Marmor- und Grabarbeiten bieten wir zuverlässige, geordnete und sorgfältige Lösungen.",
+        stat_2_title: "Sorgfältig",
+        stat_2_text: "Bei jeder Arbeit handeln wir mit dem Anspruch an Ästhetik, Stabilität und ordentliche Übergabe.",
+        stat_3_title: "Schnell",
+        stat_3_text: "Sie können per Telefon oder WhatsApp Informationen erhalten und uns leicht erreichen.",
+        highlight_1_title: "Transparente Kommunikation",
+        highlight_1_text: "Wir teilen Prozess-, Modell- und Ausführungsdetails klar und offen mit.",
+        highlight_2_title: "Einfache Erreichbarkeit vor Ort",
+        highlight_2_text: "Dank unseres Standorts in Karacaahmet können unsere Kunden uns bequem erreichen.",
+        highlight_3_title: "Sorgfältige Übergabe",
+        highlight_3_text: "Wir legen Wert darauf, unsere Arbeiten geordnet, sauber und langlebig abzuschließen.",
+        cta_eyebrow: "Kontakt",
+        cta_title: "Kontaktieren Sie uns jetzt für Informationen oder den Standort",
+        cta_text: "Sie können uns schnell per Telefon, WhatsApp oder Kartenlink erreichen.",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_map: "Auf Karte anzeigen",
+        footer_brand: "Uğur Mermer",
+        footer_location: "Karacaahmet, Üsküdar / Istanbul"
+      },
+      ru: {
+        pageTitle: "Uğur Mermer | Изготовление памятников и мраморные работы в Стамбуле",
+        pageDescription: "С 1969 года в Караджаахмете, Стамбул: изготовление памятников, ремонт могил, гранитные и мраморные работы. Быстрая связь с Uğur Mermer.",
+        nav_home: "Главная",
+        nav_gallery: "Галерея",
+        nav_services: "Услуги",
+        nav_contact: "Контакты",
+        hero_chip: "Опыт с 1969 года",
+        hero_title: "Надежные услуги по изготовлению могил, ремонту и мраморным работам в Стамбуле",
+        hero_text: "Наша компания, расположенная в Караджаахмете, предлагает изготовление надгробий, полное строительство могил, устройство лахита, ремонт и очистку с качественным исполнением и внимательным подходом.",
+        hero_btn_whatsapp: "Написать в WhatsApp",
+        hero_btn_call: "Позвонить сейчас",
+        hero_btn_gallery: "Посмотреть работы",
+        hero_badge_location: "Караджаахмет / Ускюдар",
+        hero_alt: "Белое мраморное надгробие от Uğur Mermer",
+        gallery_title: "Некоторые примеры выполненных работ",
+        gallery_text: "В нашей галерее вы можете ознакомиться с различными моделями, видами камня и примерами исполнения.",
+        gallery_card_1_title: "Пример работы",
+        gallery_card_1_text: "Эта работа выполнена с аккуратной обработкой и сбалансированным дизайном, обеспечивая эстетичный вид и долговечность.",
+        gallery_card_2_title: "Гранитная деталь",
+        gallery_card_2_text: "Гранитные детали обеспечивают прочный и стильный внешний вид, сохраняют надежность на долгие годы и придают памятнику эстетическую целостность.",
+        gallery_card_3_title: "Индивидуальное решение",
+        gallery_card_3_text: "Решения подбираются с учетом потребностей, размеров, модели и материала и выполняются в соответствии с желаемым внешним видом.",
+        gallery_card_4_title: "Чистка и уход за могилой",
+        gallery_card_4_text: "Загрязнения и следы износа, возникающие со временем, аккуратно устраняются для более чистого внешнего вида.",
+        gallery_alt_1: "Пример изготовления могилы 1",
+        gallery_alt_2: "Пример изготовления могилы 2",
+        gallery_alt_3: "Пример изготовления могилы 3",
+        gallery_alt_4: "Пример чистки и ухода за могилой",
+        gallery_btn: "Смотреть всю галерею",
+        services_title: "Решения по могилам и мрамору под ваши потребности",
+        services_text: "Мы предлагаем услуги для различных потребностей в строительстве, обновлении и уходе.",
+        service_1_title: "Изготовление надгробий",
+        service_1_text: "Изготавливаем надгробия из мрамора или гранита с учетом надписей, размеров и модели по желанию клиента.",
+        service_2_title: "Полное изготовление могилы",
+        service_2_text: "На всех этапах полного изготовления могилы предлагаются эстетичные и аккуратные решения.",
+        service_3_title: "Ремонт могилы",
+        service_3_text: "Поврежденные или изношенные со временем части могилы аккуратно ремонтируются и обновляются.",
+        service_4_title: "Чистка могилы",
+        service_4_text: "Загрязненные со временем участки могилы очищаются и приводятся в более ухоженный вид.",
+        service_5_title: "Изготовление лахита внутри могилы",
+        service_5_text: "Работы по устройству лахита выполняются аккуратно и надежно по подходящим размерам.",
+        service_6_title: "Фонтан",
+        service_6_text: "Для территории могилы или подходящих участков выполняются эстетичные и функциональные фонтаны.",
+        services_btn: "Посмотреть все услуги",
+        why_title: "Почему Uğur Mermer?",
+        stat_1_title: "С 1969 года",
+        stat_1_text: "Благодаря многолетнему опыту в мраморных и мемориальных работах мы предлагаем надежные, аккуратные и продуманные решения.",
+        stat_2_title: "Аккуратно",
+        stat_2_text: "В каждой работе мы придерживаемся принципов эстетики, прочности и аккуратной сдачи.",
+        stat_3_title: "Быстро",
+        stat_3_text: "Вы можете получить информацию по телефону или WhatsApp и легко добраться до нас.",
+        highlight_1_title: "Прозрачное общение",
+        highlight_1_text: "Мы открыто делимся деталями процесса, модели и выполнения.",
+        highlight_2_title: "Удобное расположение",
+        highlight_2_text: "Благодаря нашему расположению в Караджаахмете клиентам легко до нас добраться.",
+        highlight_3_title: "Внимательный подход к сдаче",
+        highlight_3_text: "Мы придаем большое значение тому, чтобы завершать работы аккуратно, чисто и надолго.",
+        cta_eyebrow: "Контакты",
+        cta_title: "Свяжитесь с нами сейчас для информации или местоположения",
+        cta_text: "Вы можете быстро связаться с нами по телефону, через WhatsApp или по ссылке на карту.",
+        cta_btn_whatsapp: "WhatsApp",
+        cta_btn_map: "Показать на карте",
+        footer_brand: "Uğur Mermer",
+        footer_location: "Караджаахмет, Ускюдар / Стамбул"
+      }
+    };
+
+    const languageSelect = document.getElementById('languageSelect');
+    const pageTitle = document.getElementById('pageTitle');
+    const pageDescription = document.getElementById('pageDescription');
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.tr;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      pageTitle.textContent = dict.pageTitle;
+      pageDescription.setAttribute('content', dict.pageDescription);
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        if (dict[key]) el.setAttribute('alt', dict[key]);
+      });
+
+      localStorage.setItem('siteLanguage', lang);
+      languageSelect.value = lang;
+    }
+
+    const savedLanguage = localStorage.getItem('siteLanguage') || 'tr';
+    setLanguage(savedLanguage);
+
+    languageSelect.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+  </script>
 </body>
 </html>
