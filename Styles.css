@@ -575,6 +575,51 @@ footer {
   display: block;
 }
 
+/* Arapça masaüstü hero düzeltmesi */
+html[dir="rtl"] .hero-banner-content {
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .hero-copy {
+  width: min(40vw, 500px);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 28px;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .hero-copy h1 {
+  max-width: 100%;
+  font-size: clamp(2.7rem, 4vw, 4.6rem);
+  line-height: 1.24;
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .hero-copy .lead {
+  max-width: 100%;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+html[dir="rtl"] .hero-banner-overlay {
+  background:
+    linear-gradient(270deg,
+      rgba(0,0,0,0.98) 0%,
+      rgba(0,0,0,0.94) 24%,
+      rgba(0,0,0,0.80) 42%,
+      rgba(0,0,0,0.46) 60%,
+      rgba(0,0,0,0.12) 78%,
+      rgba(0,0,0,0.02) 100%);
+}
+
+html[dir="rtl"] .hero-banner-image img {
+  object-fit: cover !important;
+  object-position: left center !important;
+  transform: none !important;
+  background: #070707;
+}
+
 @media (max-width: 1080px) {
   .hero {
     min-height: 620px;
@@ -606,6 +651,12 @@ footer {
   .hero-copy {
     max-width: 100%;
     padding: 64px 0 72px;
+  }
+
+  html[dir="rtl"] .hero-copy {
+    width: min(48vw, 460px);
+    max-width: 460px;
+    padding-right: 16px;
   }
 
   .section-tight {
@@ -910,5 +961,10 @@ footer {
     object-position: center center;
     transform: none;
     background: #070707;
+  }
+
+  html[dir="rtl"] .hero-banner-image img {
+    object-fit: cover !important;
+    object-position: left center !important;
   }
 }
