@@ -893,3 +893,19 @@ footer {
     margin-top: 12px;
   }
 }
+@media (min-width: 761px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-banner-content {
+    min-height: 620px;
+  }
+
+  .hero-banner-image img {
+    object-fit: contain;
+    object-position: center center;
+    transform: none;
+    background: #070707;
+  }
+}
