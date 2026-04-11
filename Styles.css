@@ -196,10 +196,10 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 74% center;
-  transform: scale(0.96);
-  transform-origin: center;
+  object-position: right center;
+  transform: none;
   filter: saturate(0.98) contrast(1.02);
+  display: block;
 }
 
 .hero-banner-overlay {
