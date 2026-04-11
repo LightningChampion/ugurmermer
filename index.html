@@ -32,7 +32,7 @@
     .language-bar {
       position: relative;
       z-index: 20;
-      padding-top: 16px;
+      margin-top: 18px;
     }
 
     .language-switcher {
@@ -150,53 +150,16 @@
         height: 26px;
       }
 
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-      }
-
-      .nav-inner {
-        min-height: auto;
-        padding: 10px 0 12px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-      }
-
-      .brand {
-        font-size: 1rem;
-        line-height: 1.05;
-        align-self: center;
-      }
-
-      nav ul {
-        gap: 10px 16px;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-      }
-
-      nav a {
-        font-size: 14px;
-      }
-
       .language-bar {
-        padding-top: 12px;
+        margin-top: 12px;
       }
 
       .language-switcher {
-        width: 100%;
-        padding: 10px;
-        border-radius: 22px;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 10px;
-        justify-content: stretch;
-        align-items: stretch;
+        padding: 10px;
+        border-radius: 22px;
       }
 
       .lang-btn {
@@ -953,8 +916,12 @@
 
     function updateBodyOffset() {
       const nav = document.querySelector('nav');
-      if (!nav) return;
-      document.body.style.paddingTop = `${nav.offsetHeight + 18}px`;
+      const languageBar = document.querySelector('.language-bar');
+      if (!nav || !languageBar) return;
+
+      const navHeight = nav.offsetHeight;
+      document.body.style.paddingTop = `${navHeight + 18}px`;
+      languageBar.style.marginTop = `${navHeight + 8}px`;
     }
 
     const savedLanguage = localStorage.getItem('siteLanguage') || 'tr';
