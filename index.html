@@ -47,7 +47,6 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
       flex-wrap: wrap;
-      width: 100%;
     }
 
     .lang-btn {
@@ -144,6 +143,16 @@
       object-position: left center !important;
     }
 
+    @media (max-width: 1180px) {
+      .language-bar {
+        margin-top: 14px;
+      }
+
+      .language-switcher {
+        width: 100%;
+      }
+    }
+
     @media (max-width: 760px) {
       .floating-whatsapp svg {
         width: 26px;
@@ -155,11 +164,12 @@
       }
 
       .language-switcher {
+        width: 100%;
+        padding: 10px;
+        border-radius: 22px;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 10px;
-        padding: 10px;
-        border-radius: 22px;
       }
 
       .lang-btn {
@@ -916,12 +926,8 @@
 
     function updateBodyOffset() {
       const nav = document.querySelector('nav');
-      const languageBar = document.querySelector('.language-bar');
-      if (!nav || !languageBar) return;
-
-      const navHeight = nav.offsetHeight;
-      document.body.style.paddingTop = `${navHeight + 18}px`;
-      languageBar.style.marginTop = `${navHeight + 8}px`;
+      if (!nav) return;
+      document.body.style.paddingTop = `${nav.offsetHeight + 18}px`;
     }
 
     const savedLanguage = localStorage.getItem('siteLanguage') || 'tr';
