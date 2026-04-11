@@ -154,8 +154,9 @@
     }
 
     @media (max-width: 760px) {
-      body {
-        padding-top: 245px !important;
+      .floating-whatsapp svg {
+        width: 26px;
+        height: 26px;
       }
 
       nav {
@@ -164,11 +165,6 @@
         left: 0;
         right: 0;
         z-index: 1000;
-      }
-
-      .floating-whatsapp svg {
-        width: 26px;
-        height: 26px;
       }
 
       .nav-inner {
@@ -198,12 +194,9 @@
       }
 
       .language-switcher {
-        position: fixed;
-        top: 118px;
-        left: 9px;
-        right: 9px;
-        width: auto;
-        margin: 0;
+        width: 100%;
+        order: 3;
+        margin: 8px 0 0;
         padding: 10px;
         border-radius: 22px;
         display: grid;
@@ -211,7 +204,6 @@
         gap: 10px;
         justify-content: stretch;
         align-items: stretch;
-        z-index: 1001;
       }
 
       .lang-btn {
@@ -241,14 +233,7 @@
     }
 
     @media (max-width: 480px) {
-      body {
-        padding-top: 232px !important;
-      }
-
       .language-switcher {
-        top: 108px;
-        left: 7px;
-        right: 7px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 8px;
         padding: 8px;
@@ -974,16 +959,6 @@
     }
 
     function updateBodyOffset() {
-      if (window.innerWidth <= 480) {
-        document.body.style.paddingTop = '232px';
-        return;
-      }
-
-      if (window.innerWidth <= 760) {
-        document.body.style.paddingTop = '245px';
-        return;
-      }
-
       const nav = document.querySelector('nav');
       if (!nav) return;
       document.body.style.paddingTop = `${nav.offsetHeight + 18}px`;
