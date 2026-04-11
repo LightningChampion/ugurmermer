@@ -29,9 +29,16 @@
       color: var(--text) !important;
     }
 
+    .language-bar {
+      position: relative;
+      z-index: 20;
+      padding-top: 16px;
+    }
+
     .language-switcher {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
       padding: 8px;
       border-radius: 999px;
@@ -39,9 +46,8 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
-      margin-left: 12px;
-      flex: 0 0 auto;
       flex-wrap: wrap;
+      width: 100%;
     }
 
     .lang-btn {
@@ -138,21 +144,6 @@
       object-position: left center !important;
     }
 
-    @media (max-width: 1180px) {
-      .nav-inner {
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
-      .language-switcher {
-        width: 100%;
-        order: 3;
-        margin-left: 0;
-        margin-top: 8px;
-        justify-content: center;
-      }
-    }
-
     @media (max-width: 760px) {
       .floating-whatsapp svg {
         width: 26px;
@@ -193,10 +184,12 @@
         font-size: 14px;
       }
 
+      .language-bar {
+        padding-top: 12px;
+      }
+
       .language-switcher {
         width: 100%;
-        order: 3;
-        margin: 8px 0 0;
         padding: 10px;
         border-radius: 22px;
         display: grid;
@@ -215,10 +208,6 @@
 
       .lang-btn .flag {
         font-size: 18px;
-      }
-
-      .lang-btn[data-lang="zh"] {
-        grid-column: auto;
       }
 
       html[dir="rtl"] .hero-mobile-bottom,
@@ -267,7 +256,11 @@
         <li><a href="services.html" data-i18n="nav_services">Hizmetlerimiz</a></li>
         <li><a href="contact.html" data-i18n="nav_contact">İletişim</a></li>
       </ul>
+    </div>
+  </nav>
 
+  <div class="language-bar">
+    <div class="container">
       <div class="language-switcher" aria-label="Dil seçici">
         <button type="button" class="lang-btn active" data-lang="tr" aria-label="Türkçe">
           <span class="flag">🇹🇷</span><span class="label">Türkçe</span>
@@ -289,7 +282,7 @@
         </button>
       </div>
     </div>
-  </nav>
+  </div>
 
   <main>
     <section class="hero hero-banner">
