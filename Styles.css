@@ -934,10 +934,19 @@ footer {
   }
 
   html[dir="rtl"] .hero-copy-mobile {
-    max-width: min(980px, 100%);
+    max-width: 980px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0;
-    text-align: center;
+    padding: 0 24px;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  html[dir="rtl"] .hero-copy-mobile .hero-chip {
+    margin-bottom: 14px;
   }
 
   html[dir="rtl"] .hero-copy-mobile h1 {
@@ -946,6 +955,7 @@ footer {
     letter-spacing: 0;
     max-width: 920px;
     margin: 0 auto 18px;
+    text-align: center !important;
   }
 
   html[dir="rtl"] .hero-copy-mobile .lead {
@@ -953,6 +963,7 @@ footer {
     margin: 0 auto;
     font-size: 1.08rem;
     line-height: 1.9;
+    text-align: center !important;
   }
 
   html[dir="rtl"] .hero-mobile-image-wrap {
