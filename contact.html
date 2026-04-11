@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>İletişim | Uğur Mermer</title>
-  <meta name="description" content="Uğur Mermer ile mezar yapımı ve mermer işleri için iletişime geçin. Telefon ve WhatsApp üzerinden bize ulaşabilirsiniz.">
+  <meta name="description" content="Uğur Mermer iletişim bilgileri, telefon numaraları, WhatsApp hattı ve konum bilgisi.">
   <link rel="stylesheet" href="Styles.css">
   <style>
     .floating-whatsapp {
@@ -20,47 +20,6 @@
       width: 30px;
       height: 30px;
       display: block;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .contact-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .contact-card h2 {
-      margin-top: 0;
-      margin-bottom: 16px;
-      color: var(--accent);
-    }
-
-    .contact-card p {
-      margin-bottom: 12px;
-      line-height: 1.7;
-    }
-
-    .contact-card a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .contact-card a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 18px;
     }
 
     @media (max-width: 760px) {
@@ -86,31 +45,44 @@
 
   <main class="container">
     <section class="page-hero section-header center">
-      <h1 style="color: var(--accent);">İletişim</h1>
-      <p class="lead">Mezar yapımı, mermer işleri ve fiyat bilgisi için bizimle hemen iletişime geçebilirsiniz.</p>
+      <span class="eyebrow">İletişim</span>
+      <h1>Uğur Mermer ile hızlıca iletişime geçin</h1>
+      <p class="lead">Telefon, WhatsApp ve harita bağlantısı üzerinden bize kolayca ulaşabilirsiniz.</p>
     </section>
 
-    <section class="section">
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h2>Bize Ulaşın</h2>
-          <p><strong>Firma:</strong> Uğur Mermer</p>
-          <p><strong>Telefon:</strong> <a href="tel:+905426952150">0542 695 21 50</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/905426952150" target="_blank" rel="noopener">Mesaj Gönder</a></p>
-          <p>Detaylı bilgi almak, fiyat sormak veya örnek işler hakkında konuşmak için bize ulaşabilirsiniz.</p>
+    <section class="section contact-wrapper">
+      <div class="contact-box">
+        <h2>İletişim Bilgileri</h2>
 
-          <div class="contact-actions">
-            <a class="btn btn-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn btn-secondary" href="tel:+905426952150">Hemen Ara</a>
-          </div>
-        </div>
+        <p><strong>Cep Telefonu:</strong><br>
+          <a class="link" href="tel:+905426952150">+90 542 695 21 50</a>
+        </p>
 
-        <div class="contact-card">
-          <h2>Hızlı Bilgi</h2>
-          <p>Mezar yapımı, baş taşı, mermer kaplama ve özel ölçü işleriniz için destek veriyoruz.</p>
-          <p>Galeri sayfamızdan örnek uygulamaları inceleyebilir, ardından iletişime geçebilirsiniz.</p>
-          <p><a href="gallery.html">Galeri sayfasına git</a></p>
+        <p><strong>Adres:</strong><br>
+          Karacaahmet, Zeynep Kamil<br>
+          Nuhkuyusu Caddesi No:25<br>
+          Üsküdar / İstanbul
+        </p>
+
+        <p><strong>Çalışma Saatleri:</strong><br>
+          Pazartesi - Pazar: 08:00 - 18:00
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-secondary" href="tel:+905426952150">Ara</a>
+          <a class="btn btn-map" href="https://www.google.com/maps/place/U%C4%9Fur+Mermer/@41.0132344,29.0196256,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab7a7f7967f29:0x558d44e6e1e3ac49!8m2!3d41.0132304!4d29.0222005!16s%2Fg%2F1ptxcj9y8" target="_blank" rel="noopener">Haritada Göster</a>
         </div>
+      </div>
+
+      <div class="contact-box">
+        <iframe
+          class="map"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.3093316403107!2d29.0222005!3d41.0132304!2m3!1f0!2f0!3f0!2m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7a7f7967f29%3A0x558d44e6e1e3ac49!2sU%C4%9Fur%20Mermer!5e0!3m2!1str!2str!4v1702470000000">
+        </iframe>
       </div>
     </section>
   </main>
@@ -118,7 +90,7 @@
   <footer>
     <div class="container footer-inner">
       <div>Uğur Mermer</div>
-      <div>İletişim ve bilgi alma</div>
+      <div>Karacaahmet, Üsküdar / İstanbul</div>
     </div>
   </footer>
 
