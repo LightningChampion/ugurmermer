@@ -23,14 +23,12 @@
       display: block;
     }
 
-    /* Sarı başlıklar Neden Uğur Mermer? başlığıyla aynı beyaz tona çekildi */
     .service-card h3,
     .stat-number,
     .highlight-card h3 {
       color: var(--text) !important;
     }
 
-    /* Yeni dil alanı */
     .language-switcher {
       display: flex;
       align-items: center;
@@ -48,6 +46,7 @@
     .lang-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       min-height: 44px;
       padding: 10px 16px;
@@ -82,7 +81,6 @@
       line-height: 1;
     }
 
-    /* RTL */
     html[dir="rtl"] body {
       direction: rtl;
     }
@@ -112,24 +110,33 @@
     html[dir="rtl"] .hero-copy {
       margin-left: auto;
       margin-right: 0;
-      max-width: 560px;
+      max-width: 520px;
+      padding-right: 8px;
+    }
+
+    html[dir="rtl"] .hero-copy h1 {
+      max-width: 520px;
+      line-height: 1.18;
+    }
+
+    html[dir="rtl"] .hero-copy .lead {
+      max-width: 520px;
     }
 
     html[dir="rtl"] .hero-banner-overlay {
       background:
         linear-gradient(270deg,
-          rgba(0,0,0,0.92) 0%,
-          rgba(0,0,0,0.84) 24%,
-          rgba(0,0,0,0.56) 46%,
-          rgba(0,0,0,0.18) 70%,
-          rgba(0,0,0,0.06) 100%);
+          rgba(0,0,0,0.96) 0%,
+          rgba(0,0,0,0.90) 28%,
+          rgba(0,0,0,0.68) 50%,
+          rgba(0,0,0,0.26) 74%,
+          rgba(0,0,0,0.08) 100%);
     }
 
     html[dir="rtl"] .hero-banner-image img {
-      object-position: left center;
+      object-position: left center !important;
     }
 
-    /* Masaüstü ve tablet nav düzeni */
     @media (max-width: 1180px) {
       .nav-inner {
         flex-wrap: wrap;
@@ -140,7 +147,7 @@
         width: 100%;
         order: 3;
         margin-left: 0;
-        margin-top: 6px;
+        margin-top: 8px;
         justify-content: center;
       }
     }
@@ -154,32 +161,37 @@
       .language-switcher {
         width: 100%;
         margin-left: 0;
-        margin-top: 8px;
-        padding: 6px;
-        justify-content: flex-start;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .language-switcher::-webkit-scrollbar {
-        display: none;
+        margin-top: 10px;
+        padding: 8px;
+        border-radius: 22px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
       }
 
       .lang-btn {
-        min-height: 40px;
-        padding: 8px 12px;
+        width: 100%;
+        min-height: 42px;
+        padding: 8px 10px;
         font-size: 14px;
-        flex: 0 0 auto;
       }
 
       .lang-btn .flag {
         font-size: 18px;
       }
 
+      .lang-btn[data-lang="ru"] {
+        grid-column: 1 / -1;
+      }
+
       html[dir="rtl"] .hero-mobile-bottom,
       html[dir="rtl"] .hero-copy-mobile {
         text-align: right;
+      }
+
+      html[dir="rtl"] .hero-copy-mobile h1,
+      html[dir="rtl"] .hero-copy-mobile .lead {
+        max-width: 100%;
       }
     }
   </style>
@@ -814,6 +826,13 @@
       });
 
       localStorage.setItem('siteLanguage', lang);
+      requestAnimationFrame(updateBodyOffset);
+    }
+
+    function updateBodyOffset() {
+      const nav = document.querySelector('nav');
+      if (!nav) return;
+      document.body.style.paddingTop = `${nav.offsetHeight + 18}px`;
     }
 
     const savedLanguage = localStorage.getItem('siteLanguage') || 'tr';
@@ -824,6 +843,9 @@
         setLanguage(btn.dataset.lang);
       });
     });
+
+    window.addEventListener('load', updateBodyOffset);
+    window.addEventListener('resize', updateBodyOffset);
   </script>
 </body>
 </html>
