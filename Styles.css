@@ -157,7 +157,7 @@ p {
 
 .hero {
   position: relative;
-  min-height: 690px;
+  min-height: 620px;
   overflow: visible;
   background: transparent;
 }
@@ -219,7 +219,7 @@ p {
 .hero-banner-content {
   position: relative;
   z-index: 3;
-  min-height: 690px;
+  min-height: 620px;
   display: flex;
   align-items: center;
 }
