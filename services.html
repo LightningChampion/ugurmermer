@@ -26,7 +26,7 @@
     .language-bar {
       position: relative;
       z-index: 20;
-      margin-top: 10px;
+      margin-top: 8px;
       margin-bottom: 6px;
     }
 
@@ -82,13 +82,13 @@
       line-height: 1;
     }
 
-    .service-card ul {
-      margin: 14px 0 0;
-      padding-left: 18px;
+    .services-grid ul {
+      margin: 0;
+      padding-left: 20px;
       color: var(--muted);
     }
 
-    .service-card li {
+    .services-grid li {
       margin-bottom: 8px;
     }
 
@@ -98,7 +98,8 @@
 
     html[dir="rtl"] .nav-inner,
     html[dir="rtl"] .actions,
-    html[dir="rtl"] .footer-inner {
+    html[dir="rtl"] .footer-inner,
+    html[dir="rtl"] .contact-actions {
       direction: rtl;
     }
 
@@ -108,14 +109,14 @@
       text-align: right;
     }
 
-    html[dir="rtl"] .service-card ul {
+    html[dir="rtl"] .services-grid ul {
       padding-left: 0;
-      padding-right: 18px;
+      padding-right: 20px;
     }
 
     @media (max-width: 1180px) {
       .language-bar {
-        margin-top: 10px;
+        margin-top: 6px;
       }
 
       .language-switcher {
@@ -130,7 +131,7 @@
       }
 
       .language-bar {
-        margin-top: 10px;
+        margin-top: 4px;
         margin-bottom: 4px;
       }
 
@@ -219,8 +220,8 @@
 
   <main class="container">
     <section class="page-hero section-header center">
-      <h1 style="color: var(--accent);" data-i18n="services_page_title">İhtiyaca uygun uygulamalar</h1>
-      <p class="lead" data-i18n="services_page_text">Her çalışmada düzenli işçilik, dayanıklı malzeme ve özenli uygulama anlayışıyla çalışıyoruz.</p>
+      <h1 style="color: var(--accent);" data-i18n="hero_title">İhtiyaca uygun uygulamalar</h1>
+      <p class="lead" data-i18n="hero_text">Her çalışmada düzenli işçilik, dayanıklı malzeme ve özenli uygulama anlayışıyla çalışıyoruz.</p>
     </section>
 
     <section class="section services-grid">
@@ -228,9 +229,9 @@
         <h3 data-i18n="service_1_title">Mezar taşı yapımı</h3>
         <p data-i18n="service_1_text">Mermer veya granit seçenekleriyle, yazı ve model tercihlerinize uygun mezar taşı üretimi yapılır.</p>
         <ul>
-          <li data-i18n="service_1_item_1">Kişiye özel ölçü ve model seçenekleri</li>
-          <li data-i18n="service_1_item_2">Yazı ve yüzey uygulamaları</li>
-          <li data-i18n="service_1_item_3">Temiz ve düzenli montaj</li>
+          <li data-i18n="service_1_li_1">Kişiye özel ölçü ve model seçenekleri</li>
+          <li data-i18n="service_1_li_2">Yazı ve yüzey uygulamaları</li>
+          <li data-i18n="service_1_li_3">Temiz ve düzenli montaj</li>
         </ul>
       </article>
 
@@ -238,9 +239,9 @@
         <h3 data-i18n="service_2_title">Mezar onarım</h3>
         <p data-i18n="service_2_text">Hasar gören, çatlayan veya zamanla yıpranan bölümlerin düzenlenmesi ve yenilenmesi yapılır.</p>
         <ul>
-          <li data-i18n="service_2_item_1">Kırık ve hasarlı kısımların onarımı</li>
-          <li data-i18n="service_2_item_2">Taş yüzey düzeltmeleri</li>
-          <li data-i18n="service_2_item_3">Genel görünüm yenilemesi</li>
+          <li data-i18n="service_2_li_1">Kırık ve hasarlı kısımların onarımı</li>
+          <li data-i18n="service_2_li_2">Taş yüzey düzeltmeleri</li>
+          <li data-i18n="service_2_li_3">Genel görünüm yenilemesi</li>
         </ul>
       </article>
 
@@ -248,9 +249,9 @@
         <h3 data-i18n="service_3_title">Mezar temizliği</h3>
         <p data-i18n="service_3_text">Zamanla kirlenen, matlaşan veya bakıma ihtiyaç duyan mezar alanlarının temizliği sağlanır.</p>
         <ul>
-          <li data-i18n="service_3_item_1">Yüzey temizliği</li>
-          <li data-i18n="service_3_item_2">Daha düzenli görünüm</li>
-          <li data-i18n="service_3_item_3">Bakım odaklı uygulama</li>
+          <li data-i18n="service_3_li_1">Yüzey temizliği</li>
+          <li data-i18n="service_3_li_2">Daha düzenli görünüm</li>
+          <li data-i18n="service_3_li_3">Bakım odaklı uygulama</li>
         </ul>
       </article>
 
@@ -258,9 +259,9 @@
         <h3 data-i18n="service_4_title">Mezar içine lahit yapımı</h3>
         <p data-i18n="service_4_text">İhtiyaca uygun şekilde mezar içine lahit uygulaması özenle hazırlanır ve uygulanır.</p>
         <ul>
-          <li data-i18n="service_4_item_1">Uygun ölçülendirme</li>
-          <li data-i18n="service_4_item_2">Sağlam ve düzenli uygulama</li>
-          <li data-i18n="service_4_item_3">Uzun ömürlü kullanım hedefi</li>
+          <li data-i18n="service_4_li_1">Uygun ölçülendirme</li>
+          <li data-i18n="service_4_li_2">Sağlam ve düzenli uygulama</li>
+          <li data-i18n="service_4_li_3">Uzun ömürlü kullanım hedefi</li>
         </ul>
       </article>
 
@@ -268,9 +269,9 @@
         <h3 data-i18n="service_5_title">Komple mezar yapımı</h3>
         <p data-i18n="service_5_text">Baştan sona tasarlanan mezar yapım sürecinde tüm taş ve uygulama detayları birlikte planlanır.</p>
         <ul>
-          <li data-i18n="service_5_item_1">Mermer ve granit çözümleri</li>
-          <li data-i18n="service_5_item_2">Bütünlüklü görünüm</li>
-          <li data-i18n="service_5_item_3">İsteğe uygun detaylandırma</li>
+          <li data-i18n="service_5_li_1">Mermer ve granit çözümleri</li>
+          <li data-i18n="service_5_li_2">Bütünlüklü görünüm</li>
+          <li data-i18n="service_5_li_3">İsteğe uygun detaylandırma</li>
         </ul>
       </article>
 
@@ -278,9 +279,9 @@
         <h3 data-i18n="service_6_title">Çeşme</h3>
         <p data-i18n="service_6_text">Mezar alanı veya uygun bölümler için estetik ve işlevsel çeşme uygulamaları yapılır.</p>
         <ul>
-          <li data-i18n="service_6_item_1">Şık ve sade tasarım</li>
-          <li data-i18n="service_6_item_2">Taş ile uyumlu görünüm</li>
-          <li data-i18n="service_6_item_3">Özenli montaj</li>
+          <li data-i18n="service_6_li_1">Şık ve sade tasarım</li>
+          <li data-i18n="service_6_li_2">Taş ile uyumlu görünüm</li>
+          <li data-i18n="service_6_li_3">Özenli montaj</li>
         </ul>
       </article>
     </section>
@@ -323,38 +324,38 @@
         nav_gallery: "Galeri",
         nav_services: "Hizmetlerimiz",
         nav_contact: "İletişim",
-        services_page_title: "İhtiyaca uygun uygulamalar",
-        services_page_text: "Her çalışmada düzenli işçilik, dayanıklı malzeme ve özenli uygulama anlayışıyla çalışıyoruz.",
+        hero_title: "İhtiyaca uygun uygulamalar",
+        hero_text: "Her çalışmada düzenli işçilik, dayanıklı malzeme ve özenli uygulama anlayışıyla çalışıyoruz.",
         service_1_title: "Mezar taşı yapımı",
         service_1_text: "Mermer veya granit seçenekleriyle, yazı ve model tercihlerinize uygun mezar taşı üretimi yapılır.",
-        service_1_item_1: "Kişiye özel ölçü ve model seçenekleri",
-        service_1_item_2: "Yazı ve yüzey uygulamaları",
-        service_1_item_3: "Temiz ve düzenli montaj",
+        service_1_li_1: "Kişiye özel ölçü ve model seçenekleri",
+        service_1_li_2: "Yazı ve yüzey uygulamaları",
+        service_1_li_3: "Temiz ve düzenli montaj",
         service_2_title: "Mezar onarım",
         service_2_text: "Hasar gören, çatlayan veya zamanla yıpranan bölümlerin düzenlenmesi ve yenilenmesi yapılır.",
-        service_2_item_1: "Kırık ve hasarlı kısımların onarımı",
-        service_2_item_2: "Taş yüzey düzeltmeleri",
-        service_2_item_3: "Genel görünüm yenilemesi",
+        service_2_li_1: "Kırık ve hasarlı kısımların onarımı",
+        service_2_li_2: "Taş yüzey düzeltmeleri",
+        service_2_li_3: "Genel görünüm yenilemesi",
         service_3_title: "Mezar temizliği",
         service_3_text: "Zamanla kirlenen, matlaşan veya bakıma ihtiyaç duyan mezar alanlarının temizliği sağlanır.",
-        service_3_item_1: "Yüzey temizliği",
-        service_3_item_2: "Daha düzenli görünüm",
-        service_3_item_3: "Bakım odaklı uygulama",
+        service_3_li_1: "Yüzey temizliği",
+        service_3_li_2: "Daha düzenli görünüm",
+        service_3_li_3: "Bakım odaklı uygulama",
         service_4_title: "Mezar içine lahit yapımı",
         service_4_text: "İhtiyaca uygun şekilde mezar içine lahit uygulaması özenle hazırlanır ve uygulanır.",
-        service_4_item_1: "Uygun ölçülendirme",
-        service_4_item_2: "Sağlam ve düzenli uygulama",
-        service_4_item_3: "Uzun ömürlü kullanım hedefi",
+        service_4_li_1: "Uygun ölçülendirme",
+        service_4_li_2: "Sağlam ve düzenli uygulama",
+        service_4_li_3: "Uzun ömürlü kullanım hedefi",
         service_5_title: "Komple mezar yapımı",
         service_5_text: "Baştan sona tasarlanan mezar yapım sürecinde tüm taş ve uygulama detayları birlikte planlanır.",
-        service_5_item_1: "Mermer ve granit çözümleri",
-        service_5_item_2: "Bütünlüklü görünüm",
-        service_5_item_3: "İsteğe uygun detaylandırma",
+        service_5_li_1: "Mermer ve granit çözümleri",
+        service_5_li_2: "Bütünlüklü görünüm",
+        service_5_li_3: "İsteğe uygun detaylandırma",
         service_6_title: "Çeşme",
         service_6_text: "Mezar alanı veya uygun bölümler için estetik ve işlevsel çeşme uygulamaları yapılır.",
-        service_6_item_1: "Şık ve sade tasarım",
-        service_6_item_2: "Taş ile uyumlu görünüm",
-        service_6_item_3: "Özenli montaj",
+        service_6_li_1: "Şık ve sade tasarım",
+        service_6_li_2: "Taş ile uyumlu görünüm",
+        service_6_li_3: "Özenli montaj",
         cta_eyebrow: "Bilgi Alın",
         cta_title: "İhtiyacınıza uygun hizmet için bize ulaşın",
         cta_text: "Yapım, bakım veya yenileme süreci hakkında hızlıca bilgi almak için telefon ya da WhatsApp üzerinden iletişime geçebilirsiniz.",
@@ -370,41 +371,41 @@
         nav_gallery: "Gallery",
         nav_services: "Services",
         nav_contact: "Contact",
-        services_page_title: "Applications tailored to your needs",
-        services_page_text: "In every project, we work with an understanding of orderly workmanship, durable materials and careful application.",
+        hero_title: "Applications tailored to your needs",
+        hero_text: "In every project, we work with neat workmanship, durable materials and careful application.",
         service_1_title: "Gravestone production",
-        service_1_text: "Gravestones are produced in marble or granite according to your preferred text and model.",
-        service_1_item_1: "Custom size and model options",
-        service_1_item_2: "Text and surface applications",
-        service_1_item_3: "Clean and orderly installation",
+        service_1_text: "Gravestones are produced in marble or granite according to your preferred inscription and model.",
+        service_1_li_1: "Custom dimensions and model options",
+        service_1_li_2: "Inscription and surface applications",
+        service_1_li_3: "Clean and orderly installation",
         service_2_title: "Grave repair",
-        service_2_text: "Damaged, cracked or worn sections are repaired, adjusted and renewed.",
-        service_2_item_1: "Repair of broken and damaged parts",
-        service_2_item_2: "Stone surface corrections",
-        service_2_item_3: "Overall appearance renewal",
+        service_2_text: "Damaged, cracked or worn parts are repaired, adjusted and renewed.",
+        service_2_li_1: "Repair of broken and damaged parts",
+        service_2_li_2: "Stone surface corrections",
+        service_2_li_3: "Overall appearance renewal",
         service_3_title: "Grave cleaning",
-        service_3_text: "Cleaning is provided for grave areas that have become dirty, dull or require maintenance over time.",
-        service_3_item_1: "Surface cleaning",
-        service_3_item_2: "A more orderly appearance",
-        service_3_item_3: "Maintenance-focused application",
+        service_3_text: "Grave areas that become dirty, dull or require maintenance over time are cleaned carefully.",
+        service_3_li_1: "Surface cleaning",
+        service_3_li_2: "More orderly appearance",
+        service_3_li_3: "Maintenance-focused application",
         service_4_title: "Inner sarcophagus construction",
-        service_4_text: "Inner sarcophagus applications are carefully prepared and applied according to need.",
-        service_4_item_1: "Appropriate sizing",
-        service_4_item_2: "Solid and orderly application",
-        service_4_item_3: "Long-lasting use target",
+        service_4_text: "Inner sarcophagus applications are prepared and installed carefully according to need.",
+        service_4_li_1: "Appropriate sizing",
+        service_4_li_2: "Strong and orderly application",
+        service_4_li_3: "Long-lasting usage goal",
         service_5_title: "Complete grave construction",
-        service_5_text: "In the complete grave construction process, all stone and application details are planned together from start to finish.",
-        service_5_item_1: "Marble and granite solutions",
-        service_5_item_2: "Integrated appearance",
-        service_5_item_3: "Customized detailing",
+        service_5_text: "In the full grave construction process, all stone and application details are planned together from start to finish.",
+        service_5_li_1: "Marble and granite solutions",
+        service_5_li_2: "Integrated appearance",
+        service_5_li_3: "Custom detailing",
         service_6_title: "Fountain",
-        service_6_text: "Aesthetic and functional fountain applications are made for grave areas or suitable sections.",
-        service_6_item_1: "Elegant and simple design",
-        service_6_item_2: "Appearance compatible with stone",
-        service_6_item_3: "Careful installation",
+        service_6_text: "Aesthetic and functional fountain applications are built for grave areas or suitable sections.",
+        service_6_li_1: "Elegant and simple design",
+        service_6_li_2: "Stone-compatible appearance",
+        service_6_li_3: "Careful installation",
         cta_eyebrow: "Get Information",
-        cta_title: "Contact us for the service you need",
-        cta_text: "You can quickly get information about construction, maintenance or renewal through phone or WhatsApp.",
+        cta_title: "Contact us for the service that suits your needs",
+        cta_text: "You can quickly get information about construction, maintenance or renewal by phone or WhatsApp.",
         cta_btn_whatsapp: "WhatsApp",
         cta_btn_call: "Call",
         footer_brand: "Uğur Mermer",
@@ -412,93 +413,93 @@
       },
       ar: {
         pageTitle: "خدماتنا | أوغور مرمر",
-        pageDescription: "صناعة شواهد القبور، ترميم القبور، التنظيف، بناء اللحد، بناء القبور بالكامل وتطبيقات النوافير.",
+        pageDescription: "صناعة شواهد القبور، ترميم القبور، التنظيف، بناء اللحد الداخلي، بناء القبر بالكامل وتطبيقات النوافير.",
         nav_home: "الرئيسية",
         nav_gallery: "المعرض",
         nav_services: "خدماتنا",
         nav_contact: "التواصل",
-        services_page_title: "تطبيقات مناسبة لاحتياجاتكم",
-        services_page_text: "في كل عمل نعمل وفق مفهوم يجمع بين التنفيذ المنظم، المواد المتينة، والتطبيق الدقيق.",
+        hero_title: "تطبيقات تناسب احتياجاتكم",
+        hero_text: "في كل عمل نعتمد على التنفيذ المنظم، والمواد المتينة، والتطبيق الدقيق.",
         service_1_title: "صناعة شواهد القبور",
-        service_1_text: "يتم تصنيع شواهد القبور من الرخام أو الجرانيت بما يتناسب مع تفضيلاتكم في الكتابة والتصميم.",
-        service_1_item_1: "خيارات قياس وتصميم خاصة",
-        service_1_item_2: "تطبيقات الكتابة والسطح",
-        service_1_item_3: "تركيب نظيف ومنظم",
+        service_1_text: "يتم تصنيع شواهد القبور من الرخام أو الجرانيت وفقاً للكتابة والتصميم المطلوبين.",
+        service_1_li_1: "خيارات قياس وتصميم خاصة",
+        service_1_li_2: "الكتابة وتطبيقات الأسطح",
+        service_1_li_3: "تركيب نظيف ومنظم",
         service_2_title: "ترميم القبور",
-        service_2_text: "يتم إصلاح وتجديد الأجزاء المتضررة أو المتشققة أو المتآكلة مع مرور الوقت.",
-        service_2_item_1: "إصلاح الأجزاء المكسورة والمتضررة",
-        service_2_item_2: "تعديلات على سطح الحجر",
-        service_2_item_3: "تجديد المظهر العام",
+        service_2_text: "يتم إصلاح وتجديد الأجزاء المتضررة أو المتشققة أو المتآكلة مع الوقت.",
+        service_2_li_1: "إصلاح الأجزاء المكسورة والمتضررة",
+        service_2_li_2: "تعديل أسطح الحجر",
+        service_2_li_3: "تجديد المظهر العام",
         service_3_title: "تنظيف القبور",
-        service_3_text: "يتم تنظيف مناطق القبور التي أصبحت متسخة أو باهتة أو تحتاج إلى صيانة مع مرور الوقت.",
-        service_3_item_1: "تنظيف السطح",
-        service_3_item_2: "مظهر أكثر ترتيباً",
-        service_3_item_3: "تطبيق يركز على الصيانة",
-        service_4_title: "بناء اللحد داخل القبر",
-        service_4_text: "يتم تجهيز وتطبيق اللحد داخل القبر بعناية وفق الحاجة.",
-        service_4_item_1: "قياسات مناسبة",
-        service_4_item_2: "تنفيذ متين ومنظم",
-        service_4_item_3: "استهداف استخدام طويل الأمد",
+        service_3_text: "يتم تنظيف مناطق القبور التي تتسخ أو يبهت مظهرها أو تحتاج إلى صيانة مع الوقت.",
+        service_3_li_1: "تنظيف الأسطح",
+        service_3_li_2: "مظهر أكثر ترتيباً",
+        service_3_li_3: "تطبيق يركز على الصيانة",
+        service_4_title: "بناء اللحد الداخلي",
+        service_4_text: "يتم تجهيز وتنفيذ بناء اللحد الداخلي بعناية وفق الحاجة.",
+        service_4_li_1: "تحديد قياسات مناسبة",
+        service_4_li_2: "تنفيذ متين ومنظم",
+        service_4_li_3: "هدف استخدام طويل الأمد",
         service_5_title: "بناء القبر بالكامل",
-        service_5_text: "في عملية بناء القبر بالكامل يتم التخطيط لجميع تفاصيل الحجر والتنفيذ معاً من البداية إلى النهاية.",
-        service_5_item_1: "حلول الرخام والجرانيت",
-        service_5_item_2: "مظهر متكامل",
-        service_5_item_3: "تفاصيل حسب الطلب",
+        service_5_text: "في عملية بناء القبر بالكامل يتم التخطيط لجميع تفاصيل الحجر والتنفيذ من البداية إلى النهاية.",
+        service_5_li_1: "حلول الرخام والجرانيت",
+        service_5_li_2: "مظهر متكامل",
+        service_5_li_3: "تفاصيل حسب الطلب",
         service_6_title: "نافورة",
         service_6_text: "يتم تنفيذ تطبيقات نوافير جمالية وعملية في مناطق القبور أو الأقسام المناسبة.",
-        service_6_item_1: "تصميم أنيق وبسيط",
-        service_6_item_2: "مظهر متناسق مع الحجر",
-        service_6_item_3: "تركيب دقيق",
-        cta_eyebrow: "احصل على معلومات",
-        cta_title: "تواصلوا معنا للحصول على الخدمة المناسبة لكم",
-        cta_text: "يمكنكم الحصول بسرعة على معلومات حول البناء أو الصيانة أو التجديد عبر الهاتف أو واتساب.",
+        service_6_li_1: "تصميم أنيق وبسيط",
+        service_6_li_2: "مظهر متناسق مع الحجر",
+        service_6_li_3: "تركيب دقيق",
+        cta_eyebrow: "احصل على المعلومات",
+        cta_title: "تواصل معنا للحصول على الخدمة المناسبة لاحتياجك",
+        cta_text: "يمكنك الحصول بسرعة على معلومات حول البناء أو الصيانة أو التجديد عبر الهاتف أو واتساب.",
         cta_btn_whatsapp: "واتساب",
-        cta_btn_call: "اتصل",
+        cta_btn_call: "اتصال",
         footer_brand: "أوغور مرمر",
         footer_text: "بناء القبور وأعمال الرخام"
       },
       de: {
         pageTitle: "Leistungen | Uğur Mermer",
-        pageDescription: "Grabsteinherstellung, Grabreparatur, Reinigung, Lahit-Bau, kompletter Grabbau und Brunnenanwendungen.",
+        pageDescription: "Grabsteinherstellung, Grabreparatur, Reinigung, Lahit-Bau im Grab, kompletter Grabbau und Brunnenanwendungen.",
         nav_home: "Startseite",
         nav_gallery: "Galerie",
         nav_services: "Leistungen",
         nav_contact: "Kontakt",
-        services_page_title: "Anwendungen nach Bedarf",
-        services_page_text: "Bei jeder Arbeit arbeiten wir mit einem Verständnis für ordentliche Handwerkskunst, langlebige Materialien und sorgfältige Ausführung.",
+        hero_title: "Anwendungen passend zu Ihrem Bedarf",
+        hero_text: "Bei jeder Arbeit setzen wir auf saubere Ausführung, langlebige Materialien und sorgfältige Anwendung.",
         service_1_title: "Grabsteinherstellung",
-        service_1_text: "Grabsteine werden aus Marmor oder Granit passend zu Ihren Schrift- und Modellwünschen gefertigt.",
-        service_1_item_1: "Individuelle Maß- und Modelloptionen",
-        service_1_item_2: "Schrift- und Oberflächenanwendungen",
-        service_1_item_3: "Saubere und ordentliche Montage",
+        service_1_text: "Grabsteine aus Marmor oder Granit werden passend zu Ihren Schrift- und Modellwünschen gefertigt.",
+        service_1_li_1: "Individuelle Maß- und Modelloptionen",
+        service_1_li_2: "Schrift- und Oberflächenanwendungen",
+        service_1_li_3: "Saubere und ordentliche Montage",
         service_2_title: "Grabreparatur",
-        service_2_text: "Beschädigte, gerissene oder im Laufe der Zeit abgenutzte Bereiche werden instand gesetzt und erneuert.",
-        service_2_item_1: "Reparatur gebrochener und beschädigter Teile",
-        service_2_item_2: "Korrekturen an Steinoberflächen",
-        service_2_item_3: "Erneuerung des Gesamtbildes",
+        service_2_text: "Beschädigte, gerissene oder im Laufe der Zeit abgenutzte Teile werden gerichtet und erneuert.",
+        service_2_li_1: "Reparatur gebrochener und beschädigter Teile",
+        service_2_li_2: "Korrekturen an Steinoberflächen",
+        service_2_li_3: "Erneuerung des Gesamtbildes",
         service_3_title: "Grabreinigung",
-        service_3_text: "Grabflächen, die mit der Zeit verschmutzt, matt oder pflegebedürftig geworden sind, werden gereinigt.",
-        service_3_item_1: "Oberflächenreinigung",
-        service_3_item_2: "Geordneteres Erscheinungsbild",
-        service_3_item_3: "Pflegeorientierte Ausführung",
+        service_3_text: "Grabflächen, die mit der Zeit verschmutzen, matt werden oder Pflege benötigen, werden gereinigt.",
+        service_3_li_1: "Oberflächenreinigung",
+        service_3_li_2: "Ordentlicheres Erscheinungsbild",
+        service_3_li_3: "Pflegeorientierte Anwendung",
         service_4_title: "Lahit-Bau im Grab",
-        service_4_text: "Lahit-Anwendungen im Grab werden je nach Bedarf sorgfältig vorbereitet und umgesetzt.",
-        service_4_item_1: "Passende Maße",
-        service_4_item_2: "Stabile und ordentliche Ausführung",
-        service_4_item_3: "Ziel einer langlebigen Nutzung",
+        service_4_text: "Lahit-Anwendungen im Grab werden bedarfsgerecht sorgfältig vorbereitet und umgesetzt.",
+        service_4_li_1: "Passende Maßplanung",
+        service_4_li_2: "Stabile und ordentliche Anwendung",
+        service_4_li_3: "Ziel einer langen Nutzungsdauer",
         service_5_title: "Kompletter Grabbau",
-        service_5_text: "Beim kompletten Grabbau werden alle Stein- und Ausführungsdetails von Anfang bis Ende gemeinsam geplant.",
-        service_5_item_1: "Marmor- und Granitlösungen",
-        service_5_item_2: "Ganzheitliches Erscheinungsbild",
-        service_5_item_3: "Detaillierung nach Wunsch",
+        service_5_text: "Beim kompletten Grabbau werden alle Stein- und Ausführungsdetails gemeinsam von Anfang bis Ende geplant.",
+        service_5_li_1: "Marmor- und Granitlösungen",
+        service_5_li_2: "Ganzheitliches Erscheinungsbild",
+        service_5_li_3: "Individuelle Detailgestaltung",
         service_6_title: "Brunnen",
         service_6_text: "Für Grabflächen oder geeignete Bereiche werden ästhetische und funktionale Brunnenanwendungen umgesetzt.",
-        service_6_item_1: "Elegantes und schlichtes Design",
-        service_6_item_2: "Zum Stein passendes Erscheinungsbild",
-        service_6_item_3: "Sorgfältige Montage",
-        cta_eyebrow: "Informationen",
+        service_6_li_1: "Elegantes und schlichtes Design",
+        service_6_li_2: "Zum Stein passendes Erscheinungsbild",
+        service_6_li_3: "Sorgfältige Montage",
+        cta_eyebrow: "Informationen erhalten",
         cta_title: "Kontaktieren Sie uns für die passende Leistung",
-        cta_text: "Für schnelle Informationen zu Bau, Pflege oder Erneuerung können Sie uns telefonisch oder per WhatsApp erreichen.",
+        cta_text: "Für schnelle Informationen zu Bau, Pflege oder Erneuerung erreichen Sie uns per Telefon oder WhatsApp.",
         cta_btn_whatsapp: "WhatsApp",
         cta_btn_call: "Anrufen",
         footer_brand: "Uğur Mermer",
@@ -506,46 +507,46 @@
       },
       ru: {
         pageTitle: "Услуги | Uğur Mermer",
-        pageDescription: "Изготовление надгробий, ремонт могил, чистка, изготовление лахита, полное изготовление могилы и фонтаны.",
+        pageDescription: "Изготовление надгробий, ремонт могил, чистка, изготовление лахита внутри могилы, полное изготовление могилы и фонтаны.",
         nav_home: "Главная",
         nav_gallery: "Галерея",
         nav_services: "Услуги",
         nav_contact: "Контакты",
-        services_page_title: "Решения под ваши потребности",
-        services_page_text: "В каждой работе мы придерживаемся принципов аккуратного исполнения, прочных материалов и тщательного подхода.",
+        hero_title: "Решения под ваши потребности",
+        hero_text: "В каждой работе мы придерживаемся аккуратного исполнения, прочных материалов и внимательного подхода.",
         service_1_title: "Изготовление надгробий",
-        service_1_text: "Надгробия из мрамора или гранита изготавливаются в соответствии с вашими пожеланиями по надписям и модели.",
-        service_1_item_1: "Индивидуальные размеры и модели",
-        service_1_item_2: "Надписи и обработка поверхности",
-        service_1_item_3: "Чистый и аккуратный монтаж",
+        service_1_text: "Изготавливаем надгробия из мрамора или гранита в соответствии с желаемой надписью и моделью.",
+        service_1_li_1: "Индивидуальные размеры и модели",
+        service_1_li_2: "Надписи и обработка поверхности",
+        service_1_li_3: "Чистый и аккуратный монтаж",
         service_2_title: "Ремонт могилы",
-        service_2_text: "Поврежденные, треснувшие или изношенные со временем участки восстанавливаются и обновляются.",
-        service_2_item_1: "Ремонт сломанных и поврежденных частей",
-        service_2_item_2: "Выравнивание каменной поверхности",
-        service_2_item_3: "Обновление общего внешнего вида",
+        service_2_text: "Поврежденные, треснувшие или изношенные со временем части восстанавливаются и обновляются.",
+        service_2_li_1: "Ремонт сломанных и поврежденных частей",
+        service_2_li_2: "Выравнивание каменной поверхности",
+        service_2_li_3: "Обновление общего вида",
         service_3_title: "Чистка могилы",
-        service_3_text: "Проводится чистка участков могилы, которые со временем загрязнились, потускнели или нуждаются в уходе.",
-        service_3_item_1: "Очистка поверхности",
-        service_3_item_2: "Более аккуратный внешний вид",
-        service_3_item_3: "Уходовый подход",
+        service_3_text: "Очищаются участки могилы, которые со временем загрязнились, потускнели или требуют ухода.",
+        service_3_li_1: "Очистка поверхности",
+        service_3_li_2: "Более аккуратный вид",
+        service_3_li_3: "Уход-ориентированное выполнение",
         service_4_title: "Изготовление лахита внутри могилы",
-        service_4_text: "Лахит внутри могилы тщательно подготавливается и выполняется в соответствии с потребностями.",
-        service_4_item_1: "Подходящие размеры",
-        service_4_item_2: "Надежное и аккуратное исполнение",
-        service_4_item_3: "Расчет на долгий срок службы",
+        service_4_text: "Работы по устройству лахита внутри могилы подготавливаются и выполняются аккуратно по необходимости.",
+        service_4_li_1: "Подходящие размеры",
+        service_4_li_2: "Прочное и аккуратное исполнение",
+        service_4_li_3: "Ориентация на долговечность",
         service_5_title: "Полное изготовление могилы",
-        service_5_text: "При полном изготовлении могилы все детали по камню и исполнению планируются вместе от начала до конца.",
-        service_5_item_1: "Решения из мрамора и гранита",
-        service_5_item_2: "Цельный внешний вид",
-        service_5_item_3: "Детализация по запросу",
+        service_5_text: "При полном изготовлении могилы все детали по камню и выполнению планируются вместе от начала до конца.",
+        service_5_li_1: "Решения из мрамора и гранита",
+        service_5_li_2: "Цельный внешний вид",
+        service_5_li_3: "Детализация по желанию",
         service_6_title: "Фонтан",
         service_6_text: "Для территории могилы или подходящих участков выполняются эстетичные и функциональные фонтаны.",
-        service_6_item_1: "Элегантный и простой дизайн",
-        service_6_item_2: "Гармоничный вид с камнем",
-        service_6_item_3: "Тщательный монтаж",
+        service_6_li_1: "Стильный и лаконичный дизайн",
+        service_6_li_2: "Гармония с камнем",
+        service_6_li_3: "Аккуратный монтаж",
         cta_eyebrow: "Получить информацию",
-        cta_title: "Свяжитесь с нами для подходящей услуги",
-        cta_text: "Чтобы быстро получить информацию о строительстве, уходе или обновлении, вы можете связаться с нами по телефону или через WhatsApp.",
+        cta_title: "Свяжитесь с нами за подходящей услугой",
+        cta_text: "Вы можете быстро получить информацию о строительстве, уходе или обновлении по телефону или через WhatsApp.",
         cta_btn_whatsapp: "WhatsApp",
         cta_btn_call: "Позвонить",
         footer_brand: "Uğur Mermer",
@@ -553,48 +554,48 @@
       },
       zh: {
         pageTitle: "我们的服务 | Uğur Mermer",
-        pageDescription: "墓碑制作、墓地修复、清洁、墓内石棺建造、整墓建造和喷泉施工。",
+        pageDescription: "墓碑制作、墓地修复、清洁、墓内石棺建造、整墓建造和喷泉应用。",
         nav_home: "首页",
         nav_gallery: "作品集",
         nav_services: "我们的服务",
         nav_contact: "联系我们",
-        services_page_title: "符合需求的施工方案",
-        services_page_text: "在每一项工作中，我们都坚持整洁工艺、耐用材料和细致施工的理念。",
+        hero_title: "符合需求的应用方案",
+        hero_text: "每一项工作中，我们都坚持整洁工艺、耐用材料和细致施工。",
         service_1_title: "墓碑制作",
-        service_1_text: "可根据您对文字和款式的需求，制作花岗岩或大理石墓碑。",
-        service_1_item_1: "个性化尺寸和款式选择",
-        service_1_item_2: "文字与表面处理",
-        service_1_item_3: "整洁规范的安装",
+        service_1_text: "可根据您需要的文字和款式，制作大理石或花岗岩墓碑。",
+        service_1_li_1: "个性化尺寸和款式选择",
+        service_1_li_2: "文字和表面处理",
+        service_1_li_3: "整洁规范安装",
         service_2_title: "墓地修复",
-        service_2_text: "对损坏、开裂或随时间老化的部分进行修整和翻新。",
-        service_2_item_1: "修复破损和受损部分",
-        service_2_item_2: "石材表面修整",
-        service_2_item_3: "整体外观翻新",
+        service_2_text: "对受损、开裂或随时间磨损的部分进行修复和翻新。",
+        service_2_li_1: "破损部分修复",
+        service_2_li_2: "石材表面调整",
+        service_2_li_3: "整体外观翻新",
         service_3_title: "墓地清洁",
-        service_3_text: "对随时间变脏、失去光泽或需要维护的墓地区域进行清洁。",
-        service_3_item_1: "表面清洁",
-        service_3_item_2: "更整洁的外观",
-        service_3_item_3: "注重维护的施工",
+        service_3_text: "对随着时间变脏、失去光泽或需要维护的墓地区域进行清洁。",
+        service_3_li_1: "表面清洁",
+        service_3_li_2: "更整洁的外观",
+        service_3_li_3: "注重维护的施工",
         service_4_title: "墓内石棺建造",
-        service_4_text: "根据需求，精心准备并实施墓内石棺施工。",
-        service_4_item_1: "合适的尺寸规划",
-        service_4_item_2: "稳固且整洁的施工",
-        service_4_item_3: "以长期使用为目标",
+        service_4_text: "根据需要，细致地准备并实施墓内石棺建造。",
+        service_4_li_1: "合适尺寸规划",
+        service_4_li_2: "牢固规范施工",
+        service_4_li_3: "追求长期使用",
         service_5_title: "整墓建造",
-        service_5_text: "从头到尾规划整墓建造过程，将所有石材和施工细节统一设计。",
-        service_5_item_1: "大理石和花岗岩方案",
-        service_5_item_2: "整体协调外观",
-        service_5_item_3: "按需求细节定制",
+        service_5_text: "从头到尾统一规划整墓建造中的全部石材和施工细节。",
+        service_5_li_1: "大理石和花岗岩方案",
+        service_5_li_2: "整体协调外观",
+        service_5_li_3: "按需细节定制",
         service_6_title: "喷泉",
         service_6_text: "可在墓地区域或合适位置建设兼具美观与实用性的喷泉。",
-        service_6_item_1: "优雅简洁的设计",
-        service_6_item_2: "与石材协调的外观",
-        service_6_item_3: "细致安装",
+        service_6_li_1: "简洁美观设计",
+        service_6_li_2: "与石材协调一致",
+        service_6_li_3: "细致安装",
         cta_eyebrow: "获取信息",
-        cta_title: "请联系我们获取适合您的服务",
-        cta_text: "如需快速了解建造、维护或翻新流程，您可以通过电话或 WhatsApp 联系我们。",
+        cta_title: "联系我们获取适合您需求的服务",
+        cta_text: "关于建造、维护或翻新流程，您可以通过电话或 WhatsApp 快速获取信息。",
         cta_btn_whatsapp: "WhatsApp",
-        cta_btn_call: "致电",
+        cta_btn_call: "拨打电话",
         footer_brand: "Uğur Mermer",
         footer_text: "墓碑建造与大理石工程"
       }
@@ -628,13 +629,8 @@
 
     function updateBodyOffset() {
       const nav = document.querySelector('nav');
-      const languageBar = document.querySelector('.language-bar');
       if (!nav) return;
-
-      const navHeight = nav.offsetHeight;
-      const langHeight = languageBar ? languageBar.offsetHeight : 0;
-
-      document.body.style.paddingTop = `${navHeight + langHeight + 6}px`;
+      document.body.style.paddingTop = `${nav.offsetHeight + 6}px`;
     }
 
     const savedLanguage = localStorage.getItem('siteLanguage') || 'tr';
