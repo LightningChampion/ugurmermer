@@ -26,8 +26,8 @@
     .language-bar {
       position: relative;
       z-index: 20;
-      margin-top: 10px;
-      margin-bottom: 6px;
+      margin-top: 6px;
+      margin-bottom: 0;
     }
 
     .language-switcher {
@@ -82,6 +82,19 @@
       line-height: 1;
     }
 
+    .gallery-page main.container {
+      padding-top: 0;
+    }
+
+    .gallery-page .page-hero {
+      padding-top: 6px;
+      margin-bottom: 8px;
+    }
+
+    .gallery-page .section-header.center {
+      margin-top: 0;
+    }
+
     html[dir="rtl"] body {
       direction: rtl;
     }
@@ -104,10 +117,6 @@
     }
 
     @media (max-width: 1180px) {
-      .language-bar {
-        margin-top: 10px;
-      }
-
       .language-switcher {
         width: 100%;
       }
@@ -120,8 +129,7 @@
       }
 
       .language-bar {
-        margin-top: 10px;
-        margin-bottom: 4px;
+        margin-top: 6px;
       }
 
       .language-switcher {
@@ -142,6 +150,11 @@
 
       .lang-btn .flag {
         font-size: 18px;
+      }
+
+      .gallery-page .page-hero {
+        padding-top: 4px;
+        margin-bottom: 4px;
       }
     }
 
@@ -513,13 +526,8 @@
 
     function updateBodyOffset() {
       const nav = document.querySelector('nav');
-      const languageBar = document.querySelector('.language-bar');
       if (!nav) return;
-
-      const navHeight = nav.offsetHeight;
-      const langHeight = languageBar ? languageBar.offsetHeight : 0;
-
-      document.body.style.paddingTop = `${navHeight + langHeight + 6}px`;
+      document.body.style.paddingTop = `${nav.offsetHeight + 6}px`;
     }
 
     prevBtn.addEventListener('click', () => {
