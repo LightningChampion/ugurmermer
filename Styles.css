@@ -970,8 +970,7 @@ footer {
     inset: auto;
     border-radius: var(--hero-radius);
     overflow: hidden;
-    aspect-ratio: 16 / 5;
-    max-height: 420px;
+    aspect-ratio: 16 / 8.5;
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(201, 162, 77, 0.12);
   }
