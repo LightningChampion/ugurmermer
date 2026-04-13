@@ -452,11 +452,11 @@ iframe.map {
 }
 
 .page-hero.center h1 {
-  font-size: clamp(2.5rem, 4.2vw, 4rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-size: clamp(3.2rem, 5vw, 5rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
   max-width: 980px;
-  margin: 0 auto 18px;
+  margin: 0 auto 22px;
 }
 
 .page-hero.center .lead {
