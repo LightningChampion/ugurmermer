@@ -970,7 +970,7 @@ footer {
     inset: auto;
     border-radius: var(--hero-radius);
     overflow: hidden;
-    aspect-ratio: 16 / 8.5;
+    aspect-ratio: 16 / 5;
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(201, 162, 77, 0.12);
   }
@@ -981,10 +981,10 @@ footer {
     inset: 0;
     background:
       linear-gradient(270deg,
-        rgba(0,0,0,0.88) 0%,
-        rgba(0,0,0,0.70) 28%,
-        rgba(0,0,0,0.28) 55%,
-        rgba(0,0,0,0.06) 100%);
+        rgba(0,0,0,0.45) 0%,
+        rgba(0,0,0,0.30) 28%,
+        rgba(0,0,0,0.10) 55%,
+        rgba(0,0,0,0.02) 100%);
     pointer-events: none;
   }
 
