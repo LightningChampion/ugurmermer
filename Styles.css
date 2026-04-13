@@ -452,7 +452,7 @@ iframe.map {
 }
 
 .page-hero.center h1 {
-  font-size: clamp(3.2rem, 5vw, 5rem);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
   line-height: 1.06;
   letter-spacing: -0.04em;
   max-width: 980px;
