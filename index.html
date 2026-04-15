@@ -32,7 +32,7 @@
     .language-bar {
       position: relative;
       z-index: 20;
-      margin-top: 0px;
+      margin-top: 0;
     }
 
     .language-switcher {
@@ -109,38 +109,47 @@
       text-align: right;
     }
 
+    /* RTL FIX */
     html[dir="rtl"] .hero-banner-content {
-      justify-content: flex-end;
+      justify-content: flex-start !important;
     }
 
     html[dir="rtl"] .hero-copy {
-      margin-left: auto;
-      margin-right: 0;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
       max-width: 520px;
-      padding-right: 8px;
+      padding-right: 0;
+      padding-left: 0;
+      text-align: right;
     }
 
-    html[dir="rtl"] .hero-copy h1 {
-      max-width: 520px;
-      line-height: 1.18;
-    }
-
+    html[dir="rtl"] .hero-copy h1,
     html[dir="rtl"] .hero-copy .lead {
-      max-width: 520px;
+      max-width: 100%;
     }
 
     html[dir="rtl"] .hero-banner-overlay {
       background:
-        linear-gradient(270deg,
+        linear-gradient(90deg,
           rgba(0,0,0,0.96) 0%,
-          rgba(0,0,0,0.90) 28%,
-          rgba(0,0,0,0.68) 50%,
-          rgba(0,0,0,0.26) 74%,
-          rgba(0,0,0,0.08) 100%);
+          rgba(0,0,0,0.88) 28%,
+          rgba(0,0,0,0.62) 50%,
+          rgba(0,0,0,0.22) 74%,
+          rgba(0,0,0,0.05) 100%);
     }
 
     html[dir="rtl"] .hero-banner-image img {
-      object-position: left center !important;
+      object-position: center center !important;
+    }
+
+    html[dir="rtl"] .hero-actions {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    html[dir="rtl"] .hero-badges {
+      justify-content: flex-start;
+      flex-wrap: wrap;
     }
 
     @media (max-width: 1180px) {
@@ -191,6 +200,11 @@
       html[dir="rtl"] .hero-copy-mobile h1,
       html[dir="rtl"] .hero-copy-mobile .lead {
         max-width: 100%;
+      }
+
+      html[dir="rtl"] .hero-actions,
+      html[dir="rtl"] .hero-badges {
+        justify-content: flex-start;
       }
     }
 
