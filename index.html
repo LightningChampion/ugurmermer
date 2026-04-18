@@ -4,9 +4,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title id="pageTitle">Uğur Mermer | İstanbul Mezar Yapımı ve Mermer İşleri</title>
-  <meta id="pageDescription" name="description" content="1969'dan beri İstanbul Karacaahmet'te mezar yapımı, mezar onarımı, granit ve mermer işleri. Uğur Mermer ile hızlı iletişim kurun.">
+
+  <title id="pageTitle">İstanbul Mezar Yapımı ve Mezar Taşı | Uğur Mermer | Karacaahmet Üsküdar</title>
+  <meta id="pageDescription" name="description" content="İstanbul Karacaahmet ve Üsküdar bölgesinde mezar yapımı, mezar taşı, mezar onarımı, lahit ve mermer işleri. Uğur Mermer ile hızlı iletişim kurun.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Burak Efe">
+  <meta name="theme-color" content="#111111">
+
+  <link rel="canonical" href="https://siteadresi.com/index.html">
   <link rel="stylesheet" href="Styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Uğur Mermer">
+  <meta property="og:title" content="İstanbul Mezar Yapımı ve Mezar Taşı | Uğur Mermer | Karacaahmet Üsküdar">
+  <meta property="og:description" content="İstanbul Karacaahmet ve Üsküdar bölgesinde mezar yapımı, mezar taşı, mezar onarımı, lahit ve mermer işleri.">
+  <meta property="og:url" content="https://siteadresi.com/index.html">
+  <meta property="og:image" content="https://siteadresi.com/images/hero.jpg">
+  <meta property="og:image:alt" content="İstanbul Karacaahmet'te mezar yapımı ve mermer işleri örnek görseli">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="İstanbul Mezar Yapımı ve Mezar Taşı | Uğur Mermer | Karacaahmet Üsküdar">
+  <meta name="twitter:description" content="İstanbul Karacaahmet ve Üsküdar bölgesinde mezar yapımı, mezar taşı, mezar onarımı, lahit ve mermer işleri.">
+  <meta name="twitter:image" content="https://siteadresi.com/images/hero.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Uğur Mermer",
+    "url": "https://siteadresi.com/index.html",
+    "image": "https://siteadresi.com/images/hero.jpg",
+    "telephone": "+90 542 695 21 50",
+    "description": "İstanbul Karacaahmet ve Üsküdar bölgesinde mezar yapımı, mezar taşı, mezar onarımı, lahit ve mermer işleri.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Üsküdar",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "areaServed": "İstanbul",
+    "sameAs": [
+      "https://www.google.com/maps/place/U%C4%9Fur+Mermer/@41.0132344,29.0196256,17z"
+    ]
+  }
+  </script>
+
   <style>
     .floating-whatsapp {
       color: #fff;
@@ -27,6 +71,13 @@
     .stat-number,
     .highlight-card h3 {
       color: var(--text) !important;
+    }
+
+    .hero-title {
+      margin: 0;
+      font: inherit;
+      color: inherit;
+      font-weight: inherit;
     }
 
     .language-bar {
@@ -120,7 +171,8 @@
       padding-right: 8px;
     }
 
-    html[dir="rtl"] .hero-copy h1 {
+    html[dir="rtl"] .hero-copy h1,
+    html[dir="rtl"] .hero-copy .hero-title {
       max-width: 520px;
       line-height: 1.18;
     }
@@ -189,6 +241,7 @@
       }
 
       html[dir="rtl"] .hero-copy-mobile h1,
+      html[dir="rtl"] .hero-copy-mobile .hero-title,
       html[dir="rtl"] .hero-copy-mobile .lead {
         max-width: 100%;
       }
@@ -274,7 +327,7 @@
           <div class="hero-banner-image">
             <picture>
               <source media="(max-width: 760px)" srcset="images/hero-mobile.jpg">
-              <img src="images/hero.jpg" alt="Uğur Mermer beyaz mermer mezar uygulaması" data-i18n-alt="hero_alt">
+              <img src="images/hero.jpg" alt="İstanbul Karacaahmet'te beyaz mermer mezar yapımı örneği" data-i18n-alt="hero_alt">
             </picture>
           </div>
         </div>
@@ -296,7 +349,7 @@
         <div class="hero-banner-image">
           <picture>
             <source media="(max-width: 760px)" srcset="images/hero-mobile.jpg">
-            <img src="images/hero.jpg" alt="Uğur Mermer beyaz mermer mezar uygulaması" data-i18n-alt="hero_alt">
+            <img src="images/hero.jpg" alt="İstanbul Karacaahmet'te beyaz mermer mezar yapımı örneği" data-i18n-alt="hero_alt">
           </picture>
         </div>
 
@@ -305,7 +358,7 @@
         <div class="container hero-banner-content">
           <div class="hero-copy">
             <span class="eyebrow hero-chip" data-i18n="hero_chip">1969'dan beri deneyim</span>
-            <h1 data-i18n="hero_title">Mezar Yapımı, Bakımı, Onarımı ve Mermer İşlerinde Güvenilir Hizmet</h1>
+            <div class="hero-title" data-i18n="hero_title">Mezar Yapımı, Bakımı, Onarımı ve Mermer İşlerinde Güvenilir Hizmet</div>
             <p class="lead" data-i18n="hero_text">
               Karacaahmet merkezli işletmemiz; mezar taşı yapımı, komple mezar yapımı,
               lahit uygulamaları, onarım ve temizlik hizmetlerini kaliteli işçilik ve
@@ -335,35 +388,35 @@
 
         <div class="gallery-grid">
           <article class="gallery-card">
-            <img src="images/photo7.jpg" alt="Mezar yapımı örneği 1" data-i18n-alt="gallery_alt_1">
+            <img src="images/photo7.jpg" alt="İstanbul mezar yapımı örneği mermer uygulama 1" data-i18n-alt="gallery_alt_1">
             <div class="gallery-card-body">
               <h3 data-i18n="gallery_card_1_title">Örnek uygulama</h3>
               <p data-i18n="gallery_card_1_text">Temiz işçilik ve dengeli tasarım anlayışıyla hazırlanan bu uygulama, estetik görünüm ve uzun ömürlü kullanım açısından özenle tamamlanmıştır.</p>
             </div>
           </article>
           <article class="gallery-card">
-            <img src="images/photo42.jpg" alt="Mezar yapımı örneği 2" data-i18n-alt="gallery_alt_2">
+            <img src="images/photo42.jpg" alt="İstanbul granit mezar taşı uygulaması örneği" data-i18n-alt="gallery_alt_2">
             <div class="gallery-card-body">
               <h3 data-i18n="gallery_card_2_title">Granit mezar uygulaması</h3>
               <p data-i18n="gallery_card_2_text">Dayanıklı ve şık görünüm sunan granit detaylar, kaliteli malzeme yapısıyla uzun yıllar sağlamlığını korurken mezara estetik bir bütünlük kazandırır.</p>
             </div>
           </article>
           <article class="gallery-card">
-            <img src="images/photo4.jpg" alt="Mezar yapımı örneği 3" data-i18n-alt="gallery_alt_3">
+            <img src="images/photo4.jpg" alt="Kişiye özel mezar yapımı örneği İstanbul" data-i18n-alt="gallery_alt_3">
             <div class="gallery-card-body">
               <h3 data-i18n="gallery_card_3_title">Kişiye uygun uygulama</h3>
               <p data-i18n="gallery_card_3_text">İhtiyaca göre planlanan çözümler, ölçü, model ve malzeme tercihleri doğrultusunda kişiye özel olarak hazırlanarak istenilen görünüme uygun şekilde uygulanır.</p>
             </div>
           </article>
           <article class="gallery-card">
-            <img src="images/photo5.jpg" alt="Mezar temizliği ve bakım örneği" data-i18n-alt="gallery_alt_4">
+            <img src="images/photo5.jpg" alt="Mezar temizliği ve bakım hizmeti İstanbul" data-i18n-alt="gallery_alt_4">
             <div class="gallery-card-body">
               <h3 data-i18n="gallery_card_4_title">Mezar temizliği ve bakım</h3>
               <p data-i18n="gallery_card_4_text">Zamanla oluşan kir ve yıpranmalar, özenli uygulama ile giderilerek daha temiz bir görünüme kavuşturulur.</p>
             </div>
           </article>
           <article class="gallery-card">
-            <img src="images/photo124.jpg" alt="Çeşme uygulaması örneği" data-i18n-alt="gallery_alt_5">
+            <img src="images/photo124.jpg" alt="Mezar alanı için çeşme uygulaması örneği İstanbul" data-i18n-alt="gallery_alt_5">
             <div class="gallery-card-body">
               <h3 data-i18n="gallery_card_5_title">Çeşme uygulaması</h3>
               <p data-i18n="gallery_card_5_text">Dayanıklı malzeme ve özenli işçilikle hazırlanan çeşme uygulamaları, yapılan hayrın uzun yıllar devam etmesine vesile olan anlamlı bir uygulamadır.</p>
@@ -503,8 +556,8 @@
   <script>
     const translations = {
       tr: {
-        pageTitle: "Uğur Mermer | İstanbul Mezar Yapımı ve Mermer İşleri",
-        pageDescription: "1969'dan beri İstanbul Karacaahmet'te mezar yapımı, mezar onarımı, granit ve mermer işleri. Uğur Mermer ile hızlı iletişim kurun.",
+        pageTitle: "İstanbul Mezar Yapımı ve Mezar Taşı | Uğur Mermer | Karacaahmet Üsküdar",
+        pageDescription: "İstanbul Karacaahmet ve Üsküdar bölgesinde mezar yapımı, mezar taşı, mezar onarımı, lahit ve mermer işleri. Uğur Mermer ile hızlı iletişim kurun.",
         nav_home: "Anasayfa",
         nav_gallery: "Galeri",
         nav_services: "Hizmetlerimiz",
@@ -516,7 +569,7 @@
         hero_btn_call: "Hemen Ara",
         hero_btn_gallery: "Örnek İşleri Gör",
         hero_badge_location: "Karacaahmet / Üsküdar",
-        hero_alt: "Uğur Mermer beyaz mermer mezar uygulaması",
+        hero_alt: "İstanbul Karacaahmet'te beyaz mermer mezar yapımı örneği",
         gallery_title: "Yapılan işlerden bazı örnekler",
         gallery_text: "Farklı model, taş ve uygulama örneklerini galerimizde inceleyebilirsiniz.",
         gallery_card_1_title: "Örnek uygulama",
@@ -529,11 +582,11 @@
         gallery_card_4_text: "Zamanla oluşan kir ve yıpranmalar, özenli uygulama ile giderilerek daha temiz bir görünüme kavuşturulur.",
         gallery_card_5_title: "Çeşme uygulaması",
         gallery_card_5_text: "Dayanıklı malzeme ve özenli işçilikle hazırlanan çeşme uygulamaları, yapılan hayrın uzun yıllar devam etmesine vesile olan anlamlı bir uygulamadır.",
-        gallery_alt_1: "Mezar yapımı örneği 1",
-        gallery_alt_2: "Mezar yapımı örneği 2",
-        gallery_alt_3: "Mezar yapımı örneği 3",
-        gallery_alt_4: "Mezar temizliği ve bakım örneği",
-        gallery_alt_5: "Çeşme uygulaması örneği",
+        gallery_alt_1: "İstanbul mezar yapımı örneği mermer uygulama 1",
+        gallery_alt_2: "İstanbul granit mezar taşı uygulaması örneği",
+        gallery_alt_3: "Kişiye özel mezar yapımı örneği İstanbul",
+        gallery_alt_4: "Mezar temizliği ve bakım hizmeti İstanbul",
+        gallery_alt_5: "Mezar alanı için çeşme uygulaması örneği İstanbul",
         gallery_btn: "Tüm galeriyi görüntüle",
         services_title: "İhtiyaca uygun mezar ve mermer çözümleri",
         services_text: "Yapım, yenileme ve bakım süreçlerinde farklı ihtiyaçlara yönelik hizmetler sunuyoruz.",
@@ -572,8 +625,8 @@
         footer_location: "Karacaahmet, Üsküdar / İstanbul"
       },
       en: {
-        pageTitle: "Uğur Mermer | Grave Construction and Marble Works in Istanbul",
-        pageDescription: "Since 1969 in Karacaahmet, Istanbul: grave construction, grave repair, granite and marble works. Contact Uğur Mermer quickly.",
+        pageTitle: "Grave Construction and Headstones in Istanbul | Uğur Mermer | Karacaahmet Üsküdar",
+        pageDescription: "Grave construction, gravestones, grave repair, sarcophagus work and marble services in Karacaahmet and Üsküdar, Istanbul. Contact Uğur Mermer quickly.",
         nav_home: "Home",
         nav_gallery: "Gallery",
         nav_services: "Services",
@@ -585,7 +638,7 @@
         hero_btn_call: "Call Now",
         hero_btn_gallery: "See Sample Works",
         hero_badge_location: "Karacaahmet / Üsküdar",
-        hero_alt: "Uğur Mermer white marble grave application",
+        hero_alt: "White marble grave construction example in Karacaahmet Istanbul",
         gallery_title: "Some examples of completed works",
         gallery_text: "You can review different models, stone types and application examples in our gallery.",
         gallery_card_1_title: "Sample application",
@@ -598,11 +651,11 @@
         gallery_card_4_text: "Dirt and wear formed over time are removed with careful application to achieve a cleaner appearance.",
         gallery_card_5_title: "Fountain application",
         gallery_card_5_text: "Fountain applications prepared with durable materials and careful workmanship are a meaningful feature that helps the charitable deed continue for many years.",
-        gallery_alt_1: "Grave construction example 1",
-        gallery_alt_2: "Grave construction example 2",
-        gallery_alt_3: "Grave construction example 3",
-        gallery_alt_4: "Grave cleaning and maintenance example",
-        gallery_alt_5: "Fountain application example",
+        gallery_alt_1: "Marble grave construction example in Istanbul",
+        gallery_alt_2: "Granite gravestone application example in Istanbul",
+        gallery_alt_3: "Custom grave construction example in Istanbul",
+        gallery_alt_4: "Grave cleaning and maintenance service in Istanbul",
+        gallery_alt_5: "Fountain application for grave area in Istanbul",
         gallery_btn: "View full gallery",
         services_title: "Grave and marble solutions tailored to your needs",
         services_text: "We offer services for different needs in construction, renewal and maintenance processes.",
@@ -641,8 +694,8 @@
         footer_location: "Karacaahmet, Üsküdar / Istanbul"
       },
       ar: {
-        pageTitle: "أوغور مرمر | أعمال القبور والرخام في إسطنبول",
-        pageDescription: "منذ عام 1969 في كاراجا أحمد بإسطنبول: بناء القبور، ترميمها، وأعمال الجرانيت والرخام. تواصل سريع مع أوغور مرمر.",
+        pageTitle: "أعمال القبور وشواهد القبور في إسطنبول | أوغور مرمر | كاراجا أحمد أوسكودار",
+        pageDescription: "بناء القبور، شواهد القبور، ترميم القبور، أعمال اللحد والرخام في كاراجا أحمد وأوسكودار بإسطنبول. تواصل سريع مع أوغور مرمر.",
         nav_home: "الرئيسية",
         nav_gallery: "المعرض",
         nav_services: "خدماتنا",
@@ -654,7 +707,7 @@
         hero_btn_call: "اتصل الآن",
         hero_btn_gallery: "شاهد الأعمال",
         hero_badge_location: "كاراجا أحمد / أوسكودار",
-        hero_alt: "تطبيق قبر رخامي أبيض من أوغور مرمر",
+        hero_alt: "مثال على بناء قبر رخامي أبيض في كاراجا أحمد إسطنبول",
         gallery_title: "بعض الأمثلة من الأعمال المنجزة",
         gallery_text: "يمكنكم استعراض نماذج مختلفة من الحجر والتصميمات والتطبيقات في معرضنا.",
         gallery_card_1_title: "تطبيق نموذجي",
@@ -667,11 +720,11 @@
         gallery_card_4_text: "تتم إزالة الأوساخ وآثار التآكل المتراكمة مع الوقت بعناية للوصول إلى مظهر أنظف.",
         gallery_card_5_title: "تطبيق نافورة",
         gallery_card_5_text: "تُعد تطبيقات النافورة المُنفذة بمواد متينة وحرفية دقيقة إضافةً ذات معنى تُسهم في استمرار عمل الخير لسنوات طويلة.",
-        gallery_alt_1: "مثال بناء قبر 1",
-        gallery_alt_2: "مثال بناء قبر 2",
-        gallery_alt_3: "مثال بناء قبر 3",
-        gallery_alt_4: "مثال تنظيف وصيانة القبور",
-        gallery_alt_5: "مثال تطبيق نافورة",
+        gallery_alt_1: "مثال بناء قبر رخامي في إسطنبول",
+        gallery_alt_2: "مثال شاهد قبر من الجرانيت في إسطنبول",
+        gallery_alt_3: "مثال بناء قبر مخصص في إسطنبول",
+        gallery_alt_4: "خدمة تنظيف وصيانة القبور في إسطنبول",
+        gallery_alt_5: "مثال نافورة لمنطقة القبر في إسطنبول",
         gallery_btn: "عرض كامل المعرض",
         services_title: "حلول القبور والرخام المناسبة لاحتياجاتكم",
         services_text: "نقدم خدمات تلبي مختلف الاحتياجات في البناء والتجديد والصيانة.",
@@ -710,8 +763,8 @@
         footer_location: "كاراجا أحمد، أوسكودار / إسطنبول"
       },
       de: {
-        pageTitle: "Uğur Mermer | Grabbau und Marmorarbeiten in Istanbul",
-        pageDescription: "Seit 1969 in Karacaahmet, Istanbul: Grabbau, Grabreparatur sowie Granit- und Marmorarbeiten. Kontaktieren Sie Uğur Mermer schnell.",
+        pageTitle: "Grabbau und Grabsteine in Istanbul | Uğur Mermer | Karacaahmet Üsküdar",
+        pageDescription: "Grabbau, Grabsteine, Grabreparatur, Lahit- und Marmorarbeiten in Karacaahmet und Üsküdar, Istanbul. Kontaktieren Sie Uğur Mermer schnell.",
         nav_home: "Startseite",
         nav_gallery: "Galerie",
         nav_services: "Leistungen",
@@ -723,7 +776,7 @@
         hero_btn_call: "Jetzt anrufen",
         hero_btn_gallery: "Beispiele ansehen",
         hero_badge_location: "Karacaahmet / Üsküdar",
-        hero_alt: "Weiße Marmoranwendung von Uğur Mermer",
+        hero_alt: "Beispiel für weißen Marmorgraubbau in Karacaahmet Istanbul",
         gallery_title: "Einige Beispiele unserer Arbeiten",
         gallery_text: "In unserer Galerie können Sie verschiedene Modelle, Steinarten und Ausführungsbeispiele ansehen.",
         gallery_card_1_title: "Beispielanwendung",
@@ -736,11 +789,11 @@
         gallery_card_4_text: "Mit der Zeit entstandener Schmutz und Abnutzung werden durch sorgfältige Anwendung entfernt und sorgen für ein saubereres Erscheinungsbild.",
         gallery_card_5_title: "Brunnenanwendung",
         gallery_card_5_text: "Brunnenanwendungen aus langlebigen Materialien und mit sorgfältiger Handwerkskunst sind eine bedeutungsvolle Ausführung, die dazu beiträgt, dass die Wohltat viele Jahre weiterwirkt.",
-        gallery_alt_1: "Grabbau Beispiel 1",
-        gallery_alt_2: "Grabbau Beispiel 2",
-        gallery_alt_3: "Grabbau Beispiel 3",
-        gallery_alt_4: "Beispiel für Grabreinigung und Pflege",
-        gallery_alt_5: "Beispiel für eine Brunnenanwendung",
+        gallery_alt_1: "Marmor Grabbau Beispiel in Istanbul",
+        gallery_alt_2: "Granit Grabstein Beispiel in Istanbul",
+        gallery_alt_3: "Individuelles Grabbau Beispiel in Istanbul",
+        gallery_alt_4: "Grabreinigung und Pflege in Istanbul",
+        gallery_alt_5: "Brunnenanwendung für Grabfläche in Istanbul",
         gallery_btn: "Gesamte Galerie ansehen",
         services_title: "Grab- und Marmorlösungen nach Bedarf",
         services_text: "Wir bieten Leistungen für unterschiedliche Anforderungen in den Bereichen Bau, Erneuerung und Pflege.",
@@ -779,8 +832,8 @@
         footer_location: "Karacaahmet, Üsküdar / Istanbul"
       },
       ru: {
-        pageTitle: "Uğur Mermer | Изготовление памятников и мраморные работы в Стамбуле",
-        pageDescription: "С 1969 года в Караджаахмете, Стамбул: изготовление памятников, ремонт могил, гранитные и мраморные работы. Быстрая связь с Uğur Mermer.",
+        pageTitle: "Изготовление памятников и надгробий в Стамбуле | Uğur Mermer | Караджаахмет Ускюдар",
+        pageDescription: "Изготовление могил, надгробий, ремонт могил, устройство лахита и мраморные работы в Караджаахмете и Ускюдаре, Стамбул. Быстрая связь с Uğur Mermer.",
         nav_home: "Главная",
         nav_gallery: "Галерея",
         nav_services: "Услуги",
@@ -792,7 +845,7 @@
         hero_btn_call: "Позвонить сейчас",
         hero_btn_gallery: "Посмотреть работы",
         hero_badge_location: "Караджаахмет / Ускюдар",
-        hero_alt: "Белое мраморное надгробие от Uğur Mermer",
+        hero_alt: "Пример белого мраморного надгробия в Караджаахмете Стамбул",
         gallery_title: "Некоторые примеры выполненных работ",
         gallery_text: "В нашей галерее вы можете ознакомиться с различными моделями, видами камня и примерами исполнения.",
         gallery_card_1_title: "Пример работы",
@@ -805,11 +858,11 @@
         gallery_card_4_text: "Загрязнения и следы износа, возникающие со временем, аккуратно устраняются для более чистого внешнего вида.",
         gallery_card_5_title: "Установка фонтана",
         gallery_card_5_text: "Фонтанные решения, выполненные из прочных материалов и с аккуратной работой, являются значимым элементом, который помогает благому делу продолжаться долгие годы.",
-        gallery_alt_1: "Пример изготовления могилы 1",
-        gallery_alt_2: "Пример изготовления могилы 2",
-        gallery_alt_3: "Пример изготовления могилы 3",
-        gallery_alt_4: "Пример чистки и ухода за могилой",
-        gallery_alt_5: "Пример установки фонтана",
+        gallery_alt_1: "Пример мраморного памятника в Стамбуле",
+        gallery_alt_2: "Пример гранитного надгробия в Стамбуле",
+        gallery_alt_3: "Пример индивидуального памятника в Стамбуле",
+        gallery_alt_4: "Чистка и уход за могилой в Стамбуле",
+        gallery_alt_5: "Пример фонтана для территории могилы в Стамбуле",
         gallery_btn: "Смотреть всю галерею",
         services_title: "Решения по могилам и мрамору под ваши потребности",
         services_text: "Мы предлагаем услуги для различных потребностей в строительстве, обновлении и уходе.",
@@ -848,8 +901,8 @@
         footer_location: "Караджаахмет, Ускюдар / Стамбул"
       },
       zh: {
-        pageTitle: "Uğur Mermer | 伊斯坦布尔墓碑建造与大理石工程",
-        pageDescription: "自1969年以来，我们在伊斯坦布尔卡拉贾艾哈迈特提供墓碑建造、墓地修复、花岗岩和大理石工程服务。快速联系 Uğur Mermer。",
+        pageTitle: "伊斯坦布尔墓碑建造与墓碑制作 | Uğur Mermer | Karacaahmet Üsküdar",
+        pageDescription: "在伊斯坦布尔 Karacaahmet 和 Üsküdar 提供墓碑建造、墓碑制作、墓地修复、石棺和大理石工程。快速联系 Uğur Mermer。",
         nav_home: "首页",
         nav_gallery: "作品集",
         nav_services: "我们的服务",
@@ -861,7 +914,7 @@
         hero_btn_call: "立即致电",
         hero_btn_gallery: "查看案例",
         hero_badge_location: "Karacaahmet / Üsküdar",
-        hero_alt: "Uğur Mermer 白色大理石墓碑应用",
+        hero_alt: "伊斯坦布尔 Karacaahmet 白色大理石墓碑建造示例",
         gallery_title: "部分已完成作品示例",
         gallery_text: "您可以在我们的作品集中查看不同款式、石材和施工示例。",
         gallery_card_1_title: "示例应用",
@@ -874,11 +927,11 @@
         gallery_card_4_text: "随着时间产生的污渍和磨损会通过细致施工被清除，使外观更加整洁。",
         gallery_card_5_title: "喷泉应用",
         gallery_card_5_text: "采用耐用材料并以细致工艺完成的喷泉应用，是一项富有意义的设计，能够让这份善举多年延续下去。",
-        gallery_alt_1: "墓碑建造示例 1",
-        gallery_alt_2: "墓碑建造示例 2",
-        gallery_alt_3: "墓碑建造示例 3",
-        gallery_alt_4: "墓地清洁与维护示例",
-        gallery_alt_5: "喷泉应用示例",
+        gallery_alt_1: "伊斯坦布尔大理石墓碑建造示例",
+        gallery_alt_2: "伊斯坦布尔花岗岩墓碑示例",
+        gallery_alt_3: "伊斯坦布尔定制墓碑示例",
+        gallery_alt_4: "伊斯坦布尔墓地清洁与维护服务",
+        gallery_alt_5: "伊斯坦布尔墓地区域喷泉应用示例",
         gallery_btn: "查看全部作品",
         services_title: "符合需求的墓碑与大理石解决方案",
         services_text: "我们在建造、翻新和维护过程中提供适合不同需求的服务。",
