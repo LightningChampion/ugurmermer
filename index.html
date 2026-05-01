@@ -162,13 +162,15 @@
 
     html[dir="rtl"] .hero-banner-content {
       justify-content: flex-end;
+      direction: rtl;
     }
 
     html[dir="rtl"] .hero-copy {
-      margin-left: auto;
-      margin-right: 0;
+      margin-left: 0;
+      margin-right: auto;
       max-width: 520px;
       padding-right: 8px;
+      text-align: right;
     }
 
     html[dir="rtl"] .hero-copy h1,
@@ -184,15 +186,90 @@
     html[dir="rtl"] .hero-banner-overlay {
       background:
         linear-gradient(270deg,
-          rgba(0,0,0,0.96) 0%,
-          rgba(0,0,0,0.90) 28%,
-          rgba(0,0,0,0.68) 50%,
-          rgba(0,0,0,0.26) 74%,
-          rgba(0,0,0,0.08) 100%);
+          rgba(0,0,0,0.92) 0%,
+          rgba(0,0,0,0.82) 30%,
+          rgba(0,0,0,0.54) 52%,
+          rgba(0,0,0,0.18) 75%,
+          rgba(0,0,0,0.06) 100%);
     }
 
     html[dir="rtl"] .hero-banner-image img {
-      object-position: left center !important;
+      object-position: center center !important;
+    }
+
+    .hero-banner {
+      position: relative;
+      height: 440px;
+      min-height: 440px;
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    .hero-desktop-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-desktop-layer .hero-banner-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-desktop-layer .hero-banner-image picture,
+    .hero-desktop-layer .hero-banner-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .hero-desktop-layer .hero-banner-image img {
+      object-fit: cover;
+      object-position: center center !important;
+    }
+
+    .hero-banner-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-banner-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    html[dir="rtl"] .hero-banner {
+      height: 440px;
+      min-height: 440px;
+    }
+
+    html[dir="rtl"] .hero-desktop-layer,
+    html[dir="rtl"] .hero-desktop-layer .hero-banner-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    html[dir="rtl"] .hero-banner-content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    html[dir="rtl"] .hero-banner-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center !important;
     }
 
     @media (max-width: 1180px) {
@@ -235,9 +312,54 @@
         font-size: 18px;
       }
 
+      .hero-banner {
+        height: auto;
+        min-height: 0;
+        border-radius: 0;
+        overflow: visible;
+      }
+
+      .hero-desktop-layer {
+        display: none;
+      }
+
+      .hero-mobile-stack {
+        display: block;
+      }
+
+      .hero-mobile-image-wrap .hero-banner-image {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+      }
+
+      .hero-mobile-image-wrap .hero-banner-image picture,
+      .hero-mobile-image-wrap .hero-banner-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .hero-mobile-image-wrap .hero-banner-image img {
+        object-fit: contain;
+        object-position: center center !important;
+      }
+
+      html[dir="rtl"] .hero-banner {
+        height: auto;
+        min-height: 0;
+      }
+
       html[dir="rtl"] .hero-mobile-bottom,
       html[dir="rtl"] .hero-copy-mobile {
         text-align: right;
+      }
+
+      html[dir="rtl"] .hero-copy-mobile {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
       }
 
       html[dir="rtl"] .hero-copy-mobile h1,
@@ -271,6 +393,7 @@
     }
   </style>
 </head>
+
 <body>
   <nav>
     <div class="container nav-inner">
@@ -394,6 +517,7 @@
               <p data-i18n="gallery_card_1_text">Temiz işçilik ve dengeli tasarım anlayışıyla hazırlanan bu uygulama, estetik görünüm ve uzun ömürlü kullanım açısından özenle tamamlanmıştır.</p>
             </div>
           </article>
+
           <article class="gallery-card">
             <img src="images/photo42.jpg" alt="İstanbul granit mezar taşı uygulaması örneği" data-i18n-alt="gallery_alt_2">
             <div class="gallery-card-body">
@@ -401,6 +525,7 @@
               <p data-i18n="gallery_card_2_text">Dayanıklı ve şık görünüm sunan granit detaylar, kaliteli malzeme yapısıyla uzun yıllar sağlamlığını korurken mezara estetik bir bütünlük kazandırır.</p>
             </div>
           </article>
+
           <article class="gallery-card">
             <img src="images/photo4.jpg" alt="Kişiye özel mezar yapımı örneği İstanbul" data-i18n-alt="gallery_alt_3">
             <div class="gallery-card-body">
@@ -408,6 +533,7 @@
               <p data-i18n="gallery_card_3_text">İhtiyaca göre planlanan çözümler, ölçü, model ve malzeme tercihleri doğrultusunda kişiye özel olarak hazırlanarak istenilen görünüme uygun şekilde uygulanır.</p>
             </div>
           </article>
+
           <article class="gallery-card">
             <img src="images/photo5.jpg" alt="Mezar temizliği ve bakım hizmeti İstanbul" data-i18n-alt="gallery_alt_4">
             <div class="gallery-card-body">
@@ -415,6 +541,7 @@
               <p data-i18n="gallery_card_4_text">Zamanla oluşan kir ve yıpranmalar, özenli uygulama ile giderilerek daha temiz bir görünüme kavuşturulur.</p>
             </div>
           </article>
+
           <article class="gallery-card">
             <img src="images/photo124.jpg" alt="Mezar alanı için çeşme uygulaması örneği İstanbul" data-i18n-alt="gallery_alt_5">
             <div class="gallery-card-body">
@@ -443,26 +570,31 @@
             <h3 data-i18n="service_1_title">Mezar taşı yapımı</h3>
             <p data-i18n="service_1_text">İsteğe uygun yazı, ölçü ve model seçenekleriyle mermer veya granit mezar taşı üretimi yapılır.</p>
           </article>
+
           <article class="service-card">
             <div class="card-icon">▣</div>
             <h3 data-i18n="service_2_title">Komple mezar yapımı</h3>
             <p data-i18n="service_2_text">Baştan sona planlanan mezar yapım sürecinde estetik ve düzenli çözümler sunulur.</p>
           </article>
+
           <article class="service-card">
             <div class="card-icon">⚒</div>
             <h3 data-i18n="service_3_title">Mezar onarımı</h3>
             <p data-i18n="service_3_text">Hasar gören veya zamanla yıpranan mezar bölümlerinin onarım ve yenileme işlemleri yapılır.</p>
           </article>
+
           <article class="service-card">
             <div class="card-icon">◩</div>
             <h3 data-i18n="service_4_title">Mezar temizliği</h3>
             <p data-i18n="service_4_text">Zamanla kirlenen mezar alanları temizlenerek daha bakımlı ve düzenli hale getirilir.</p>
           </article>
+
           <article class="service-card">
             <div class="card-icon">◪</div>
             <h3 data-i18n="service_5_title">Mezar içine lahit yapımı</h3>
             <p data-i18n="service_5_text">İhtiyaca uygun ölçülerle lahit uygulamaları özenli ve sağlam şekilde hazırlanır.</p>
           </article>
+
           <article class="service-card">
             <div class="card-icon">◫</div>
             <h3 data-i18n="service_6_title">Çeşme</h3>
@@ -491,11 +623,13 @@
           <div class="stat-number" data-i18n="stat_1_title">1969'dan beri</div>
           <p data-i18n="stat_1_text">Mermer ve mezar işlerinde yılların birikimiyle güven veren, düzenli ve özenli çözümler sunuyoruz.</p>
         </article>
+
         <article class="stat-card">
           <div class="card-icon">◈</div>
           <div class="stat-number text-number" data-i18n="stat_2_title">Özenli</div>
           <p data-i18n="stat_2_text">Her çalışmada estetik görünüm, sağlamlık ve düzenli teslim anlayışıyla hareket ediyoruz.</p>
         </article>
+
         <article class="stat-card">
           <div class="card-icon">⚡</div>
           <div class="stat-number text-number" data-i18n="stat_3_title">Hızlı</div>
@@ -511,11 +645,13 @@
           <h3 data-i18n="highlight_1_title">Şeffaf iletişim</h3>
           <p data-i18n="highlight_1_text">Süreç, model ve uygulama detaylarını açık şekilde paylaşarak ilerliyoruz.</p>
         </article>
+
         <article class="highlight-card">
           <div class="card-icon">⌖</div>
           <h3 data-i18n="highlight_2_title">Yerinde ulaşım kolaylığı</h3>
           <p data-i18n="highlight_2_text">Karacaahmet'teki konumumuz sayesinde müşterilerimiz bize rahatça ulaşabiliyor.</p>
         </article>
+
         <article class="highlight-card">
           <div class="card-icon">⬡</div>
           <h3 data-i18n="highlight_3_title">Özenli teslim anlayışı</h3>
@@ -531,6 +667,7 @@
           <h2 data-i18n="cta_title">Bilgi almak veya konum görmek için hemen ulaşın</h2>
           <p data-i18n="cta_text">Telefon, WhatsApp veya harita bağlantısı üzerinden hızlıca iletişime geçebilirsiniz.</p>
         </div>
+
         <div class="actions">
           <a class="btn btn-whatsapp" href="https://wa.me/905426952150" target="_blank" rel="noopener" data-i18n="cta_btn_whatsapp">WhatsApp</a>
           <a class="btn btn-map" href="https://www.google.com/maps/place/U%C4%9Fur+Mermer/@41.0132344,29.0196256,17z/data=!3m1!4b1!4m6!3m5!1s0x14cab7a7f7967f29:0x558d44e6e1e3ac49!8m2!3d41.0132304!4d29.0222005!16s%2Fg%2F1ptxcj9y8" target="_blank" rel="noopener" data-i18n="cta_btn_map">Haritada Göster</a>
