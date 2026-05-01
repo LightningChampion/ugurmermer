@@ -118,6 +118,14 @@
       line-height: 1.7;
     }
 
+    .desktop-gallery {
+      display: block;
+    }
+
+    .mobile-gallery {
+      display: none;
+    }
+
     .gallery-grid-section {
       padding-top: 0;
       padding-bottom: 70px;
@@ -139,6 +147,7 @@
       min-height: 190px;
       box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
       transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+      padding: 0;
     }
 
     .gallery-card:hover {
@@ -200,6 +209,82 @@
 
     .load-more-btn.hidden {
       display: none;
+    }
+
+    .mobile-slider-shell {
+      position: relative;
+      padding-top: 0;
+      padding-bottom: 42px;
+    }
+
+    .mobile-slider-container {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.22);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.28);
+    }
+
+    .mobile-slider {
+      display: flex;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+
+    .mobile-slider img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 520px;
+      object-fit: contain;
+      background: #050505;
+      display: block;
+    }
+
+    .mobile-slider-button {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.45);
+      color: #fff;
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 5;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+
+    .mobile-slider-button:hover {
+      background: rgba(212, 175, 106, 0.28);
+      transform: translateY(-50%) scale(1.04);
+    }
+
+    .mobile-slider-button.prev {
+      left: 12px;
+    }
+
+    .mobile-slider-button.next {
+      right: 12px;
+    }
+
+    .mobile-slider-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+    }
+
+    .mobile-slider-counter {
+      color: var(--accent);
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .lightbox {
@@ -316,6 +401,10 @@
       text-align: right;
     }
 
+    html[dir="rtl"] .mobile-slider {
+      direction: ltr;
+    }
+
     @media (max-width: 1180px) {
       .language-switcher {
         width: 100%;
@@ -350,6 +439,14 @@
     }
 
     @media (max-width: 760px) {
+      .desktop-gallery {
+        display: none;
+      }
+
+      .mobile-gallery {
+        display: block;
+      }
+
       .floating-whatsapp svg {
         width: 26px;
         height: 26px;
@@ -387,15 +484,21 @@
       .gallery-page .page-hero .lead {
         font-size: 15px;
       }
+
+      .mobile-slider img {
+        height: 470px;
+      }
     }
 
     @media (max-width: 540px) {
-      .gallery-grid {
-        grid-template-columns: 1fr;
+      .mobile-slider img {
+        height: 420px;
       }
 
-      .gallery-card img {
-        height: 240px;
+      .mobile-slider-meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
       }
 
       .lightbox {
@@ -439,8 +542,14 @@
         font-size: 13px;
       }
 
-      .gallery-card img {
-        height: 220px;
+      .mobile-slider img {
+        height: 390px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .mobile-slider img {
+        height: 350px;
       }
     }
   </style>
@@ -491,11 +600,25 @@
       <p class="lead" data-i18n="gallery_page_text">Galerimizde farklı model, taş seçimi ve uygulama örneklerini inceleyebilirsiniz.</p>
     </section>
 
-    <section class="section gallery-grid-section">
+    <section class="section gallery-grid-section desktop-gallery">
       <div class="gallery-grid" id="galleryGrid"></div>
 
       <div class="gallery-actions">
         <button class="load-more-btn" id="loadMoreBtn" type="button" data-i18n="load_more">Daha Fazla Göster</button>
+      </div>
+    </section>
+
+    <section class="section mobile-gallery mobile-slider-shell">
+      <div class="mobile-slider-container">
+        <div class="mobile-slider" id="mobileSlider"></div>
+      </div>
+
+      <button class="mobile-slider-button prev" id="mobilePrevBtn" type="button" aria-label="Önceki görsel">&#8249;</button>
+      <button class="mobile-slider-button next" id="mobileNextBtn" type="button" aria-label="Sonraki görsel">&#8250;</button>
+
+      <div class="mobile-slider-meta">
+        <p data-i18n="slider_help">Görseller arasında ok tuşlarıyla geçiş yapabilirsiniz.</p>
+        <div class="mobile-slider-counter" id="mobileSliderCounter">1 / 129</div>
       </div>
     </section>
   </main>
@@ -538,6 +661,7 @@
         gallery_eyebrow: "Galeri",
         gallery_page_title: "Tamamlanmış işlerden bazı örnekler",
         gallery_page_text: "Galerimizde farklı model, taş seçimi ve uygulama örneklerini inceleyebilirsiniz.",
+        slider_help: "Görseller arasında ok tuşlarıyla geçiş yapabilirsiniz.",
         load_more: "Daha Fazla Göster",
         footer_brand: "Uğur Mermer",
         footer_text: "Karacaahmet, Üsküdar / İstanbul",
@@ -556,6 +680,7 @@
         gallery_eyebrow: "Gallery",
         gallery_page_title: "Some examples from completed works",
         gallery_page_text: "You can review different models, stone choices and application examples in our gallery.",
+        slider_help: "You can navigate through the images using the arrow keys.",
         load_more: "Show More",
         footer_brand: "Uğur Mermer",
         footer_text: "Karacaahmet, Üsküdar / Istanbul",
@@ -574,6 +699,7 @@
         gallery_eyebrow: "المعرض",
         gallery_page_title: "بعض الأمثلة من الأعمال المنجزة",
         gallery_page_text: "يمكنكم في معرضنا مشاهدة نماذج مختلفة وخيارات حجرية وأمثلة على التنفيذ.",
+        slider_help: "يمكنكم التنقل بين الصور باستخدام أزرار الأسهم.",
         load_more: "عرض المزيد",
         footer_brand: "أوغور مرمر",
         footer_text: "كاراجا أحمد، أوسكودار / إسطنبول",
@@ -592,6 +718,7 @@
         gallery_eyebrow: "Galerie",
         gallery_page_title: "Einige Beispiele abgeschlossener Arbeiten",
         gallery_page_text: "In unserer Galerie können Sie verschiedene Modelle, Steinauswahlen und Ausführungsbeispiele ansehen.",
+        slider_help: "Sie können mit den Pfeiltasten zwischen den Bildern wechseln.",
         load_more: "Mehr anzeigen",
         footer_brand: "Uğur Mermer",
         footer_text: "Karacaahmet, Üsküdar / Istanbul",
@@ -610,6 +737,7 @@
         gallery_eyebrow: "Галерея",
         gallery_page_title: "Некоторые примеры выполненных работ",
         gallery_page_text: "В нашей галерее вы можете посмотреть разные модели, варианты камня и примеры исполнения.",
+        slider_help: "Вы можете переключаться между изображениями с помощью стрелок на клавиатуре.",
         load_more: "Показать больше",
         footer_brand: "Uğur Mermer",
         footer_text: "Караджаахмет, Ускюдар / Стамбул",
@@ -628,6 +756,7 @@
         gallery_eyebrow: "作品集",
         gallery_page_title: "部分已完成项目示例",
         gallery_page_text: "您可以在作品集中查看不同模型、石材选择和施工示例。",
+        slider_help: "您可以使用方向键在图片之间切换。",
         load_more: "查看更多",
         footer_brand: "Uğur Mermer",
         footer_text: "Karacaahmet, Üsküdar / 伊斯坦布尔",
@@ -644,6 +773,12 @@
 
     const galleryGrid = document.getElementById("galleryGrid");
     const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+    const mobileSlider = document.getElementById("mobileSlider");
+    const mobilePrevBtn = document.getElementById("mobilePrevBtn");
+    const mobileNextBtn = document.getElementById("mobileNextBtn");
+    const mobileSliderCounter = document.getElementById("mobileSliderCounter");
+
     const languageButtons = document.querySelectorAll(".lang-btn");
     const pageTitle = document.getElementById("pageTitle");
     const pageDescription = document.getElementById("pageDescription");
@@ -657,6 +792,7 @@
 
     let visibleCount = initialVisibleCount;
     let currentImageIndex = 1;
+    let mobileIndex = 0;
     let currentLanguage = localStorage.getItem("siteLanguage") || "tr";
 
     function getCurrentDict() {
@@ -688,7 +824,7 @@
       return button;
     }
 
-    function renderGallery() {
+    function renderDesktopGallery() {
       galleryGrid.innerHTML = "";
 
       for (let i = 1; i <= visibleCount && i <= totalImages; i++) {
@@ -700,6 +836,44 @@
       } else {
         loadMoreBtn.classList.remove("hidden");
       }
+    }
+
+    function renderMobileSlider() {
+      mobileSlider.innerHTML = "";
+
+      for (let i = 1; i <= totalImages; i++) {
+        const dict = getCurrentDict();
+
+        const img = document.createElement("img");
+        img.src = `images/photo${i}.jpg`;
+        img.alt = `${dict.gallery_alt_prefix} ${i}`;
+        img.loading = i <= 2 ? "eager" : "lazy";
+        img.decoding = "async";
+        img.dataset.mobileGalleryAlt = i;
+
+        img.addEventListener("click", () => {
+          openLightbox(i);
+        });
+
+        mobileSlider.appendChild(img);
+      }
+
+      updateMobileSlider();
+    }
+
+    function updateMobileSlider() {
+      mobileSlider.style.transform = `translateX(-${mobileIndex * 100}%)`;
+      mobileSliderCounter.textContent = `${mobileIndex + 1} / ${totalImages}`;
+    }
+
+    function mobilePrev() {
+      mobileIndex = (mobileIndex - 1 + totalImages) % totalImages;
+      updateMobileSlider();
+    }
+
+    function mobileNext() {
+      mobileIndex = (mobileIndex + 1) % totalImages;
+      updateMobileSlider();
     }
 
     function openLightbox(number) {
@@ -740,6 +914,11 @@
         img.alt = `${dict.gallery_alt_prefix} ${no}`;
       });
 
+      document.querySelectorAll("[data-mobile-gallery-alt]").forEach(img => {
+        const no = img.getAttribute("data-mobile-gallery-alt");
+        img.alt = `${dict.gallery_alt_prefix} ${no}`;
+      });
+
       document.querySelectorAll(".gallery-card").forEach(card => {
         const no = card.dataset.index;
         card.setAttribute("aria-label", `${dict.gallery_alt_prefix} ${no}`);
@@ -766,6 +945,8 @@
       lightboxClose.setAttribute("aria-label", dict.close_aria);
       lightboxPrev.setAttribute("aria-label", dict.prev_aria);
       lightboxNext.setAttribute("aria-label", dict.next_aria);
+      mobilePrevBtn.setAttribute("aria-label", dict.prev_aria);
+      mobileNextBtn.setAttribute("aria-label", dict.next_aria);
 
       updateGalleryAltTexts(dict);
 
@@ -785,9 +966,12 @@
 
     loadMoreBtn.addEventListener("click", () => {
       visibleCount += loadStep;
-      renderGallery();
+      renderDesktopGallery();
       setLanguage(currentLanguage);
     });
+
+    mobilePrevBtn.addEventListener("click", mobilePrev);
+    mobileNextBtn.addEventListener("click", mobileNext);
 
     lightboxClose.addEventListener("click", closeLightbox);
     lightboxPrev.addEventListener("click", showPrevImage);
@@ -800,25 +984,47 @@
     });
 
     document.addEventListener("keydown", event => {
-      if (!lightbox.classList.contains("active")) return;
+      const isLightboxOpen = lightbox.classList.contains("active");
 
-      if (event.key === "Escape") {
-        closeLightbox();
-      }
-
-      if (event.key === "ArrowLeft") {
-        if (document.documentElement.dir === "rtl") {
-          showNextImage();
-        } else {
-          showPrevImage();
+      if (isLightboxOpen) {
+        if (event.key === "Escape") {
+          closeLightbox();
         }
+
+        if (event.key === "ArrowLeft") {
+          if (document.documentElement.dir === "rtl") {
+            showNextImage();
+          } else {
+            showPrevImage();
+          }
+        }
+
+        if (event.key === "ArrowRight") {
+          if (document.documentElement.dir === "rtl") {
+            showPrevImage();
+          } else {
+            showNextImage();
+          }
+        }
+
+        return;
       }
 
-      if (event.key === "ArrowRight") {
-        if (document.documentElement.dir === "rtl") {
-          showPrevImage();
-        } else {
-          showNextImage();
+      if (window.innerWidth <= 760) {
+        if (event.key === "ArrowLeft") {
+          if (document.documentElement.dir === "rtl") {
+            mobileNext();
+          } else {
+            mobilePrev();
+          }
+        }
+
+        if (event.key === "ArrowRight") {
+          if (document.documentElement.dir === "rtl") {
+            mobilePrev();
+          } else {
+            mobileNext();
+          }
         }
       }
     });
@@ -831,13 +1037,15 @@
 
     window.addEventListener("load", () => {
       updateBodyOffset();
-      renderGallery();
+      renderDesktopGallery();
+      renderMobileSlider();
       setLanguage(currentLanguage);
     });
 
     window.addEventListener("resize", updateBodyOffset);
 
-    renderGallery();
+    renderDesktopGallery();
+    renderMobileSlider();
     setLanguage(currentLanguage);
   </script>
 </body>
